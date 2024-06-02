@@ -32,6 +32,10 @@
               }
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/magenta-violet.css",
+              "node_modules/bootstrap/scss/bootstrap-reboot.scss",
+              "node_modules/bootstrap/scss/bootstrap-grid.scss",
+              "node_modules/bootstrap/scss/bootstrap-utilities.scss",
               "src/styles.scss"
             ],
             "scripts": []
@@ -91,6 +95,7 @@
               }
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/magenta-violet.css",
               "src/styles.scss"
             ],
             "scripts": []
