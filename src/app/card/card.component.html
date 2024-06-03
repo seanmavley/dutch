@@ -1,0 +1,23 @@
+@if (company) {
+  <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-subtitle>KvK - {{company.kvk}}</mat-card-subtitle>
+      <mat-card-title>{{ company.name }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p>This card has divider and indeterminate progress as footer</p>
+      <p>{{ company.description }}</p>
+      <mat-divider></mat-divider>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>Company website</button>
+    </mat-card-actions>
+    <mat-card-footer>
+      <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+    </mat-card-footer>
+  </mat-card>
+} @else {
+  <mat-card>
+    <mat-card-content>Nothing to show. Click on a company to view details</mat-card-content>
+  </mat-card>
+}

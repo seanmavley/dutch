@@ -1,10 +1,38 @@
 [
   {
-    "name of company - kvk": {
-      "about": "about company",
-      "category": "education",
-      "website": "http://website.com",
-      "tags": "education, university, school"
-    }
+    "id": 1,
+    "kvk": "1234567890",
+    "name": "Company 1",
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione nobis non est vero suscipit corruptisequi vitae odit laborum eoofficiis commodi saepe nam expedita voluptates, labore, hic doloremque ut. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum maiores vero ad quod tempore, eveniet  atque delectus labore temporibus fugiat ratione mollitia repellendus nulla voluptatibus, modi, sint porro laudantium ipsam!",
+    "category": "education",
+    "website": "http://website.com",
+    "tags": "education, university, school"
+  },
+  {
+    "id": 2,
+    "kvk": "1234567890",
+    "name": "Company 2",
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione nobis non est vero suscipit corruptisequi vitae odit laborum eoofficiis commodi saepe nam expedita voluptates, labore, hic doloremque ut. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum maiores vero ad quod tempore, eveniet  atque delectus labore temporibus fugiat ratione mollitia repellendus nulla voluptatibus, modi, sint porro laudantium ipsam!",
+    "category": "education",
+    "website": "http://website.com",
+    "tags": "education, university, school"
+  },
+  {
+    "id": 3,
+    "kvk": "1234567890",
+    "name": "name of company",
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione nobis non est vero suscipit corruptisequi vitae odit laborum eoofficiis commodi saepe nam expedita voluptates, labore, hic doloremque ut. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum maiores vero ad quod tempore, eveniet  atque delectus labore temporibus fugiat ratione mollitia repellendus nulla voluptatibus, modi, sint porro laudantium ipsam!",
+    "category": "education",
+    "website": "http://website.com",
+    "tags": "education, university, school"
+  },
+  {
+    "id": 4,
+    "kvk": "1234567890",
+    "name": "name of company",
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione nobis non est vero suscipit corruptisequi vitae odit laborum eoofficiis commodi saepe nam expedita voluptates, labore, hic doloremque ut. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum maiores vero ad quod tempore, eveniet  atque delectus labore temporibus fugiat ratione mollitia repellendus nulla voluptatibus, modi, sint porro laudantium ipsam!",
+    "category": "education",
+    "website": "http://website.com",
+    "tags": "education, university, school"
   }
 ]
