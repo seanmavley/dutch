@@ -24,7 +24,7 @@
       <section class="text-center">
         <button mat-flat-button color="primary" class="me-2 mb-3">All</button>
         @for (company of list_of_industries; track $index) {
-          <button mat-stroked-button color="primary" class="me-2 mb-3">{{ company.name }}</button>
+        <button mat-stroked-button color="primary" class="me-2 mb-3">{{ company.name }}</button>
         }
       </section>
     </div>
@@ -41,8 +41,8 @@
     </mat-toolbar>
     <mat-nav-list>
       @for (org of list_of_companies; track $index) {
-        <a mat-list-item (click)="selectCompany(org)">
-          <mat-icon matListItemIcon>home</mat-icon>Go back home</a>
+      <a mat-list-item (click)="selectCompany(org)">
+        <mat-icon matListItemIcon>arrow_right</mat-icon>{{org.name}}</a>
       }
     </mat-nav-list>
   </mat-drawer>

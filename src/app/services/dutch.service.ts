@@ -16,9 +16,14 @@ export class DutchService {
       tap(async (data: iCompany[]) => {
         await this.rxdbService.initDB().then(async () => {
           await this.rxdbService.addCompanies(data);
+          localStorage.setItem('task', 'done')
         });
       }),
     );
+  }
+
+  initDB() {
+    return this.rxdbService.initDB();
   }
 
   getCompanies() {

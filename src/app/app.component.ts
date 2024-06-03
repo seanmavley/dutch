@@ -16,6 +16,8 @@ import { CardComponent } from './card/card.component';
 })
 export class AppComponent {
 
+  is_done: boolean = false;
+
   selected_company!: iCompany;
 
   list_of_industries = [
@@ -31,18 +33,35 @@ export class AppComponent {
 
   constructor(private dutchService: DutchService,
     private snack: MatSnackBar
-  ) { }
+  ) {
+
+    this.is_done = localStorage.getItem('is_done') === 'done' ? true : false;
+
+  }
 
   ngOnInit() {
+    // this.dutchService.initDB()
+    //   .then(async () => {
+    //     await this.dutchService.getCompanies()
+    //       .then(companies => {
+    //         this.list_of_companies = companies;
+    //       })
+    //   })
+
+    // if (!this.is_done) {
+      this.loadJson();
+    // } else {
+    // }
+  }
+
+  loadJson() {
+
     this.dutchService.loadJson('assets/orgs.json')
       .subscribe({
         next: (data: iCompany[]) => {
           console.log(data)
           this.list_of_companies = data;
-          // this.dutchService.getCompanies()
-          //   .then(companies => {
-          //     this.list_of_companies = companies;
-          //   })
+
         },
         error: (error) => {
           console.error(error);

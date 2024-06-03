@@ -9,7 +9,7 @@ export const companySchema = {
     id: {
       type: 'string',
       primary: true,
-      "maxLength": 100
+      maxLength: 100
     },
     kvk: {
       type: 'string'
