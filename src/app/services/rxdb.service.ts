@@ -4,10 +4,13 @@ import { companySchema } from '../schemas/company.schema';
 import { RxCollection } from 'rxdb';
 import { iCompany } from '../models/dutch.interface';
 import { getRxStorageDexie } from 'rxdb/plugins/storage-dexie';
+// import { RxDBMigrationPlugin } from 'rxdb/plugins/migration-schema';
+// addRxPlugin(RxDBMigrationPlugin);
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class RxdbService {
   private db!: RxDatabase;
   public companyCollection!: RxCollection<iCompany>;

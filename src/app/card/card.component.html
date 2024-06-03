@@ -9,9 +9,9 @@
       <mat-divider></mat-divider>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-button>Company website</button>
+      <a [href]="company.website" target="_blank" mat-button>Company website</a>
+      <a href="'https://www.google.com/search?q=' + {{company.name}}"  target="_blank" mat-button>Websearch</a>
     </mat-card-actions>
-
   </mat-card>
 } @else {
   <mat-card>
