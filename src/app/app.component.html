@@ -23,18 +23,20 @@
     <div class="col-sm-12">
       <section class="text-center">
         <button mat-flat-button color="primary" class="me-2 mb-3" (click)="filterCompanies()"
-          [class.mat-flat-button]="activeCategory == 'all'"
-          [class.mat-stroked-button]="activeCategory != 'all'">All</button>
+          [attr.mat-flat-button]="activeCategory == 'all'"
+          [attr.mat-stroked-button]="activeCategory != 'all'">All</button>
         @for (company of list_of_industries; track $index) {
         <button mat-stroked-button color="primary" class="me-2 mb-3" (click)="filterCompanies(company.slug)"
-          [class.mat-flat-button]="activeCategory == company.slug"
-          [class.mat-stroked-button]="activeCategory != company.slug">{{ company.name }}</button>
+          [attr.mat-flat-button]="activeCategory == company.slug"
+          [attr.mat-stroked-button]="activeCategory != company.slug">{{ company.name }}</button>
         }
       </section>
     </div>
   </div>
 </div>
-
+@if (busy) {
+  <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+}
 <mat-tab-nav-panel #tabPanel></mat-tab-nav-panel>
 <mat-drawer-container style="height: 100vh;">
   <!-- In the Drawer -->
@@ -44,7 +46,7 @@
       <span>Companies</span>
     </mat-toolbar>
     <mat-nav-list>
-      @for (org of filteredCompanies; track $index) {
+      @for (org of filteredCompanies || list_of_companies; track $index) {
       <a mat-list-item (click)="selectCompany(org)">
         <mat-icon matListItemIcon>arrow_right</mat-icon>{{ org.name }}
       </a>

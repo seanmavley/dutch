@@ -1,4 +1,5 @@
 export interface iIndustry {
+  slug: string;
   name: string;
   id: number;
 }

@@ -5,18 +5,15 @@ import { RouterModule } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
-import { MatExpansionModule } from '@angular/material/expansion';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule, MatNavList } from '@angular/material/list';
 import { FormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
-import { MatRippleModule } from '@angular/material/core';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { MatRadioModule } from '@angular/material/radio';
 
 @NgModule({
   declarations: [],
@@ -27,7 +24,6 @@ import { MatRadioModule } from '@angular/material/radio';
     MatButtonModule,
     MatIconModule,
     MatCardModule,
-    MatExpansionModule,
     MatTabsModule,
     MatSidenavModule,
     MatNavList,
@@ -35,11 +31,9 @@ import { MatRadioModule } from '@angular/material/radio';
     FormsModule,
     MatInputModule,
     MatProgressBarModule,
-    MatRippleModule,
     MatMenuModule,
     MatDialogModule,
     MatSnackBarModule,
-    MatRadioModule
   ],
   exports: [
     CommonModule,
@@ -48,7 +42,6 @@ import { MatRadioModule } from '@angular/material/radio';
     MatIconModule,
     MatButtonModule,
     MatCardModule,
-    MatExpansionModule,
     MatTabsModule,
     MatSidenavModule,
     MatListModule,
@@ -56,11 +49,9 @@ import { MatRadioModule } from '@angular/material/radio';
     FormsModule,
     MatInputModule,
     MatProgressBarModule,
-    MatRippleModule,
     MatMenuModule,
     MatDialogModule,
     MatSnackBarModule,
-    MatRadioModule
   ]
 })
 export class SharedModule { }

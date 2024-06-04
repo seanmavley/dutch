@@ -1,0 +1,38 @@
+[
+  {
+    "description": "AFRY is an engineering, design, and advisory company that helps clients to develop and implement sustainable solutions.",
+    "category": "mi",
+    "website": "https://www.afry.com/",
+    "tags": "engineering, consulting, sustainability",
+    "id": 1,
+    "name": "AFRY Netherlands B.V.",
+    "kvk": "88584917"
+  },
+  {
+    "description": "Advanced Automated Equipment B.V. (AAE) is an engineering company that designs, develops, and manufactures specialized automated equipment for various industries.",
+    "category": "mi",
+    "website": "https://www.aae.nl/",
+    "tags": "engineering, manufacturing, automation",
+    "id": 2,
+    "name": "\"AAE\" Advanced Automated Equipment B.V.",
+    "kvk": "17037842"
+  },
+  {
+    "description": "@EasePay B.V. is an online payment solutions provider, enabling businesses to accept and process payments easily.",
+    "category": "fr",
+    "website": "https://easepay.com/",
+    "tags": "payment solutions, e-commerce, fintech",
+    "id": 3,
+    "name": "@EasePay B.V.",
+    "kvk": "83892869"
+  },
+  {
+    "description": "@Fentures B.V. is a company that provides financial technology solutions for wealth management, investment, and portfolio management.",
+    "category": "Finance and Real Estate",
+    "website": "https://fentures.com/",
+    "tags": "financial technology, fintech, wealth management",
+    "id": 4,
+    "name": "@Fentures B.V.",
+    "kvk": "82701695"
+  }
+]

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, SimpleChanges } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
@@ -19,9 +19,7 @@ export class CardComponent {
 
   constructor() { }
 
-  ngOnInit(): void {
-    console.log(this.company);
-    this.url = `https://www.google.com/search?q= + ${this.company?.website}`
+  ngOnChanges(): void {
+    this.url = `https://www.google.com/search?q=${this.company?.name}` 
   }
-
 }
