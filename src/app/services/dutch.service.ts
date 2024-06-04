@@ -2,31 +2,24 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, tap } from 'rxjs';
 import { iCompany } from '../models/dutch.interface';
-import { RxdbService } from './rxdb.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DutchService {
 
-  constructor(private http: HttpClient, private rxdbService: RxdbService) { }
+  constructor(private http: HttpClient) { }
 
-  loadJson(url: string): Observable<iCompany[]> {
-    return this.http.get<iCompany[]>(url).pipe(
-      tap(async (data: iCompany[]) => {
-        await this.rxdbService.initDB().then(async () => {
-          await this.rxdbService.addCompanies(data);
+  loadJson(url: string) {
+    return this.http.get<iCompany[]>(url)
+      .pipe(
+        tap(data => {
+          console.log(JSON.stringify(data))
+          localStorage.setItem('data', JSON.stringify(data))
           localStorage.setItem('task', 'done')
-        });
-      }),
-    );
+          return data
+        })
+      );
   }
 
-  initDB() {
-    return this.rxdbService.initDB();
-  }
-
-  getCompanies() {
-    return this.rxdbService.getCompanies();
-  }
 }

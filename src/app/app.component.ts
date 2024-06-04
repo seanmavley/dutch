@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { SharedModule } from './shared/shared.module';
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { DutchService } from './services/dutch.service';
 import { iCompany } from './models/dutch.interface';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -31,47 +30,47 @@ export class AppComponent {
 
   list_of_companies!: iCompany[];
 
-  constructor(private dutchService: DutchService,
-    private snack: MatSnackBar
+  constructor(
+    private dutchService: DutchService,
+    private snack: MatSnackBar,
   ) {
-
-    this.is_done = localStorage.getItem('is_done') === 'done' ? true : false;
-
+    this.is_done = localStorage.getItem('task') === 'done' ? true : false;
   }
 
   ngOnInit() {
-    // this.dutchService.initDB()
-    //   .then(async () => {
-    //     await this.dutchService.getCompanies()
-    //       .then(companies => {
-    //         this.list_of_companies = companies;
-    //       })
-    //   })
-
-    // if (!this.is_done) {
+    if (!this.is_done) {
+      this.snack.open('Loading json from server', 'Ok', {
+        duration: 3000,
+      });
       this.loadJson();
-    // } else {
-    // }
+    } else {
+      this.snack.open('Loading json from local', 'Ok', {
+        duration: 3000,
+      });
+      this.loadLocal();
+    }
+  }
+
+  refresh() {
+    this.loadJson()
+  }
+
+  loadLocal() {
+    const data = localStorage.getItem('data');
+    if (data) {
+      this.list_of_companies = JSON.parse(data);
+      console.log(this.list_of_companies)
+    }
   }
 
   loadJson() {
-
     this.dutchService.loadJson('assets/orgs.json')
-      .subscribe({
-        next: (data: iCompany[]) => {
-          console.log(data)
-          this.list_of_companies = data;
-
-        },
-        error: (error) => {
-          console.error(error);
-          this.snack.open(error.message, 'OK', { duration: 5000 });
-        }
+      .subscribe((data: iCompany[]) => {
+        this.list_of_companies = data;
       });
   }
 
   selectCompany(company: iCompany) {
-    console.log(company)
     this.selected_company = company
   }
 }

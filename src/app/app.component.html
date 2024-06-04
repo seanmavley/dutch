@@ -10,10 +10,10 @@
     </mat-form-field>
   </form>
   <span class="example-spacer"></span>
-  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-    <mat-icon>favorite</mat-icon>
+  <button mat-icon-button (click)="refresh()">
+    <mat-icon>refresh</mat-icon>
   </button>
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+  <button mat-icon-button>
     <mat-icon>share</mat-icon>
   </button>
 </mat-toolbar>
@@ -43,6 +43,8 @@
       @for (org of list_of_companies; track $index) {
       <a mat-list-item (click)="selectCompany(org)">
         <mat-icon matListItemIcon>arrow_right</mat-icon>{{org.name}}</a>
+      } @empty {
+        <a mat-list-item>No Companies</a>
       }
     </mat-nav-list>
   </mat-drawer>
