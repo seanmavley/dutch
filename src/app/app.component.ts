@@ -4,7 +4,8 @@ import { DutchService } from './services/dutch.service';
 import { iCompany, iIndustry } from './models/dutch.interface';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { CardComponent } from './card/card.component';
-
+import { Subject, debounceTime } from 'rxjs';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -14,6 +15,8 @@ import { CardComponent } from './card/card.component';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
+
+  private searchTerm$ = new Subject<string>();
 
   busy: boolean = false;
   is_done: boolean = false;
@@ -25,7 +28,7 @@ export class AppComponent {
   list_of_industries: iIndustry[] = [
     { "slug": "mi", "name": "Manufacturing and Industrials", "id": 2 },
     { "slug": "eu", "name": "Energy and Utilities", "id": 3 },
-    { "slug": "cgr","name": "Consumer Goods and Retail", "id": 4 },
+    { "slug": "cgr", "name": "Consumer Goods and Retail", "id": 4 },
     { "slug": "fre", "name": "Finance and Real Estate", "id": 5 },
     { "slug": "hp", "name": "Healthcare and Pharmaceuticals", "id": 6 },
     { "slug": "tt", "name": "Technology and Telecommunications", "id": 7 }
@@ -51,8 +54,21 @@ export class AppComponent {
       });
       this.loadLocal();
     }
+
+    // Filtering via company name
+    this.searchTerm$
+      .pipe(debounceTime(500))
+      .subscribe((searchTerm) => {
+        this.filterCompanies(this.activeCategory, searchTerm);
+      });
   }
 
+  // TODO: Implement logic that checks github file
+  // perhaps every 2 weeks to compare .json file timestamp to know when to pull
+
+  /**
+   * Refresh data by loading file on server
+   */
   refresh() {
     this.loadJson()
   }
@@ -93,19 +109,23 @@ export class AppComponent {
     this.selected_company = company
   }
 
+  onSubmit(form: NgForm) {
+    this.searchTerm$.next(form.value.searchTerm);
+  }
+
   /**
    * Filter Companies
    * @param categorySlug string the category on which to filter
    */
-  filterCompanies(categorySlug: string = 'all') {
+  filterCompanies(categorySlug: string = 'all', searchTerm: string = '') {
     this.activeCategory = categorySlug;
 
-    if (categorySlug === 'all') {
-      this.filteredCompanies = this.list_of_companies; // Show all companies
-    } else {
-      this.filteredCompanies = this.list_of_companies.filter(
-        (company) => company.category === categorySlug
-      );
-    }
+    const filteredByCategory = categorySlug === 'all'
+      ? this.list_of_companies
+      : this.list_of_companies.filter((company) => company.category === categorySlug);
+
+    this.filteredCompanies = filteredByCategory.filter(company =>
+      company.name.toLowerCase().includes(searchTerm.toLowerCase())
+    );
   }
 }
