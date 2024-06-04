@@ -15,11 +15,13 @@ import { SharedModule } from '../shared/shared.module';
 export class CardComponent {
 
   @Input() company!: iCompany;
+  url!: string;
 
   constructor() { }
 
   ngOnInit(): void {
     console.log(this.company);
+    this.url = `https://www.google.com/search?q= + ${this.company?.website}`
   }
 
 }

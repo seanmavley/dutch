@@ -22,9 +22,13 @@
   <div class="row justify-content-center">
     <div class="col-sm-12">
       <section class="text-center">
-        <button mat-flat-button color="primary" class="me-2 mb-3">All</button>
+        <button mat-flat-button color="primary" class="me-2 mb-3" (click)="filterCompanies()"
+          [class.mat-flat-button]="activeCategory == 'all'"
+          [class.mat-stroked-button]="activeCategory != 'all'">All</button>
         @for (company of list_of_industries; track $index) {
-        <button mat-stroked-button color="primary" class="me-2 mb-3">{{ company.name }}</button>
+        <button mat-stroked-button color="primary" class="me-2 mb-3" (click)="filterCompanies(company.slug)"
+          [class.mat-flat-button]="activeCategory == company.slug"
+          [class.mat-stroked-button]="activeCategory != company.slug">{{ company.name }}</button>
         }
       </section>
     </div>
@@ -40,12 +44,12 @@
       <span>Companies</span>
     </mat-toolbar>
     <mat-nav-list>
-      @for (org of list_of_companies; track $index) {
+      @for (org of filteredCompanies; track $index) {
       <a mat-list-item (click)="selectCompany(org)">
-        <mat-icon matListItemIcon>arrow_right</mat-icon>{{org.name}}</a>
-      } @empty {
-        <a mat-list-item>No Companies</a>
+        <mat-icon matListItemIcon>arrow_right</mat-icon>{{ org.name }}
+      </a>
       }
+      <a *ngIf="filteredCompanies?.length === 0" mat-list-item>No Companies</a>
     </mat-nav-list>
   </mat-drawer>
 

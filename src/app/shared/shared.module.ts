@@ -14,9 +14,9 @@ import { MatInputModule } from '@angular/material/input';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatRippleModule } from '@angular/material/core';
 import { MatMenuModule } from '@angular/material/menu';
-import {MatDialogModule} from '@angular/material/dialog';
-import {MatSnackBarModule} from '@angular/material/snack-bar';
-import {MatRadioModule} from '@angular/material/radio';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatRadioModule } from '@angular/material/radio';
 
 @NgModule({
   declarations: [],
