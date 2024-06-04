@@ -11,30 +11,41 @@
     <mat-icon>link</mat-icon>
   </button>
 </mat-toolbar>
-
-<div class="container mt-2 mb-2">
-  <div class="row justify-content-center">
-    <div class="col-md-6">
-      <form class="pt-4" #searchForm="ngForm" (input)="onSubmit(searchForm)">
-        <mat-form-field appearance="outline" class="full-width">
-          <input matInput placeholder="Search" name="searchTerm" ngModel>
-        </mat-form-field>
-      </form>
+<div style="background-color: #810081;" class="py-4">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <form class="pt-4" #searchForm="ngForm" (input)="onSubmit(searchForm)">
+          <mat-form-field appearance="outline" class="full-width">
+            <input matInput placeholder="Search" name="searchTerm" ngModel>
+          </mat-form-field>
+        </form>
+      </div>
     </div>
-  </div>
-  <mat-divider class="mb-3"></mat-divider>
-  <div class="row justify-content-center">
-    <div class="col-sm-12">
-      <section class="text-center">
-        <button mat-flat-button color="primary" class="me-2 mb-3" (click)="filterCompanies()"
-          [attr.mat-flat-button]="activeCategory == 'all'"
-          [attr.mat-stroked-button]="activeCategory != 'all'">All</button>
-        @for (company of list_of_industries; track $index) {
-        <button mat-stroked-button color="primary" class="me-2 mb-3" (click)="filterCompanies(company.slug)"
-          [attr.mat-flat-button]="activeCategory == company.slug"
-          [attr.mat-stroked-button]="activeCategory != company.slug">{{ company.name }}</button>
-        }
-      </section>
+    <mat-divider class="mb-3"></mat-divider>
+    <div class="row justify-content-center">
+      <div class="col-sm-12">
+        <section class="text-center">
+
+          <!-- So in 2024, are we saying there's NO better way to do this in Angular 18+ using Angular Material? -->
+          <!-- I've tried different ways, such as swapping out the attributes via [attr.mat-flat-button] or [class.mat-flat-button] -->
+          <!-- Anyway, below is verbose, but works -->
+          @if (activeCategory === 'all') {
+            <button mat-flat-button color="primary" class="me-2 mb-3" (click)="filterCompanies()">All</button>
+          } @else {
+            <button mat-stroked-button color="primary" class="me-2 mb-3" (click)="filterCompanies()">All</button>
+          }
+
+
+          @for (company of list_of_industries; track $index) {
+            @if (activeCategory === company.slug) {
+              <button mat-flat-button color="primary" class="me-2 mb-3" (click)="filterCompanies(company.slug)">{{ company.name }}</button>
+            } @else {
+              <button mat-stroked-button color="primary" class="me-2 mb-3" (click)="filterCompanies(company.slug)">{{ company.name }}</button>
+            }
+          }
+        </section>
+      </div>
     </div>
   </div>
 </div>

@@ -10,6 +10,11 @@ export class DutchService {
 
   constructor(private http: HttpClient) { }
 
+  /**
+   * Load JSON file from local or remote resource and save
+   * @param url string pointing to the location of the resource
+   * @returns Array of company objects
+   */
   loadJson(url: string) {
     return this.http.get<iCompany[]>(url)
       .pipe(

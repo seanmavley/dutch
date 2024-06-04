@@ -70,7 +70,8 @@ export class AppComponent {
    * Refresh data by loading file on server
    */
   refresh() {
-    this.loadJson()
+    localStorage.clear()
+    window.location.reload()
   }
 
   /**
