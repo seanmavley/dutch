@@ -1,11 +1,12 @@
 {
-  "name": "dutch",
-  "short_name": "dutch",
+  "name": "Dutch",
+  "short_name": "Dutch",
   "theme_color": "#1976d2",
   "background_color": "#fafafa",
   "display": "standalone",
   "scope": "./",
   "start_url": "./",
+  "orientation": "portrait",
   "icons": [
     {
       "src": "icons/icon-72x72.png",
