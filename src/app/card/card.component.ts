@@ -1,4 +1,4 @@
-import { Component, Input, SimpleChanges } from '@angular/core';
+import { Component, Inject, Input } from '@angular/core';
 import { iCompany, iIndustry } from '../models/dutch.interface';
 import { SharedModule } from '../shared/shared.module';
 
@@ -14,6 +14,7 @@ export class CardComponent {
   @Input() company!: iCompany;
   url!: string;
 
+
   // TODO: Find somewhere to put this and access from
   // everywhere. Heavily considering localstorage. Duh!
   list_of_industries: iIndustry[] = [
@@ -25,7 +26,8 @@ export class CardComponent {
     { "slug": "tt", "name": "Technology and Telecommunications", "id": 7 }
   ]
 
-  constructor() { }
+  ngOnInit(): void {
+  }
 
   ngOnChanges(): void {
     this.url = `https://www.google.com/search?q=${this.company?.name}` 

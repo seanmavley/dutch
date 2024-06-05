@@ -6,8 +6,9 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { CardComponent } from './card/card.component';
 import { Subject, debounceTime } from 'rxjs';
 import { NgForm } from '@angular/forms';
-import {  MatBottomSheet} from '@angular/material/bottom-sheet';
+import { MatBottomSheet } from '@angular/material/bottom-sheet';
 import { AboutDialogComponent } from './partials/about-dialog/about-dialog.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-root',
@@ -38,7 +39,11 @@ export class AppComponent {
 
   list_of_companies!: iCompany[];
 
-  constructor(private dutchService: DutchService, private snack: MatSnackBar, private _bottomSheet: MatBottomSheet) {
+  constructor(private dutchService: DutchService, private snack: MatSnackBar, private _bottomSheet: MatBottomSheet, private _dialog: MatDialog) {
+    this.loadLocal();
+  }
+
+  ngAfterViewInit() {
     // use this to mark whether to load from remote or local
     // user explicitly clicks the refresh to load from remote AFTER first time load
     this.is_done = localStorage.getItem('task') === 'done' ? true : false;
@@ -140,6 +145,15 @@ export class AppComponent {
    * Open about bottomsheet
    */
   openAboutSheet() {
-    this._bottomSheet.open(AboutDialogComponent, { })
+    this._bottomSheet.open(AboutDialogComponent)
+  }
+
+  /**
+   * Open company card
+   */
+  openCompanyCard(org: iCompany) {
+    this._dialog.open(CardComponent, {
+      data: org
+    })
   }
 }

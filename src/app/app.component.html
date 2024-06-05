@@ -10,13 +10,13 @@
   <button mat-icon-button (click)="openAboutSheet()" matTooltip="About this website">
     <mat-icon>help</mat-icon>
   </button>
-  <a title="Origin data" mat-icon-button
-    matTooltip="The source of the data on this website"
+  <a title="Origin data" mat-icon-button matTooltip="The source of the data on this website"
     href="https://ind.nl/en/public-register-recognised-sponsors/public-register-regular-labour-and-highly-skilled-migrants"
     target="new">
     <mat-icon>link</mat-icon>
   </a>
-  <a title="source code" mat-icon-button href="https://github.com/seanmavley/dutch" target="new" matTooltip="Source code available on Github">
+  <a title="source code" mat-icon-button href="https://github.com/seanmavley/dutch" target="new"
+    matTooltip="Source code available on Github">
     <mat-icon>code</mat-icon>
   </a>
 </mat-toolbar>
@@ -40,9 +40,9 @@
             <mat-select (selectionChange)="onCategoryChange($event.value)">
               <mat-option value="all">All</mat-option>
               @for (industry of list_of_industries; track $index) {
-                <mat-option [value]="industry.slug">
-                  {{ industry.name }}
-                </mat-option>
+              <mat-option [value]="industry.slug">
+                {{ industry.name }}
+              </mat-option>
               }
             </mat-select>
           </mat-form-field>
@@ -83,7 +83,7 @@
 <mat-tab-nav-panel #tabPanel></mat-tab-nav-panel>
 <mat-drawer-container style="height: 100vh;">
   <!-- In the Drawer -->
-  <mat-drawer #drawer mode="side" opened="true">
+  <mat-drawer #drawer mode="side" opened="true" class="d-none d-md-block">
     <!-- Mobile Toolbar -->
     <mat-toolbar>
       <span>Companies</span>
@@ -94,13 +94,27 @@
         <mat-icon matListItemIcon>arrow_right</mat-icon>{{ org.name }}
       </a>
       }
-      <a *ngIf="filteredCompanies?.length === 0" mat-list-item>No Companies</a>
+      <a *ngIf="filteredCompanies?.length === 0" mat-list-item>No Companies. Please try another search or category</a>
     </mat-nav-list>
   </mat-drawer>
 
   <!-- In the Content -->
   <mat-drawer-content>
-    <div class="container mt-5">
+    <div class="container mt-5 d-block d-md-none">
+      <div class="row justify-content-center">
+        <mat-nav-list>
+          @for (org of filteredCompanies || list_of_companies; track $index) {
+          <a mat-list-item (click)="openCompanyCard(org)">
+            <mat-icon matListItemIcon>arrow_right</mat-icon>{{ org.name }}
+          </a>
+          }
+          <a *ngIf="filteredCompanies?.length === 0" mat-list-item>No Companies. Please try another search or
+            category</a>
+        </mat-nav-list>
+      </div>
+    </div>
+
+    <div class="container mt-5 d-none d-md-block">
       <div class="row justify-content-center">
         <div class="col-md-8">
           <app-card [company]="selected_company"></app-card>

@@ -14,8 +14,9 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import {MatTooltipModule} from '@angular/material/tooltip';
-import {MatSelectModule} from '@angular/material/select';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatSelectModule } from '@angular/material/select';
+import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 
 @NgModule({
   declarations: [],
@@ -37,7 +38,8 @@ import {MatSelectModule} from '@angular/material/select';
     MatDialogModule,
     MatSnackBarModule,
     MatTooltipModule,
-    MatSelectModule
+    MatSelectModule,
+    MatBottomSheetModule
   ],
   exports: [
     CommonModule,
@@ -57,7 +59,8 @@ import {MatSelectModule} from '@angular/material/select';
     MatDialogModule,
     MatSnackBarModule,
     MatTooltipModule,
-    MatSelectModule
+    MatSelectModule,
+    MatBottomSheetModule
   ]
 })
 export class SharedModule { }
