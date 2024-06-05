@@ -1,1 +1,54 @@
-[]
+[
+  {
+    "description": "AFRY Netherlands B.V. is a consulting and engineering company that specializes in sustainable energy, infrastructure, and industry solutions. They offer services in the areas of strategy development, design, and implementation for clients across various industries, with a focus on renewable energy, circular economy, and energy efficiency.",
+    "category": "tt",
+    "website": "https://www.afry.com/",
+    "tags": [
+      "sustainable energy",
+      "renewable energy",
+      "energy efficiency"
+    ],
+    "id": 1,
+    "name": "AFRY Netherlands B.V.",
+    "kvk": "88584917"
+  },
+  {
+    "Description": "AAE Advanced Automated Equipment B.V. specializes in designing and manufacturing automated equipment for various industries, such as pharmaceuticals, cosmetics, and food processing.",
+    "Category": "mi",
+    "Website": "https://aae.nl/",
+    "Tags": [
+      "Automated Equipment",
+      "Pharmaceutical Manufacturing",
+      "Food Processing"
+    ],
+    "id": 2,
+    "name": "\"AAE\" Advanced Automated Equipment B.V.",
+    "kvk": "17037842"
+  },
+  {
+    "description": "@EasePay B.V. is a payment service provider that offers a range of solutions for online and offline transactions, including payment processing, invoicing, and accounting services.",
+    "category": "tt",
+    "website": "https://www.easepay.com/",
+    "tags": [
+      "payment",
+      "processing",
+      "invoicing"
+    ],
+    "id": 3,
+    "name": "@EasePay B.V.",
+    "kvk": "83892869"
+  },
+  {
+    "description": "Fentures B.V. is a Netherlands-based company that specializes in developing and manufacturing innovative, high-quality, and custom-made cable solutions for various industries such as automotive, aerospace, defense, and industrial applications.",
+    "category": "Manufacturing and Industrials (mi)",
+    "website": "",
+    "tags": [
+      "Cable Solutions",
+      "Custom Manufacturing",
+      "Industrial Applications"
+    ],
+    "id": 4,
+    "name": "@Fentures B.V.",
+    "kvk": "82701695"
+  }
+]

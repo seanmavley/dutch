@@ -28,24 +28,37 @@ async function appendToOutputFile(filePath, data) {
 // Function to make API call to Ollama
 async function fetchCompanyInfo(company) {
   const prompt = `
-Below is a name of a company in Netherlands. You are to answer the following questions about the company, and return the answer according to the structure provided at the end. \n
+  Analyze the following company from the Netherlands and provide information based on your knowledge specific to the various sections:
+  
+  **Company Name:** ${company.name}
+  
+  **Instructions:**
+  
+  1. **Description:** Concisely summarize the company's primary business activities and the products or services it offers. Be specific and avoid generic terms.
+  2. **Category:** Categorize the company into ONE of the following sectors, choosing the most accurate fit:
+  
+      * Technology and Telecommunications (tt)
+      * Healthcare and Pharmaceuticals (hp)
+      * Finance and Real Estate (fre)
+      * Consumer Goods and Retail (cgr)
+      * Energy and Utilities (eu)
+      * Manufacturing and Industrials (mi)
+  
+  3. **Website:** Provide the company's official website URL. If no website is found, respond with "empty".
+  4. **Tags:** List up to THREE relevant tags (keywords) that best describe the company's focus, industry, or target market. 
+  
+  **Response Format:**
+  
+  Please structure your response in the following JSON format (only select the text in the brackets regarding the category):
+  
+  {
+      "description": "",
+      "category": "",
+      "website": "",
+      "tags": [] 
+  }
+  `;
 
-Company name: ${company.name}
-
-Questions: 
-1. What does the company do? 
-2. Which of these categories does the company fall under accurately? Choose *only* ONE from these options: Technology and Telecommunications, Healthcare and Pharmaceuticals, Finance and Real Estate, Consumer Goods and Retail, Energy and Utilities, or Manufacturing and Industrials
-3. What is the company's website? If no website is found, return "empty"
-4. What other tags would you use to describe this company? List at most 3 tags.
-
-Respond in a structure like this and fill in the blanks with your answers: \n
-
-{
-  "description": "",
-  "category": "",
-  "website": "",
-  "tags": ""
-}`;
 
   const payload = {
     model: 'llama3',
@@ -62,7 +75,7 @@ Respond in a structure like this and fill in the blanks with your answers: \n
     parsedResponse.name = company.name;
     parsedResponse.kvk = company.kvk;
 
-    console.log('Final output, ' + parsedResponse)
+    console.log('Final output, ' + parsedResponse.name)
 
     return parsedResponse;
   } catch (error) {
