@@ -4,32 +4,52 @@
   </button>
   <span>Dutch (app is WIP)</span>
   <span class="example-spacer"></span>
-  <button mat-icon-button (click)="refresh()">
+  <button mat-icon-button (click)="refresh()" matTooltip="Click on this reload data from Github">
     <mat-icon>refresh</mat-icon>
   </button>
-  <button mat-icon-button (click)="openAboutSheet()">
+  <button mat-icon-button (click)="openAboutSheet()" matTooltip="About this website">
     <mat-icon>help</mat-icon>
   </button>
-  <a title="Origin data" mat-icon-button href="https://ind.nl/en/public-register-recognised-sponsors/public-register-regular-labour-and-highly-skilled-migrants" target="new">
+  <a title="Origin data" mat-icon-button
+    matTooltip="The source of the data on this website"
+    href="https://ind.nl/en/public-register-recognised-sponsors/public-register-regular-labour-and-highly-skilled-migrants"
+    target="new">
     <mat-icon>link</mat-icon>
   </a>
-  <a title="source code" mat-icon-button href="https://github.com/seanmavley/dutch" target="new">
+  <a title="source code" mat-icon-button href="https://github.com/seanmavley/dutch" target="new" matTooltip="Source code available on Github">
     <mat-icon>code</mat-icon>
   </a>
 </mat-toolbar>
-<div style="background-color: #810081;" class="py-4">
+<div style="background-color: #810081;" class="py-md-4">
   <div class="container-fluid">
     <div class="row justify-content-center">
       <div class="col-md-4">
         <form class="pt-4" #searchForm="ngForm" (input)="onSubmit(searchForm)">
           <mat-form-field appearance="outline" class="full-width">
-            <input matInput placeholder="Search" name="searchTerm" ngModel>
+            <input matInput placeholder="Search company name" name="searchTerm" ngModel>
           </mat-form-field>
         </form>
       </div>
     </div>
     <mat-divider class="mb-4"></mat-divider>
-    <div class="row justify-content-center">
+    <div class="row justify-content-center d-block d-md-none">
+      <div class="col-sm-12">
+        <section class="text-center">
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Industry</mat-label>
+            <mat-select (selectionChange)="onCategoryChange($event.value)">
+              <mat-option value="all">All</mat-option>
+              @for (industry of list_of_industries; track $index) {
+                <mat-option [value]="industry.slug">
+                  {{ industry.name }}
+                </mat-option>
+              }
+            </mat-select>
+          </mat-form-field>
+        </section>
+      </div>
+    </div>
+    <div class="row justify-content-center d-none d-md-block">
       <div class="col-sm-12">
         <section class="text-center">
 
@@ -37,18 +57,20 @@
           <!-- I've tried different ways, such as swapping out the attributes via [attr.mat-flat-button] or [class.mat-flat-button] -->
           <!-- Anyway, below is verbose, but works -->
           @if (activeCategory === 'all') {
-            <button mat-flat-button color="primary" class="me-2 mb-3" (click)="filterCompanies()">All</button>
+          <button mat-flat-button color="primary" class="me-2 mb-3" (click)="filterCompanies()">All</button>
           } @else {
-            <button mat-stroked-button color="primary" class="me-2 mb-3" (click)="filterCompanies()">All</button>
+          <button mat-stroked-button color="primary" class="me-2 mb-3" (click)="filterCompanies()">All</button>
           }
 
 
-          @for (company of list_of_industries; track $index) {
-            @if (activeCategory === company.slug) {
-              <button mat-flat-button color="primary" class="me-2 mb-3" (click)="filterCompanies(company.slug)">{{ company.name }}</button>
-            } @else {
-              <button mat-stroked-button color="primary" class="me-2 mb-3" (click)="filterCompanies(company.slug)">{{ company.name }}</button>
-            }
+          @for (industry of list_of_industries; track $index) {
+          @if (activeCategory === industry.slug) {
+          <button mat-flat-button color="primary" class="me-2 mb-3" (click)="filterCompanies(industry.slug)">{{
+            industry.name }}</button>
+          } @else {
+          <button mat-stroked-button color="primary" class="me-2 mb-3" (click)="filterCompanies(industry.slug)">{{
+            industry.name }}</button>
+          }
           }
         </section>
       </div>
@@ -56,7 +78,7 @@
   </div>
 </div>
 @if (busy) {
-  <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+<mat-progress-bar mode="indeterminate"></mat-progress-bar>
 }
 <mat-tab-nav-panel #tabPanel></mat-tab-nav-panel>
 <mat-drawer-container style="height: 100vh;">

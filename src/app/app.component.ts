@@ -6,11 +6,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { CardComponent } from './card/card.component';
 import { Subject, debounceTime } from 'rxjs';
 import { NgForm } from '@angular/forms';
-import {
-  MatBottomSheet,
-  MatBottomSheetModule,
-  MatBottomSheetRef,
-} from '@angular/material/bottom-sheet';
+import {  MatBottomSheet} from '@angular/material/bottom-sheet';
 import { AboutDialogComponent } from './partials/about-dialog/about-dialog.component';
 
 @Component({
@@ -118,6 +114,10 @@ export class AppComponent {
 
   onSubmit(form: NgForm) {
     this.searchTerm$.next(form.value.searchTerm);
+  }
+
+  onCategoryChange(categorySlug: string) {
+    this.filterCompanies(categorySlug);
   }
 
   /**
