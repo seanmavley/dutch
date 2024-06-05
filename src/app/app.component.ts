@@ -1,15 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { SharedModule } from './shared/shared.module';
 import { DutchService } from './services/dutch.service';
 import { iCompany, iIndustry } from './models/dutch.interface';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { CardComponent } from './card/card.component';
-import { Subject, debounceTime } from 'rxjs';
+import { Subject, debounceTime, distinctUntilChanged } from 'rxjs';
 import { NgForm } from '@angular/forms';
-import {
-  MatBottomSheetModule,
-  MatBottomSheet,
-} from '@angular/material/bottom-sheet';
+import { MatBottomSheetModule, MatBottomSheet } from '@angular/material/bottom-sheet';
 import { AboutDialogComponent } from './partials/about-dialog/about-dialog.component';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { UtilsService } from './services/utils.service';
@@ -19,8 +16,9 @@ import { UtilsService } from './services/utils.service';
   standalone: true,
   imports: [SharedModule, MatBottomSheetModule, CardComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
-  providers: [MatBottomSheet] 
+  styleUrls: ['./app.component.scss'],
+  providers: [MatBottomSheet],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent {
 
@@ -56,76 +54,58 @@ export class AppComponent {
 
   ngOnInit() {
     if (!this.is_done) {
-      this.snack.open('Loading latest update from Github', 'Ok', {
-        duration: 10000,
-      });
+      this.snack.open('Loading latest update from Github', 'Ok', { duration: 10000 });
       this.loadJson();
     } else {
-      this.snack.open('Loading locally stored data', 'Ok', {
-        duration: 10000,
-      });
+      this.snack.open('Loading locally stored data', 'Ok', { duration: 10000 });
       this.loadLocal();
     }
 
     // Filtering via company name
     this.searchTerm$
-      .pipe(debounceTime(500))
+      .pipe(
+        debounceTime(500),
+        distinctUntilChanged()
+      )
       .subscribe((searchTerm) => {
         this.filterCompanies(this.activeCategory, searchTerm);
       });
 
-      this.breakpointObserver
+    this.breakpointObserver
       .observe([Breakpoints.Handset])
       .subscribe(result => {
         this.isMobile = result.matches;
       });
   }
 
-  // TODO: Implement logic that checks github file
-  // perhaps every 2 weeks to compare .json file timestamp to know when to pull
-
-  /**
-   * Refresh data by loading file on server
-   */
   refresh() {
-    localStorage.clear()
-    window.location.reload()
+    localStorage.clear();
+    window.location.reload();
   }
 
-  /**
-   * Load data from local storage
-   */
   loadLocal() {
     this.busy = true;
     const data = localStorage.getItem('data');
     if (data) {
       this.list_of_companies = JSON.parse(data);
-      console.log(this.list_of_companies)
+      this.filteredCompanies = this.list_of_companies;
       this.busy = false;
     }
   }
 
-  /**
-   * Load Json from an on-disk or remote file
-   */
   loadJson() {
     this.busy = true;
     this.dutchService.loadJson('assets/orgs.json')
       .subscribe((data: iCompany[]) => {
         this.list_of_companies = data;
-        this.snack.open('Updated successfully', 'Ok', {
-          duration: 5000,
-        });
-        this.busy = false
+        this.filteredCompanies = data;
+        this.snack.open('Loaded data successfully', 'Ok', { duration: 5000 });
+        this.busy = false;
       });
   }
 
-  /**
-   * Select Company
-   * @param company iCompany the company to select and send to the card component
-   */
   selectCompany(company: iCompany) {
-    this.selected_company = company
+    this.selected_company = company;
   }
 
   onSubmit(form: NgForm) {
@@ -136,10 +116,6 @@ export class AppComponent {
     this.filterCompanies(categorySlug);
   }
 
-  /**
-   * Filter Companies
-   * @param categorySlug string the category on which to filter
-   */
   filterCompanies(categorySlug: string = 'all', searchTerm: string = '') {
     this.activeCategory = categorySlug;
 
@@ -152,20 +128,11 @@ export class AppComponent {
     );
   }
 
-  /**
-   * Open about bottomsheet
-   */
   openAboutSheet() {
-    this._bottomSheet.open(AboutDialogComponent)
+    this._bottomSheet.open(AboutDialogComponent);
   }
 
-  /**
-   * Open company card
-   */
   openCompanyCard(org: iCompany) {
-    console.log('sending data ', org)
-    this._bottomSheet.open(CardComponent, {
-      data: org
-    })
+    this._bottomSheet.open(CardComponent, { data: org });
   }
 }
