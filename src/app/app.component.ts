@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ChangeDetectionStrategy, ViewChild, ElementRef, HostListener } from '@angular/core';
 import { SharedModule } from './shared/shared.module';
 import { DutchService } from './services/dutch.service';
 import { iCompany, iCategory } from './models/dutch.interface';
@@ -21,6 +21,14 @@ import { UtilsService } from './services/utils.service';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent {
+
+  @ViewChild('scrollupButton') scrollupButton!: ElementRef;
+  isButtonVisible = false;
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    this.isButtonVisible = window.scrollY > 200; 
+  }
 
   private searchTerm$ = new Subject<string>();
 
@@ -137,5 +145,9 @@ export class AppComponent {
 
   openCompanyCard(org: iCompany) {
     this._bottomSheet.open(CardComponent, { data: org });
+  }
+
+  scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 }

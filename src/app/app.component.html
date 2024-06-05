@@ -124,3 +124,6 @@
     </div>
   </mat-drawer-content>
 </mat-drawer-container>
+<button #scrollupButton mat-fab class="scrollup" *ngIf="isButtonVisible" (click)="scrollToTop()">
+  <mat-icon>arrow_upward</mat-icon>
+</button>
