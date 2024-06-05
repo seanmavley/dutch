@@ -1,14 +1,11 @@
 <mat-toolbar class="">
-  <button mat-icon-button>
-    <mat-icon>menu</mat-icon>
-  </button>
-  <span>Dutch (app is WIP)</span>
+  <span>Dutch</span>
   <span class="example-spacer"></span>
   <button mat-icon-button (click)="refresh()" matTooltip="Click on this reload data from Github">
     <mat-icon>refresh</mat-icon>
   </button>
   <button mat-icon-button (click)="openAboutSheet()" matTooltip="About this website">
-    <mat-icon>help</mat-icon>
+    <mat-icon>info</mat-icon>
   </button>
   <a title="Origin data" mat-icon-button matTooltip="The source of the data on this website"
     href="https://ind.nl/en/public-register-recognised-sponsors/public-register-regular-labour-and-highly-skilled-migrants"
@@ -20,23 +17,28 @@
     <mat-icon>code</mat-icon>
   </a>
 </mat-toolbar>
-<div style="background-color: #810081;" class="py-md-4">
+<div style="background-color: #810081;" class="py-md-2">
   <div class="container-fluid">
     <div class="row justify-content-center">
       <div class="col-md-4">
         <form class="pt-4" #searchForm="ngForm" (input)="onSubmit(searchForm)">
           <mat-form-field appearance="outline" class="full-width">
             <input matInput placeholder="Search company name" name="searchTerm" ngModel>
+            @if (searchForm.controls["searchTerm"] && searchForm.controls["searchTerm"].value) {
+            <button matSuffix mat-icon-button aria-label="Clear" (click)="searchForm.reset(); filterCompanies()">
+              <mat-icon>close</mat-icon>
+            </button>
+            }
           </mat-form-field>
         </form>
       </div>
     </div>
-    <mat-divider class="mb-4"></mat-divider>
+    <mat-divider class="mb-4 d-none d-md-block"></mat-divider>
     <div class="row justify-content-center d-block d-md-none">
       <div class="col-sm-12">
         <section class="text-center">
           <mat-form-field class="full-width" appearance="outline">
-            <mat-label>Industry</mat-label>
+            <mat-label>Filter by industry</mat-label>
             <mat-select (selectionChange)="onCategoryChange($event.value)">
               <mat-option value="all">All</mat-option>
               <ng-container *ngFor="let category of list_of_categories">
@@ -56,14 +58,18 @@
           <!-- So in 2024, are we saying there's NO better way to do this in Angular 18+ using Angular Material? -->
           <!-- I've tried different ways, such as swapping out the attributes via [attr.mat-flat-button] or [class.mat-flat-button] -->
           <!-- Anyway, below is verbose, but works -->
-          <button mat-flat-button *ngIf="activeCategory === 'all'" color="primary" class="me-2 mb-3" (click)="filterCompanies()">All</button>
-          <button mat-stroked-button *ngIf="activeCategory !== 'all'" color="primary" class="me-2 mb-3" (click)="filterCompanies()">All</button>
+          <button mat-flat-button *ngIf="activeCategory === 'all'" color="primary" class="me-2 mb-3"
+            (click)="filterCompanies()">All</button>
+          <button mat-stroked-button *ngIf="activeCategory !== 'all'" color="primary" class="me-2 mb-3"
+            (click)="filterCompanies()">All</button>
 
           <ng-container *ngFor="let category of list_of_categories">
-            <button mat-flat-button *ngIf="activeCategory === category.category.slug" color="primary" class="me-2 mb-3" (click)="filterCompanies(category.category.slug)">
+            <button mat-flat-button *ngIf="activeCategory === category.category.slug" color="primary" class="me-2 mb-3"
+              (click)="filterCompanies(category.category.slug)">
               {{ category.category.name }}
             </button>
-            <button mat-stroked-button *ngIf="activeCategory !== category.category.slug" color="primary" class="me-2 mb-3" (click)="filterCompanies(category.category.slug)">
+            <button mat-stroked-button *ngIf="activeCategory !== category.category.slug" color="primary"
+              class="me-2 mb-3" (click)="filterCompanies(category.category.slug)">
               {{ category.category.name }}
             </button>
           </ng-container>
@@ -77,32 +83,38 @@
 <mat-drawer-container style="height: 100vh;">
   <mat-drawer #drawer mode="side" opened="true" class="d-none d-md-block">
     <mat-toolbar>
-      <span>Companies</span>
+      <span>Companies ({{ filteredCompanies.length }})</span>
     </mat-toolbar>
     <mat-nav-list>
-      <ng-container *ngFor="let company of filteredCompanies">
-        <a mat-list-item (click)="selectCompany(company)">
-          <mat-icon matListItemIcon>arrow_right</mat-icon>{{ company.name }}
-        </a>
-      </ng-container>
-      <a *ngIf="filteredCompanies?.length === 0" mat-list-item>No Companies. Please try another search or category</a>
+      @for (company of filteredCompanies; track $index) {
+      <a mat-list-item (click)="selectCompany(company)">
+        <mat-icon matListItemIcon>arrow_right</mat-icon>{{ company.name }}
+      </a>
+      }
+      @if (filteredCompanies.length === 0) {
+      <a mat-list-item>No Companies. Please try another search or category</a>
+      }
     </mat-nav-list>
   </mat-drawer>
 
   <mat-drawer-content>
-    <div class="container mt-5 d-block d-md-none">
+    <!-- Shows on Mobile devices -->
+    <div class="container mt-4 d-block d-md-none">
+      <div class="ms-3">Companies ({{ filteredCompanies.length }})</div>
       <div class="row justify-content-center">
         <mat-nav-list>
-          <ng-container *ngFor="let company of filteredCompanies">
-            <a mat-list-item (click)="openCompanyCard(company)">
-              <mat-icon matListItemIcon>arrow_right</mat-icon>{{ company.name }}
-            </a>
-          </ng-container>
-          <a *ngIf="filteredCompanies?.length === 0" mat-list-item>No Companies. Please try another search or category</a>
+          @for (company of filteredCompanies; track $index) {
+          <a mat-list-item (click)="openCompanyCard(company)">
+            <mat-icon matListItemIcon>arrow_right</mat-icon>{{ company.name }}
+          </a>
+          }
+          <a *ngIf="filteredCompanies?.length === 0" mat-list-item>No Companies. Please try another search or
+            category</a>
         </mat-nav-list>
       </div>
     </div>
 
+    <!-- Shows on Desktop devices -->
     <div class="container mt-5 d-none d-md-block">
       <div class="row justify-content-center">
         <div class="col-md-8">

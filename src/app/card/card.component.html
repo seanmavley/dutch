@@ -1,20 +1,24 @@
 @if (company) {
-  <mat-card class="example-card">
-    <mat-card-header>
-      <mat-card-subtitle>KvK - {{company.kvk}} | {{ getIndustryName(company.category) }} </mat-card-subtitle>
-      <mat-card-title>{{ company.name }}</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <p class="lead">{{ company.description }}</p>
-      <mat-divider></mat-divider>
-    </mat-card-content>
-    <mat-card-actions>
-      <a [href]="company.website" target="_blank" mat-button>Company website</a>
-      <a [href]="url"  target="_blank" mat-button>Websearch</a>
-    </mat-card-actions>
-  </mat-card>
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-subtitle>KvK - {{company.kvk}} | {{ getIndustryName(company.category) }} </mat-card-subtitle>
+    <mat-card-title>{{ company.name }}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <p class="lead">{{ company.description }}</p>
+    <mat-divider></mat-divider>
+  </mat-card-content>
+  <mat-card-actions>
+    <a [href]="company.website" target="_blank" mat-button>Company website</a>
+    <a [href]="url" target="_blank" mat-button>Web search</a>
+  </mat-card-actions>
+</mat-card>
 } @else {
-  <mat-card>
-    <mat-card-content>Nothing to show. Click on a company to view details</mat-card-content>
-  </mat-card>
+<mat-card>
+  <mat-card-content class="text-center p-4">
+    <h4>
+      Nothing to show. <br>Click on a company to view details
+    </h4>
+  </mat-card-content>
+</mat-card>
 }
