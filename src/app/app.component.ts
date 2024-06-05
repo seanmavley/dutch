@@ -12,6 +12,7 @@ import {
 } from '@angular/material/bottom-sheet';
 import { AboutDialogComponent } from './partials/about-dialog/about-dialog.component';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { UtilsService } from './services/utils.service';
 
 @Component({
   selector: 'app-root',
@@ -33,14 +34,7 @@ export class AppComponent {
   isMobile: boolean = false;
 
   // TODO: find somewhere better to keep this?
-  list_of_industries: iIndustry[] = [
-    { "slug": "mi", "name": "Manufacturing and Industrials", "id": 2 },
-    { "slug": "eu", "name": "Energy and Utilities", "id": 3 },
-    { "slug": "cgr", "name": "Consumer Goods and Retail", "id": 4 },
-    { "slug": "fre", "name": "Finance and Real Estate", "id": 5 },
-    { "slug": "hp", "name": "Healthcare and Pharmaceuticals", "id": 6 },
-    { "slug": "tt", "name": "Technology and Telecommunications", "id": 7 }
-  ]
+  list_of_industries: iIndustry[] = this.utils.getIndustryList();
 
   list_of_companies!: iCompany[];
 
@@ -48,7 +42,9 @@ export class AppComponent {
     private _bottomSheet: MatBottomSheet,
     private dutchService: DutchService,
     private breakpointObserver: BreakpointObserver,
-    private snack: MatSnackBar) {
+    private snack: MatSnackBar,
+    private utils: UtilsService
+  ) {
     this.loadLocal();
   }
 
