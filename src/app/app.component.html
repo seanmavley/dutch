@@ -12,9 +12,9 @@
   </button>
 </mat-toolbar>
 <div style="background-color: #810081;" class="py-4">
-  <div class="container">
+  <div class="container-fluid">
     <div class="row justify-content-center">
-      <div class="col-md-6">
+      <div class="col-md-4">
         <form class="pt-4" #searchForm="ngForm" (input)="onSubmit(searchForm)">
           <mat-form-field appearance="outline" class="full-width">
             <input matInput placeholder="Search" name="searchTerm" ngModel>
@@ -22,7 +22,7 @@
         </form>
       </div>
     </div>
-    <mat-divider class="mb-3"></mat-divider>
+    <mat-divider class="mb-4"></mat-divider>
     <div class="row justify-content-center">
       <div class="col-sm-12">
         <section class="text-center">
