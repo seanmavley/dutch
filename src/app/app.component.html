@@ -39,11 +39,11 @@
             <mat-label>Industry</mat-label>
             <mat-select (selectionChange)="onCategoryChange($event.value)">
               <mat-option value="all">All</mat-option>
-              @for (industry of list_of_industries; track $index) {
-              <mat-option [value]="industry.slug">
-                {{ industry.name }}
-              </mat-option>
-              }
+              <ng-container *ngFor="let category of list_of_categories">
+                <mat-option [value]="category.category.slug">
+                  {{ category.category.name }}
+                </mat-option>
+              </ng-container>
             </mat-select>
           </mat-form-field>
         </section>
@@ -56,60 +56,49 @@
           <!-- So in 2024, are we saying there's NO better way to do this in Angular 18+ using Angular Material? -->
           <!-- I've tried different ways, such as swapping out the attributes via [attr.mat-flat-button] or [class.mat-flat-button] -->
           <!-- Anyway, below is verbose, but works -->
-          @if (activeCategory === 'all') {
-          <button mat-flat-button color="primary" class="me-2 mb-3" (click)="filterCompanies()">All</button>
-          } @else {
-          <button mat-stroked-button color="primary" class="me-2 mb-3" (click)="filterCompanies()">All</button>
-          }
+          <button mat-flat-button *ngIf="activeCategory === 'all'" color="primary" class="me-2 mb-3" (click)="filterCompanies()">All</button>
+          <button mat-stroked-button *ngIf="activeCategory !== 'all'" color="primary" class="me-2 mb-3" (click)="filterCompanies()">All</button>
 
-
-          @for (industry of list_of_industries; track $index) {
-          @if (activeCategory === industry.slug) {
-          <button mat-flat-button color="primary" class="me-2 mb-3" (click)="filterCompanies(industry.slug)">{{
-            industry.name }}</button>
-          } @else {
-          <button mat-stroked-button color="primary" class="me-2 mb-3" (click)="filterCompanies(industry.slug)">{{
-            industry.name }}</button>
-          }
-          }
+          <ng-container *ngFor="let category of list_of_categories">
+            <button mat-flat-button *ngIf="activeCategory === category.category.slug" color="primary" class="me-2 mb-3" (click)="filterCompanies(category.category.slug)">
+              {{ category.category.name }}
+            </button>
+            <button mat-stroked-button *ngIf="activeCategory !== category.category.slug" color="primary" class="me-2 mb-3" (click)="filterCompanies(category.category.slug)">
+              {{ category.category.name }}
+            </button>
+          </ng-container>
         </section>
       </div>
     </div>
   </div>
 </div>
-@if (busy) {
-<mat-progress-bar mode="indeterminate"></mat-progress-bar>
-}
+<mat-progress-bar *ngIf="busy" mode="indeterminate"></mat-progress-bar>
 <mat-tab-nav-panel #tabPanel></mat-tab-nav-panel>
 <mat-drawer-container style="height: 100vh;">
-  <!-- In the Drawer -->
   <mat-drawer #drawer mode="side" opened="true" class="d-none d-md-block">
-    <!-- Mobile Toolbar -->
     <mat-toolbar>
-      <span>Companies </span>
+      <span>Companies</span>
     </mat-toolbar>
     <mat-nav-list>
-      @for (org of filteredCompanies || list_of_companies; track $index) {
-      <a mat-list-item (click)="selectCompany(org)">
-        <mat-icon matListItemIcon>arrow_right</mat-icon>{{ org.name }}
-      </a>
-      }
+      <ng-container *ngFor="let company of filteredCompanies">
+        <a mat-list-item (click)="selectCompany(company)">
+          <mat-icon matListItemIcon>arrow_right</mat-icon>{{ company.name }}
+        </a>
+      </ng-container>
       <a *ngIf="filteredCompanies?.length === 0" mat-list-item>No Companies. Please try another search or category</a>
     </mat-nav-list>
   </mat-drawer>
 
-  <!-- In the Content -->
   <mat-drawer-content>
     <div class="container mt-5 d-block d-md-none">
       <div class="row justify-content-center">
         <mat-nav-list>
-          @for (org of filteredCompanies || list_of_companies; track $index) {
-          <a mat-list-item (click)="openCompanyCard(org)">
-            <mat-icon matListItemIcon>arrow_right</mat-icon>{{ org.name }}
-          </a>
-          }
-          <a *ngIf="filteredCompanies?.length === 0" mat-list-item>No Companies. Please try another search or
-            category</a>
+          <ng-container *ngFor="let company of filteredCompanies">
+            <a mat-list-item (click)="openCompanyCard(company)">
+              <mat-icon matListItemIcon>arrow_right</mat-icon>{{ company.name }}
+            </a>
+          </ng-container>
+          <a *ngIf="filteredCompanies?.length === 0" mat-list-item>No Companies. Please try another search or category</a>
         </mat-nav-list>
       </div>
     </div>

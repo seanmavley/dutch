@@ -1,7 +1,7 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { SharedModule } from './shared/shared.module';
 import { DutchService } from './services/dutch.service';
-import { iCompany, iIndustry } from './models/dutch.interface';
+import { iCompany, iCategory } from './models/dutch.interface';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { CardComponent } from './card/card.component';
 import { Subject, debounceTime, distinctUntilChanged } from 'rxjs';
@@ -31,10 +31,7 @@ export class AppComponent {
   activeCategory: string = 'all';
   isMobile: boolean = false;
 
-  // TODO: find somewhere better to keep this?
-  list_of_industries: iIndustry[] = this.utils.getIndustryList();
-
-  list_of_companies!: iCompany[];
+  list_of_categories: iCategory[] = [];
 
   constructor(
     private _bottomSheet: MatBottomSheet,
@@ -47,8 +44,6 @@ export class AppComponent {
   }
 
   ngAfterViewInit() {
-    // use this to mark whether to load from remote or local
-    // user explicitly clicks the refresh to load from remote AFTER first time load
     this.is_done = localStorage.getItem('task') === 'done' ? true : false;
   }
 
@@ -61,7 +56,6 @@ export class AppComponent {
       this.loadLocal();
     }
 
-    // Filtering via company name
     this.searchTerm$
       .pipe(
         debounceTime(500),
@@ -87,8 +81,8 @@ export class AppComponent {
     this.busy = true;
     const data = localStorage.getItem('data');
     if (data) {
-      this.list_of_companies = JSON.parse(data);
-      this.filteredCompanies = this.list_of_companies;
+      this.list_of_categories = JSON.parse(data);
+      this.updateFilteredCompanies();
       this.busy = false;
     }
   }
@@ -96,9 +90,9 @@ export class AppComponent {
   loadJson() {
     this.busy = true;
     this.dutchService.loadJson('assets/orgs.json')
-      .subscribe((data: iCompany[]) => {
-        this.list_of_companies = data;
-        this.filteredCompanies = data;
+      .subscribe((data: iCategory[]) => {
+        this.list_of_categories = data;
+        this.updateFilteredCompanies();
         this.snack.open('Loaded data successfully', 'Ok', { duration: 5000 });
         this.busy = false;
       });
@@ -113,19 +107,28 @@ export class AppComponent {
   }
 
   onCategoryChange(categorySlug: string) {
-    this.filterCompanies(categorySlug);
+    this.activeCategory = categorySlug;
+    this.updateFilteredCompanies();
+  }
+
+  updateFilteredCompanies(searchTerm: string = '') {
+    if (this.activeCategory === 'all') {
+      this.filteredCompanies = this.list_of_categories.flatMap(category => category.category.companies);
+    } else {
+      const category = this.list_of_categories.find(cat => cat.category.slug === this.activeCategory);
+      this.filteredCompanies = category ? category.category.companies : [];
+    }
+
+    if (searchTerm) {
+      this.filteredCompanies = this.filteredCompanies.filter(company =>
+        company.name.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+    }
   }
 
   filterCompanies(categorySlug: string = 'all', searchTerm: string = '') {
     this.activeCategory = categorySlug;
-
-    const filteredByCategory = categorySlug === 'all'
-      ? this.list_of_companies
-      : this.list_of_companies.filter((company) => company.category === categorySlug);
-
-    this.filteredCompanies = filteredByCategory.filter(company =>
-      company.name.toLowerCase().includes(searchTerm.toLowerCase())
-    );
+    this.updateFilteredCompanies(searchTerm);
   }
 
   openAboutSheet() {

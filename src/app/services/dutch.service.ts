@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, tap } from 'rxjs';
-import { iCompany } from '../models/dutch.interface';
+import { iCategory } from '../models/dutch.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -15,8 +15,8 @@ export class DutchService {
    * @param url string pointing to the location of the resource
    * @returns Array of company objects
    */
-  loadJson(url: string) {
-    return this.http.get<iCompany[]>(url)
+  loadJson(url: string): Observable<iCategory[]>{
+    return this.http.get<iCategory[]>(url)
       .pipe(
         tap(data => {
           localStorage.setItem('data', JSON.stringify(data))
@@ -28,3 +28,4 @@ export class DutchService {
   }
 
 }
+
