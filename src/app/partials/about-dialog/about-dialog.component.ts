@@ -1,5 +1,4 @@
 import { Component, Inject } from '@angular/core';
-import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { SharedModule } from '../../shared/shared.module';
 
 @Component({
@@ -11,12 +10,9 @@ import { SharedModule } from '../../shared/shared.module';
 })
 export class AboutDialogComponent {
 
-  constructor(@Inject(MAT_DIALOG_DATA) public data: any){}
+  constructor() { }
 
   ngOnInit(): void {
-    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-    //Add 'implements OnInit' to the class.
-    console.log(this.data);
   }
 
 }

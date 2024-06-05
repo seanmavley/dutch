@@ -6,16 +6,20 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { CardComponent } from './card/card.component';
 import { Subject, debounceTime } from 'rxjs';
 import { NgForm } from '@angular/forms';
-import { MatBottomSheet } from '@angular/material/bottom-sheet';
+import {
+  MatBottomSheetModule,
+  MatBottomSheet,
+} from '@angular/material/bottom-sheet';
 import { AboutDialogComponent } from './partials/about-dialog/about-dialog.component';
-import { MatDialog } from '@angular/material/dialog';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [SharedModule, CardComponent],
+  imports: [SharedModule, MatBottomSheetModule, CardComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
+  providers: [MatBottomSheet] 
 })
 export class AppComponent {
 
@@ -26,6 +30,7 @@ export class AppComponent {
   selected_company!: iCompany;
   filteredCompanies!: iCompany[];
   activeCategory: string = 'all';
+  isMobile: boolean = false;
 
   // TODO: find somewhere better to keep this?
   list_of_industries: iIndustry[] = [
@@ -39,7 +44,11 @@ export class AppComponent {
 
   list_of_companies!: iCompany[];
 
-  constructor(private dutchService: DutchService, private snack: MatSnackBar, private _bottomSheet: MatBottomSheet, private _dialog: MatDialog) {
+  constructor(
+    private _bottomSheet: MatBottomSheet,
+    private dutchService: DutchService,
+    private breakpointObserver: BreakpointObserver,
+    private snack: MatSnackBar) {
     this.loadLocal();
   }
 
@@ -67,6 +76,12 @@ export class AppComponent {
       .pipe(debounceTime(500))
       .subscribe((searchTerm) => {
         this.filterCompanies(this.activeCategory, searchTerm);
+      });
+
+      this.breakpointObserver
+      .observe([Breakpoints.Handset])
+      .subscribe(result => {
+        this.isMobile = result.matches;
       });
   }
 
@@ -152,7 +167,8 @@ export class AppComponent {
    * Open company card
    */
   openCompanyCard(org: iCompany) {
-    this._dialog.open(CardComponent, {
+    console.log('sending data ', org)
+    this._bottomSheet.open(CardComponent, {
       data: org
     })
   }

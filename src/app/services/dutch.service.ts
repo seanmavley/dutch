@@ -19,7 +19,6 @@ export class DutchService {
     return this.http.get<iCompany[]>(url)
       .pipe(
         tap(data => {
-          console.log(JSON.stringify(data))
           localStorage.setItem('data', JSON.stringify(data))
           localStorage.setItem('task', 'done')
           localStorage.setItem('last_updated', new Date().toISOString())

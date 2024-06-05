@@ -1,11 +1,13 @@
 import { Component, Inject, Input } from '@angular/core';
 import { iCompany, iIndustry } from '../models/dutch.interface';
 import { SharedModule } from '../shared/shared.module';
+import { MAT_BOTTOM_SHEET_DATA } from '@angular/material/bottom-sheet';
 
 @Component({
   selector: 'app-card',
   standalone: true,
   imports: [SharedModule],
+  providers: [{ provide: MAT_BOTTOM_SHEET_DATA, useValue: {} }],
   templateUrl: './card.component.html',
   styleUrl: './card.component.scss'
 })
@@ -13,6 +15,11 @@ export class CardComponent {
 
   @Input() company!: iCompany;
   url!: string;
+
+  constructor(@Inject(MAT_BOTTOM_SHEET_DATA) public data: any) {
+    console.log(data)
+    this.company = data;
+  }
 
 
   // TODO: Find somewhere to put this and access from
@@ -27,6 +34,7 @@ export class CardComponent {
   ]
 
   ngOnInit(): void {
+    console.log(this.data)
   }
 
   ngOnChanges(): void {
