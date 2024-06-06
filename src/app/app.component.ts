@@ -51,11 +51,10 @@ export class AppComponent {
     this.loadLocal();
   }
 
-  ngAfterViewInit() {
-    this.is_done = localStorage.getItem('task') === 'done' ? true : false;
-  }
-
+  
   ngOnInit() {
+    this.is_done = localStorage.getItem('task') === 'done' ? true : false;
+    
     if (!this.is_done) {
       this.snack.open('Loading latest update from Github', 'Ok', { duration: 10000 });
       this.loadJson();

@@ -1,6 +1,23 @@
 <mat-toolbar class="">
   <span>Dutch</span>
   <span class="example-spacer"></span>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <form class="pt-4" #searchForm="ngForm" (input)="onSubmit(searchForm)">
+          <mat-form-field appearance="outline" class="full-width">
+            <input matInput placeholder="Search company name" name="searchTerm" ngModel>
+            @if (searchForm.controls["searchTerm"] && searchForm.controls["searchTerm"].value) {
+            <button matSuffix mat-icon-button aria-label="Clear" (click)="searchForm.reset(); filterCompanies()">
+              <mat-icon>close</mat-icon>
+            </button>
+            }
+          </mat-form-field>
+        </form>
+      </div>
+    </div>
+  </div>
+  <span class="example-spacer"></span>
   <button mat-icon-button (click)="refresh()" matTooltip="Click on this reload data from Github">
     <mat-icon>refresh</mat-icon>
   </button>
@@ -19,21 +36,7 @@
 </mat-toolbar>
 <div style="background-color: #810081;" class="py-md-2">
   <div class="container-fluid">
-    <div class="row justify-content-center">
-      <div class="col-md-4">
-        <form class="pt-4" #searchForm="ngForm" (input)="onSubmit(searchForm)">
-          <mat-form-field appearance="outline" class="full-width">
-            <input matInput placeholder="Search company name" name="searchTerm" ngModel>
-            @if (searchForm.controls["searchTerm"] && searchForm.controls["searchTerm"].value) {
-            <button matSuffix mat-icon-button aria-label="Clear" (click)="searchForm.reset(); filterCompanies()">
-              <mat-icon>close</mat-icon>
-            </button>
-            }
-          </mat-form-field>
-        </form>
-      </div>
-    </div>
-    <mat-divider class="mb-4 d-none d-md-block"></mat-divider>
+    <!-- Show on Mobile devices -->
     <div class="row justify-content-center d-block d-md-none">
       <div class="col-sm-12">
         <section class="text-center">
@@ -51,7 +54,8 @@
         </section>
       </div>
     </div>
-    <div class="row justify-content-center d-none d-md-block">
+    <!-- Show on Desktop devices -->
+    <div class="row justify-content-center d-none d-md-block mt-3">
       <div class="col-sm-12">
         <section class="text-center">
 
@@ -80,19 +84,21 @@
 </div>
 <mat-progress-bar *ngIf="busy" mode="indeterminate"></mat-progress-bar>
 <mat-tab-nav-panel #tabPanel></mat-tab-nav-panel>
-<mat-drawer-container style="height: 100vh;">
+<mat-drawer-container>
   <mat-drawer #drawer mode="side" opened="true" class="d-none d-md-block">
     <mat-toolbar>
       <span>Companies ({{ filteredCompanies.length }})</span>
     </mat-toolbar>
     <mat-nav-list>
-      @for (company of filteredCompanies; track $index) {
-      <a mat-list-item (click)="selectCompany(company)">
-        <mat-icon matListItemIcon>arrow_right</mat-icon>{{ company.name }}
-      </a>
-      }
+      <cdk-virtual-scroll-viewport appendOnly itemSize="50" class="example-viewport">
+
+        <a mat-list-item (click)="selectCompany(company)" *cdkVirtualFor="let company of filteredCompanies">
+          <mat-icon matListItemIcon>arrow_right</mat-icon>{{ company.name }}
+        </a>
+      
+      </cdk-virtual-scroll-viewport>
       @if (filteredCompanies.length === 0) {
-      <a mat-list-item>No Companies. Please try another search or category</a>
+        <a mat-list-item>No Companies. Please try another search or category</a>
       }
     </mat-nav-list>
   </mat-drawer>

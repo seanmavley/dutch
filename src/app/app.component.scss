@@ -2,6 +2,10 @@
   flex: 1 1 auto;
 }
 
+mat-drawer-container {
+  height: 85vh;
+}
+
 .mat-toolbar {
   box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
@@ -15,4 +19,36 @@
   bottom: 20px;
   right: 20px;
   z-index: 100;
+}
+
+.example-viewport {
+  height: 75vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.example-item {
+  height: 50px;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #d6d6d6 #2a1e1e;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #2a1e1e;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #d6d6d6;
+  border-radius: 10px;
+  border: 3px none #7875ff;
 }

@@ -17,6 +17,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatSelectModule } from '@angular/material/select';
 import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
+import { ScrollingModule } from '@angular/cdk/scrolling';
 
 @NgModule({
   declarations: [],
@@ -39,7 +40,8 @@ import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
     MatSnackBarModule,
     MatTooltipModule,
     MatSelectModule,
-    MatBottomSheetModule
+    MatBottomSheetModule,
+    ScrollingModule
   ],
   exports: [
     CommonModule,
@@ -60,7 +62,8 @@ import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
     MatSnackBarModule,
     MatTooltipModule,
     MatSelectModule,
-    MatBottomSheetModule
+    MatBottomSheetModule,
+    ScrollingModule
   ]
 })
 export class SharedModule { }
