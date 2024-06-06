@@ -2,6 +2,23 @@ const axios = require('axios');
 const fs = require('fs').promises;
 const path = require('path');
 
+// Define the categories
+const categories = [
+  { "slug": "mi", "name": "Manufacturing and Industrials" },
+  { "slug": "eu", "name": "Energy and Utilities" },
+  { "slug": "cgr", "name": "Consumer Goods and Retail" },
+  { "slug": "fre", "name": "Finance and Real Estate" },
+  { "slug": "hp", "name": "Healthcare and Pharmaceuticals" },
+  { "slug": "tt", "name": "Technology and Telecommunications" },
+  { "slug": "ot", "name": "Other" }
+];
+
+// Function to clean up category
+function cleanCategory(rawCategory) {
+  const cleaned = categories.find(cat => rawCategory.includes(cat.slug));
+  return cleaned ? cleaned.slug : "ot";
+}
+
 // Function to read the input JSON file
 async function readInputFile(filePath) {
   try {
@@ -15,10 +32,36 @@ async function readInputFile(filePath) {
 
 // Function to append data to the output JSON file
 async function appendToOutputFile(filePath, data) {
+  let fileData;
   try {
-    const fileData = await fs.readFile(filePath, 'utf8');
-    const jsonArray = JSON.parse(fileData);
-    jsonArray.push(data);
+    fileData = await fs.readFile(filePath, 'utf8');
+  } catch (error) {
+    // If file doesn't exist, initialize with an empty array
+    fileData = '[]';
+  }
+
+  let jsonArray = JSON.parse(fileData);
+
+  // Find or create the category section
+  let categorySection = jsonArray.find(section => section.category.slug === data.category);
+
+  if (!categorySection) {
+    const categoryInfo = categories.find(cat => cat.slug === data.category);
+    categorySection = {
+      category: {
+        name: categoryInfo.name,
+        slug: categoryInfo.slug,
+        companies: []
+      }
+    };
+    jsonArray.push(categorySection);
+  }
+
+  // Append the new company data
+  categorySection.category.companies.push(data);
+
+  // Write the updated array back to the file
+  try {
     await fs.writeFile(filePath, JSON.stringify(jsonArray, null, 2));
   } catch (error) {
     console.error('Error writing to output file:', error);
@@ -60,7 +103,6 @@ async function fetchCompanyInfo(company) {
   }
   `;
 
-
   const payload = {
     model: 'llama3',
     prompt: prompt,
@@ -71,6 +113,9 @@ async function fetchCompanyInfo(company) {
   try {
     const response = await axios.post('http://localhost:11434/api/generate', payload);
     let parsedResponse = JSON.parse(response.data.response);
+
+    // Clean up category
+    parsedResponse.category = cleanCategory(parsedResponse.category);
 
     parsedResponse.id = company.id;
     parsedResponse.name = company.name;

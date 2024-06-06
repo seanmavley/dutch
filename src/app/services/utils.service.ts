@@ -9,12 +9,13 @@ export class UtilsService {
 
   getIndustryList() {
     return [
-      { "slug": "mi", "name": "Manufacturing and Industrials", "id": 1 },
-      { "slug": "eu", "name": "Energy and Utilities", "id": 2 },
-      { "slug": "cgr", "name": "Consumer Goods and Retail", "id": 3 },
-      { "slug": "fre", "name": "Finance and Real Estate", "id": 4 },
-      { "slug": "hp", "name": "Healthcare and Pharmaceuticals", "id": 5 },
-      { "slug": "tt", "name": "Technology and Telecommunications", "id": 6 }
+      { "category": "mi", "name": "Manufacturing and Industrials" },
+      { "category": "eu", "name": "Energy and Utilities" },
+      { "category": "cgr", "name": "Consumer Goods and Retail" },
+      { "category": "fre", "name": "Finance and Real Estate" },
+      { "category": "hp", "name": "Healthcare and Pharmaceuticals" },
+      { "category": "tt", "name": "Technology and Telecommunications" },
+      { "category": "ot", "name": "Other" }
     ]
   }
 }
