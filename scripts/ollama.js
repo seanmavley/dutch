@@ -15,6 +15,9 @@ const categories = [
 
 // Function to clean up category
 function cleanCategory(rawCategory) {
+  if (typeof rawCategory !== 'string') {
+    return "ot";
+  }
   const cleaned = categories.find(cat => rawCategory.includes(cat.slug));
   return cleaned ? cleaned.slug : "ot";
 }
@@ -69,6 +72,9 @@ async function appendToOutputFile(filePath, data) {
 }
 
 // Function to make API call to Ollama
+
+let errorLog = [];
+
 async function fetchCompanyInfo(company) {
   const prompt = `
   Analyze the following company from the Netherlands and provide information based on your knowledge specific to the various sections:
@@ -93,7 +99,7 @@ async function fetchCompanyInfo(company) {
   
   **Response Format:**
   
-  Please structure your response in the following JSON format (only select the text in the brackets regarding the category):
+  Please structure your response in the following JSON format. Every text in the JSON, MUST be in lowercase:
   
   {
       "description": "",
@@ -125,7 +131,26 @@ async function fetchCompanyInfo(company) {
 
     return parsedResponse;
   } catch (error) {
-    console.error('Error fetching data from API:', error);
+    console.error('Error fetching data for company:', company.name, error.message);
+
+    // Create error object with relevant details
+    const errorEntry = {
+      id: company.id,
+      name: company.name,
+      kvk: company.kvk,
+      error: error.message
+    };
+
+    // Add to error log array
+    errorLog.push(errorEntry);
+
+    try {
+      await fs.writeFile('error_log.json', JSON.stringify(errorLog, null, 2));
+      console.log('Error log saved to error_log.json');
+    } catch (err) {
+      console.error('Failed to save error log:', err);
+    }
+
     return null;
   }
 }
