@@ -37,12 +37,13 @@ async function fetchCompanyInfo(company) {
   1. **Description:** Concisely summarize the company's primary business activities and the products or services it offers. Be specific and avoid generic terms.
   2. **Category:** Categorize the company into ONE of the following sectors, choosing the most accurate fit:
   
-      * Technology and Telecommunications (tt)
-      * Healthcare and Pharmaceuticals (hp)
-      * Finance and Real Estate (fre)
-      * Consumer Goods and Retail (cgr)
-      * Energy and Utilities (eu)
-      * Manufacturing and Industrials (mi)
+      * if Technology and Telecommunications, say "tt"
+      * if Healthcare and Pharmaceuticals, say "hp"
+      * if Finance and Real Estate, say "fre"
+      * if Consumer Goods and Retail, say "cgr"
+      * if Energy and Utilities, say "eu"
+      * if Manufacturing and Industrials, say "mi"
+      * if None of the above, say "ot"
   
   3. **Website:** Provide the company's official website URL. If no website is found, respond with "empty".
   4. **Tags:** List up to THREE relevant tags (keywords) that best describe the company's focus, industry, or target market. 
@@ -75,7 +76,7 @@ async function fetchCompanyInfo(company) {
     parsedResponse.name = company.name;
     parsedResponse.kvk = company.kvk;
 
-    console.log('Final output, ' + parsedResponse.name)
+    console.log('Final output, ' + parsedResponse.name + ' ' + parsedResponse.id)
 
     return parsedResponse;
   } catch (error) {
