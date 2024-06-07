@@ -7,3 +7,13 @@ Maybe should be called PRRLHSM.
 The application has no backend. It's an Angular 18+ SPA.
 
 See the live application running at [dutch.khophi.com](dutch.khophi.com)
+
+## How to run the Angular application locally
+
+- Clone this repository and change directory to the project folder
+- Run `bun install`
+- Run `ng serve`
+
+## How to contribute
+
+Send a PR, or add an issue. 
