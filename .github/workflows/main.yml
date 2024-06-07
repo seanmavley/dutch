@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+      - django
+
+jobs:
+  build:
+    name: Build and Deploy to Remote
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: oven-sh/setup-bun@v1
+
+    - run: bun install
+    - run: bun install -g @angular/cli > /dev/null
+    - run: ng build
+
+    - name: copy file via ssh key
+      uses: appleboy/scp-action@master        
+      with:
+        HOST: ${{ secrets.HOST }}
+        USERNAME: ${{ secrets.USERNAME }}
+        PORT: ${{ secrets.PORT }}
+        KEY: ${{ secrets.KEY }}
+        source: "./dist/dutch/browser"
+        target: "/home/${{ secrets.USERNAME }}/dutch"
+        strip_components: 3
