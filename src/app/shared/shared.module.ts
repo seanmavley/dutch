@@ -8,7 +8,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule, MatNavList } from '@angular/material/list';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatMenuModule } from '@angular/material/menu';
@@ -41,7 +41,8 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
     MatTooltipModule,
     MatSelectModule,
     MatBottomSheetModule,
-    ScrollingModule
+    ScrollingModule,
+    ReactiveFormsModule
   ],
   exports: [
     CommonModule,
@@ -55,6 +56,7 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
     MatListModule,
     MatNavList,
     FormsModule,
+    ReactiveFormsModule,
     MatInputModule,
     MatProgressBarModule,
     MatMenuModule,

@@ -1,14 +1,15 @@
 <mat-toolbar class="">
   <span>Dutch <em class="fs-6">v0.0.5 beta</em></span>
   <span class="spacer"></span>
+  <!-- Search bar desktop -->
   <div class="container d-none d-md-block">
     <div class="row justify-content-center">
       <div class="col-md-6">
-        <form class="pt-4" #searchForm="ngForm" (input)="onSubmit(searchForm)">
+        <form class="pt-4" #searchForm="ngForm">
           <mat-form-field appearance="fill" class="full-width">
-            <input matInput placeholder="Search company name" name="searchTerm" ngModel>
-            @if (searchForm.controls["searchTerm"] && searchForm.controls["searchTerm"].value) {
-            <button matSuffix mat-icon-button aria-label="Clear" (click)="searchForm.reset(); filterCompanies()">
+            <input matInput placeholder="Search company name" name="searchTerm" [formControl]="searchTerm">
+            @if (searchTerm.value) {
+            <button matSuffix mat-icon-button aria-label="Clear" (click)="searchTerm.reset(); filterCompanies()">
               <mat-icon>close</mat-icon>
             </button>
             }
@@ -39,11 +40,11 @@
     <!-- Show on Mobile devices -->
     <div class="row justify-content-center d-block d-md-none">
       <div class="col-md-6">
-        <form class="pt-4" #searchForm="ngForm" (input)="onSubmit(searchForm)">
+        <form class="pt-4" #searchForm="ngForm">
           <mat-form-field appearance="outline" class="full-width">
-            <input matInput placeholder="Search company name" name="searchTerm" ngModel>
-            @if (searchForm.controls["searchTerm"] && searchForm.controls["searchTerm"].value) {
-            <button matSuffix mat-icon-button aria-label="Clear" (click)="searchForm.reset(); filterCompanies()">
+            <input matInput placeholder="Search company name" name="searchTerm" [formControl]="searchTerm">
+            @if (searchTerm.value) {
+            <button matSuffix mat-icon-button aria-label="Clear" (click)="searchTerm.reset(); filterCompanies()">
               <mat-icon>close</mat-icon>
             </button>
             }
@@ -107,7 +108,7 @@
           <mat-icon matListItemIcon>arrow_right</mat-icon>{{ company.name }}
         </a>
         @if (busy) {
-          <a mat-list-item>Loading...</a>
+        <a mat-list-item>Loading...</a>
         }
         @if (filteredCompanies?.length === 0) {
         <a mat-list-item>No Companies. Please try another search or category</a>
@@ -128,11 +129,11 @@
               <mat-icon matListItemIcon>arrow_right</mat-icon>{{ company.name }}
             </a>
             @if (busy) {
-              <a mat-list-item>Loading...</a>
+            <a mat-list-item>Loading...</a>
             }
-          @if (filteredCompanies?.length === 0) {
-          <a mat-list-item>No Companies. Please try another search or category</a>
-          }
+            @if (filteredCompanies?.length === 0) {
+            <a mat-list-item>No Companies. Please try another search or category</a>
+            }
           </cdk-virtual-scroll-viewport>
 
         </mat-nav-list>

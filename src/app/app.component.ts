@@ -5,10 +5,11 @@ import { iCompany, iCategory } from './models/dutch.interface';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { CardComponent } from './card/card.component';
 import { Subject, debounceTime, distinctUntilChanged } from 'rxjs';
-import { NgForm } from '@angular/forms';
+import { NgForm, NgModel } from '@angular/forms';
 import { MatBottomSheetModule, MatBottomSheet } from '@angular/material/bottom-sheet';
 import { AboutDialogComponent } from './partials/about-dialog/about-dialog.component';
 import { SwUpdate } from '@angular/service-worker';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -29,8 +30,6 @@ export class AppComponent {
     this.isButtonVisible = window.scrollY > 200;
   }
 
-  private searchTerm$ = new Subject<string>();
-
   busy: boolean = false;
   is_done: boolean = false;
   selected_company!: iCompany;
@@ -38,6 +37,8 @@ export class AppComponent {
   activeCategory: string = 'all';
 
   list_of_categories: iCategory[] = [];
+
+  searchTerm = new FormControl();
 
   constructor(
     private _bottomSheet: MatBottomSheet,
@@ -53,12 +54,16 @@ export class AppComponent {
   ngOnInit() {
     this.is_done = localStorage.getItem('task') === 'done' ? true : false;
 
-    this.searchTerm$
+    this.searchTerm.valueChanges
       .pipe(
         debounceTime(500),
         distinctUntilChanged()
       )
       .subscribe((searchTerm) => {
+        if (this.busy) {
+          this.snack.open('Please wait while we load data', 'Ok', { duration: 5000 });
+          return;
+        }
         this.filterCompanies(this.activeCategory, searchTerm);
       });
   }
@@ -113,14 +118,6 @@ export class AppComponent {
 
   selectCompany(company: iCompany) {
     this.selected_company = company;
-  }
-
-  onSubmit(form: NgForm) {
-    if (this.busy) {
-      this.snack.open('Please wait while we load data', 'Ok', { duration: 5000 });
-      return;
-    }
-    this.searchTerm$.next(form.value.searchTerm);
   }
 
   onCategoryChange(categorySlug: string) {
