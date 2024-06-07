@@ -100,7 +100,7 @@
 <mat-drawer-container>
   <mat-drawer #drawer mode="side" opened="true" class="d-none d-md-block">
     <mat-toolbar>
-      <span>Companies ({{ filteredCompanies.length }})</span>
+      <span>Companies ({{ filteredCompanies?.length }})</span>
     </mat-toolbar>
     <mat-nav-list>
       <cdk-virtual-scroll-viewport appendOnly itemSize="10" class="desktop-viewport">
@@ -110,7 +110,7 @@
         </a>
 
       </cdk-virtual-scroll-viewport>
-      @if (filteredCompanies.length === 0) {
+      @if (filteredCompanies?.length === 0) {
       <a mat-list-item>No Companies. Please try another search or category</a>
       }
     </mat-nav-list>
@@ -119,7 +119,7 @@
   <mat-drawer-content>
     <!-- Shows on Mobile devices -->
     <div class="container mt-4 d-block d-md-none">
-      <div class="ms-3">Companies ({{ filteredCompanies.length }})</div>
+      <div class="ms-3">Companies ({{ filteredCompanies?.length }})</div>
       <div class="row justify-content-center">
         <mat-nav-list>
           <cdk-virtual-scroll-viewport appendOnly itemSize="10" class="mobile-viewport">
@@ -127,7 +127,7 @@
               <mat-icon matListItemIcon>arrow_right</mat-icon>{{ company.name }}
             </a>
           </cdk-virtual-scroll-viewport>
-          @if (filteredCompanies.length === 0) {
+          @if (filteredCompanies?.length === 0) {
           <a mat-list-item>No Companies. Please try another search or category</a>
           }
         </mat-nav-list>

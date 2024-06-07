@@ -43,9 +43,7 @@ export class AppComponent {
   constructor(
     private _bottomSheet: MatBottomSheet,
     private dutchService: DutchService,
-    private breakpointObserver: BreakpointObserver,
     private snack: MatSnackBar,
-    private utils: UtilsService
   ) {
     this.loadLocal();
   }
@@ -99,7 +97,7 @@ export class AppComponent {
 
   loadJson() {
     this.busy = true;
-    this.dutchService.loadJson('assets/orgs.json')
+    this.dutchService.loadJson('assets/orgs-v2.json')
       .subscribe((data: iCategory[]) => {
         this.list_of_categories = data;
         this.updateFilteredCompanies();
