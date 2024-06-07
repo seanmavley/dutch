@@ -36,7 +36,8 @@
               "node_modules/bootstrap/scss/bootstrap-utilities.scss",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "webWorkerTsConfig": "tsconfig.worker.json"
           },
           "configurations": {
             "production": {
@@ -97,7 +98,8 @@
               "@angular/material/prebuilt-themes/magenta-violet.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "webWorkerTsConfig": "tsconfig.worker.json"
           }
         }
       }
