@@ -37,7 +37,6 @@ export class AppComponent {
   selected_company!: iCompany;
   filteredCompanies!: iCompany[];
   activeCategory: string = 'all';
-  isMobile: boolean = false;
 
   list_of_categories: iCategory[] = [];
 
@@ -70,12 +69,6 @@ export class AppComponent {
       )
       .subscribe((searchTerm) => {
         this.filterCompanies(this.activeCategory, searchTerm);
-      });
-
-    this.breakpointObserver
-      .observe([Breakpoints.Handset])
-      .subscribe(result => {
-        this.isMobile = result.matches;
       });
   }
 
