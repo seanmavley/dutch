@@ -27,7 +27,7 @@ export class AppComponent {
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    this.isButtonVisible = window.scrollY > 200; 
+    this.isButtonVisible = window.scrollY > 200;
   }
 
   private searchTerm$ = new Subject<string>();
@@ -50,10 +50,10 @@ export class AppComponent {
     this.loadLocal();
   }
 
-  
+
   ngOnInit() {
     this.is_done = localStorage.getItem('task') === 'done' ? true : false;
-    
+
     if (!this.is_done) {
       this.snack.open('Loading latest update from Github', 'Ok', { duration: 10000 });
       this.loadJson();
@@ -74,7 +74,17 @@ export class AppComponent {
 
   refresh() {
     localStorage.clear();
-    window.location.reload();
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.getRegistrations().then(registrations => {
+        registrations.forEach(registration => {
+          registration.unregister();
+        });
+      });
+    }
+    this.snack.open('Refreshing page in 3 seconds', 'Ok', { duration: 3000 });
+    setTimeout(() => {
+      window.location.reload();
+    }, 1000);
   }
 
   loadLocal() {
