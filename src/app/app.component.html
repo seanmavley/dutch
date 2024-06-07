@@ -1,11 +1,11 @@
 <mat-toolbar class="">
-  <span>Dutch <em class="fs-6">v0.0.4 beta</em></span>
-  <span class="example-spacer"></span>
+  <span>Dutch <em class="fs-6">v0.0.5 beta</em></span>
+  <span class="spacer"></span>
   <div class="container d-none d-md-block">
     <div class="row justify-content-center">
       <div class="col-md-6">
         <form class="pt-4" #searchForm="ngForm" (input)="onSubmit(searchForm)">
-          <mat-form-field appearance="outline" class="full-width">
+          <mat-form-field appearance="fill" class="full-width">
             <input matInput placeholder="Search company name" name="searchTerm" ngModel>
             @if (searchForm.controls["searchTerm"] && searchForm.controls["searchTerm"].value) {
             <button matSuffix mat-icon-button aria-label="Clear" (click)="searchForm.reset(); filterCompanies()">
@@ -17,7 +17,7 @@
       </div>
     </div>
   </div>
-  <span class="example-spacer"></span>
+  <span class="spacer"></span>
   <button mat-icon-button (click)="refresh()" matTooltip="Click on this reload data from Github">
     <mat-icon>refresh</mat-icon>
   </button>
@@ -120,7 +120,7 @@
   <mat-drawer-content>
     <!-- Shows on Mobile devices -->
     <div class="container mt-4 d-block d-md-none">
-      <div class="ms-3">Companies ({{ filteredCompanies?.length || '0' }})</div>
+      <div class="ms-3 my-2">Companies ({{ filteredCompanies?.length || '0' }})</div>
       <div class="row justify-content-center">
         <mat-nav-list>
           <cdk-virtual-scroll-viewport appendOnly itemSize="10" class="mobile-viewport">

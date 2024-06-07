@@ -8,8 +8,7 @@ import { Subject, debounceTime, distinctUntilChanged } from 'rxjs';
 import { NgForm } from '@angular/forms';
 import { MatBottomSheetModule, MatBottomSheet } from '@angular/material/bottom-sheet';
 import { AboutDialogComponent } from './partials/about-dialog/about-dialog.component';
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { UtilsService } from './services/utils.service';
+import { SwUpdate } from '@angular/service-worker';
 
 @Component({
   selector: 'app-root',
@@ -35,7 +34,7 @@ export class AppComponent {
   busy: boolean = false;
   is_done: boolean = false;
   selected_company!: iCompany;
-  filteredCompanies!: iCompany[];
+  filteredCompanies!: iCompany[] | null;
   activeCategory: string = 'all';
 
   list_of_categories: iCategory[] = [];
@@ -44,7 +43,8 @@ export class AppComponent {
     private _bottomSheet: MatBottomSheet,
     private dutchService: DutchService,
     private snack: MatSnackBar,
-    private ref: ChangeDetectorRef
+    private ref: ChangeDetectorRef,
+    private updates: SwUpdate,
   ) {
     this.busy = true;
   }
@@ -159,6 +159,17 @@ export class AppComponent {
   scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
+
+  // checkForUpdate() {
+  //   if (this.updates.isEnabled) {
+  //     this.updates.available.subscribe(() => {
+  //       if (confirm('New version available. Load new version?')) {
+  //         this.updates.activateUpdate().then(() => document.location.reload());
+  //       }
+  //     });
+  //   }
+  // }
+
 }
 
 if (typeof Worker !== 'undefined') {

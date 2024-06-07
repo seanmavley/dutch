@@ -44,4 +44,11 @@ export class CardComponent {
     );
     return industry ? industry.name : categorySlug; // Fallback to slug if not found
   }
+
+  /**
+   * Copy text into clipboard
+   */
+  copyText(text: string) {
+    navigator.clipboard.writeText(text);
+  }
 }
