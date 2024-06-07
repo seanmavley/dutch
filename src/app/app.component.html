@@ -68,17 +68,15 @@
     </div>
     <!-- Show on Desktop devices -->
     <div class="row justify-content-center d-none d-md-block mt-3">
-
       <div class="col-sm-12">
         <section class="text-center">
-
           <!-- So in 2024, are we saying there's NO better way to do this in Angular 18+ using Angular Material? -->
           <!-- I've tried different ways, such as swapping out the attributes via [attr.mat-flat-button] or [class.mat-flat-button] -->
           <!-- Anyway, below is verbose, but works -->
           <button mat-flat-button *ngIf="activeCategory === 'all'" color="primary" class="me-2 mb-3"
-            (click)="filterCompanies()">All</button>
+            (click)="filterCompanies()" [disabled]="busy">All</button>
           <button mat-stroked-button *ngIf="activeCategory !== 'all'" color="primary" class="me-2 mb-3"
-            (click)="filterCompanies()">All</button>
+            (click)="filterCompanies()" [disabled]="busy">All</button>
 
           <ng-container *ngFor="let category of list_of_categories">
             <button mat-flat-button *ngIf="activeCategory === category.category.slug" color="primary" class="me-2 mb-3"
@@ -100,7 +98,7 @@
 <mat-drawer-container>
   <mat-drawer #drawer mode="side" opened="true" class="d-none d-md-block">
     <mat-toolbar>
-      <span>Companies ({{ filteredCompanies?.length }})</span>
+      <span>Companies ({{ filteredCompanies?.length || '0' }})</span>
     </mat-toolbar>
     <mat-nav-list>
       <cdk-virtual-scroll-viewport appendOnly itemSize="10" class="desktop-viewport">
@@ -108,28 +106,35 @@
         <a mat-list-item (click)="selectCompany(company)" *cdkVirtualFor="let company of filteredCompanies">
           <mat-icon matListItemIcon>arrow_right</mat-icon>{{ company.name }}
         </a>
-
+        @if (busy) {
+          <a mat-list-item>Loading...</a>
+        }
+        @if (filteredCompanies?.length === 0) {
+        <a mat-list-item>No Companies. Please try another search or category</a>
+        }
       </cdk-virtual-scroll-viewport>
-      @if (filteredCompanies?.length === 0) {
-      <a mat-list-item>No Companies. Please try another search or category</a>
-      }
+
     </mat-nav-list>
   </mat-drawer>
 
   <mat-drawer-content>
     <!-- Shows on Mobile devices -->
     <div class="container mt-4 d-block d-md-none">
-      <div class="ms-3">Companies ({{ filteredCompanies?.length }})</div>
+      <div class="ms-3">Companies ({{ filteredCompanies?.length || '0' }})</div>
       <div class="row justify-content-center">
         <mat-nav-list>
           <cdk-virtual-scroll-viewport appendOnly itemSize="10" class="mobile-viewport">
             <a mat-list-item (click)="openCompanyCard(company)" *cdkVirtualFor="let company of filteredCompanies">
               <mat-icon matListItemIcon>arrow_right</mat-icon>{{ company.name }}
             </a>
-          </cdk-virtual-scroll-viewport>
+            @if (busy) {
+              <a mat-list-item>Loading...</a>
+            }
           @if (filteredCompanies?.length === 0) {
           <a mat-list-item>No Companies. Please try another search or category</a>
           }
+          </cdk-virtual-scroll-viewport>
+
         </mat-nav-list>
       </div>
     </div>

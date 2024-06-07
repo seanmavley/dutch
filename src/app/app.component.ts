@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy, ViewChild, ElementRef, HostListener } from '@angular/core';
+import { Component, ChangeDetectionStrategy, ViewChild, ElementRef, HostListener, ChangeDetectorRef } from '@angular/core';
 import { SharedModule } from './shared/shared.module';
 import { DutchService } from './services/dutch.service';
 import { iCompany, iCategory } from './models/dutch.interface';
@@ -44,21 +44,14 @@ export class AppComponent {
     private _bottomSheet: MatBottomSheet,
     private dutchService: DutchService,
     private snack: MatSnackBar,
+    private ref: ChangeDetectorRef
   ) {
-    this.loadLocal();
+    this.busy = true;
   }
 
 
   ngOnInit() {
     this.is_done = localStorage.getItem('task') === 'done' ? true : false;
-
-    if (!this.is_done) {
-      this.snack.open('Loading latest update from Github', 'Ok', { duration: 10000 });
-      this.loadJson();
-    } else {
-      this.snack.open('Loading locally stored data', 'Ok', { duration: 10000 });
-      this.loadLocal();
-    }
 
     this.searchTerm$
       .pipe(
@@ -68,6 +61,16 @@ export class AppComponent {
       .subscribe((searchTerm) => {
         this.filterCompanies(this.activeCategory, searchTerm);
       });
+  }
+
+  ngAfterContentInit(): void {
+    if (!this.is_done) {
+      this.snack.open('Loading latest update from Github', 'Ok', { duration: 10000 });
+      this.loadJson();
+    } else {
+      this.snack.open('Loading locally stored data', 'Ok', { duration: 10000 });
+      this.loadLocal();
+    }
   }
 
   refresh() {
@@ -92,6 +95,7 @@ export class AppComponent {
       this.list_of_categories = JSON.parse(data);
       this.updateFilteredCompanies();
       this.busy = false;
+      this.ref.detectChanges()
     }
   }
 
@@ -103,6 +107,7 @@ export class AppComponent {
         this.updateFilteredCompanies();
         this.snack.open('Loaded data successfully', 'Ok', { duration: 5000 });
         this.busy = false;
+        this.ref.detectChanges()
       });
   }
 
@@ -111,6 +116,10 @@ export class AppComponent {
   }
 
   onSubmit(form: NgForm) {
+    if (this.busy) {
+      this.snack.open('Please wait while we load data', 'Ok', { duration: 5000 });
+      return;
+    }
     this.searchTerm$.next(form.value.searchTerm);
   }
 
