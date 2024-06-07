@@ -21,8 +21,14 @@ mat-drawer-container {
   z-index: 100;
 }
 
-.example-viewport {
+.desktop-viewport {
   height: 75vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.mobile-viewport {
+  height: 70vh;
   width: 100%;
   overflow-x: hidden;
 }
