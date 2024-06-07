@@ -171,4 +171,6 @@ if (typeof Worker !== 'undefined') {
 } else {
   // Web Workers are not supported in this environment.
   // You should add a fallback so that your program still executes correctly.
+  console.log('Web Workers are not supported in this environment.');
+  alert('Web Workers are not supported in this environment.');
 }
