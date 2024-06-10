@@ -8,6 +8,8 @@ The application has no backend. It's an Angular 18+ SPA.
 
 See the live application running at [dutch.khophi.com](dutch.khophi.com)
 
+![wide](https://github.com/seanmavley/dutch/assets/5289083/2bd7aba1-c321-4b46-8fc8-1cddc084558a)
+
 ## How to run the Angular application locally
 
 - Clone this repository and change directory to the project folder
