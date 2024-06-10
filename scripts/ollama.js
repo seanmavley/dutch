@@ -4,13 +4,27 @@ const path = require('path');
 
 // Define the categories
 const categories = [
-  { "slug": "mi", "name": "Manufacturing and Industrials" },
-  { "slug": "eu", "name": "Energy and Utilities" },
-  { "slug": "cgr", "name": "Consumer Goods and Retail" },
-  { "slug": "fre", "name": "Finance and Real Estate" },
-  { "slug": "hp", "name": "Healthcare and Pharmaceuticals" },
-  { "slug": "tt", "name": "Technology and Telecommunications" },
-  { "slug": "ot", "name": "Other" }
+  {
+    "slug": "mi", "name": "Manufacturing and Industrials", "description": "Automotive and aerospace, Construction and engineering, Machinery and industrial equipment, Chemicals and materials",
+  },
+  {
+    "slug": "eu", "name": "Energy and Utilities", "description": "Oil and gas, Renewable energy, Electricity and power generation, Water and waste management",
+  },
+  {
+    "slug": "cgr", "name": "Consumer Goods and Retail", "description": "Food and beverages, Apparel and footwear, Household goods, Retail stores and e-commerce",
+  },
+  {
+    "slug": "fre", "name": "Finance and Real Estate", "description": "Banking and financial services, Insurance companies, Investment firms and asset management, Real estate and property development",
+  },
+  {
+    "slug": "hp", "name": "Healthcare and Pharmaceuticals", "description": "Hospitals and healthcare services, Pharmaceutical companies, Medical devices and equipment, Biotechnology firms",
+  },
+  {
+    "slug": "tt", "name": "Technology and Telecommunications", "description": "Software and IT services, Hardware and electronics, Telecommunications, Internet services and e-commerce",
+  },
+  {
+    "slug": "ot", "name": "Other", "description": "Organizations that couldn't fit exactly under the other broad categories",
+  }
 ];
 
 // Function to clean up category

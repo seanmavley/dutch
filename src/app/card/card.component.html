@@ -12,7 +12,7 @@
     <mat-divider></mat-divider>
   </mat-card-content>
   <mat-card-actions>
-    <a [href]="company.website" target="_blank" [disabled]="!company.website" mat-button>Company website</a>
+    <a [href]="company.website" target="_blank" [disabled]="!company.website" [matTooltip]="company.website || 'No website available'" mat-button>Company website</a>
     <a [href]="url" target="_blank" mat-button>Web search</a>
   </mat-card-actions>
   <mat-divider></mat-divider>

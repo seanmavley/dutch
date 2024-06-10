@@ -12,6 +12,7 @@ export interface iCategory {
   category: {
     name: string;
     slug: string;
+    description: string;
     companies: iCompany[];
   }
 }

@@ -1,5 +1,5 @@
-<mat-toolbar class="">
-  <span>Dutch <em class="fs-6">v0.0.7 beta</em></span>
+<mat-toolbar>
+  <span>Dutch <em class="fs-6">v0.1.0</em></span>
   <span class="spacer"></span>
   <!-- Search bar desktop -->
   <div class="container d-none d-md-block">
@@ -57,11 +57,11 @@
             <mat-label>Filter by industry</mat-label>
             <mat-select (selectionChange)="onCategoryChange($event.value)">
               <mat-option value="all">All</mat-option>
-              <ng-container *ngFor="let category of list_of_categories">
+              @for (category of list_of_categories; track $index) {
                 <mat-option [value]="category.category.slug">
                   {{ category.category.name }}
                 </mat-option>
-              </ng-container>
+              }
             </mat-select>
           </mat-form-field>
         </section>
@@ -75,20 +75,20 @@
           <!-- I've tried different ways, such as swapping out the attributes via [attr.mat-flat-button] or [class.mat-flat-button] -->
           <!-- Anyway, below is verbose, but works -->
           <button mat-flat-button *ngIf="activeCategory === 'all'" color="primary" class="me-2 mb-3"
-            (click)="filterCompanies()" [disabled]="busy">All</button>
+            (click)="filterCompanies()" [disabled]="busy" matTooltip="Show all the companies">All</button>
           <button mat-stroked-button *ngIf="activeCategory !== 'all'" color="primary" class="me-2 mb-3"
             (click)="filterCompanies()" [disabled]="busy">All</button>
 
-          <ng-container *ngFor="let category of list_of_categories">
+          @for (category of list_of_categories; track $index) {
             <button mat-flat-button *ngIf="activeCategory === category.category.slug" color="primary" class="me-2 mb-3"
-              (click)="filterCompanies(category.category.slug)">
+              (click)="filterCompanies(category.category.slug)" [matTooltip]="category.category.description">
               {{ category.category.name }}
             </button>
             <button mat-stroked-button *ngIf="activeCategory !== category.category.slug" color="primary"
-              class="me-2 mb-3" (click)="filterCompanies(category.category.slug)">
+              class="me-2 mb-3" (click)="filterCompanies(category.category.slug)" [matTooltip]="category.category.description">
               {{ category.category.name }}
             </button>
-          </ng-container>
+          }
         </section>
       </div>
     </div>
