@@ -1,13 +1,26 @@
 import { Component, Inject, Input, Optional } from '@angular/core';
 import { iCompany, iIndustry } from '../models/dutch.interface';
-import { SharedModule } from '../shared/shared.module';
-import { MAT_BOTTOM_SHEET_DATA } from '@angular/material/bottom-sheet';
+import { MAT_BOTTOM_SHEET_DATA, MatBottomSheetModule, MatBottomSheetRef } from '@angular/material/bottom-sheet';
 import { UtilsService } from '../services/utils.service';
+import { MatCardModule } from '@angular/material/card';
+import { CommonModule } from '@angular/common';
+import { MatDividerModule } from '@angular/material/divider';
+import { RouterModule } from '@angular/router';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-card',
   standalone: true,
-  imports: [SharedModule],
+  imports: [
+    CommonModule,
+    RouterModule,
+    MatBottomSheetModule,
+    MatCardModule,
+    MatDividerModule,
+    MatTooltipModule,
+    MatButtonModule
+  ],
   templateUrl: './card.component.html',
   styleUrl: './card.component.scss'
 })
@@ -18,16 +31,15 @@ export class CardComponent {
 
   constructor(
     @Optional() @Inject(MAT_BOTTOM_SHEET_DATA) public data: any,
-    private utils: UtilsService
+    private utils: UtilsService,
+    // private _bottomSheetRef: MatBottomSheetRef<CardComponent>
   ) {
     this.company = data;
   }
 
-  // TODO: Find somewhere to put this and access from
-  // everywhere. Heavily considering localstorage. Duh!
   list_of_industries: iIndustry[] = this.utils.getIndustryList();
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   ngOnChanges(): void {
     this.url = `https://www.google.com/search?q=${this.company?.name}`
@@ -60,11 +72,11 @@ export class CardComponent {
    */
   getCompanyProperty(company: any, key: string): any {
     if (!company) return null;
-    
+
     const lowerCaseKey = key.toLowerCase();
     const sentenceCaseKey = key.charAt(0).toUpperCase() + key.slice(1);
-    
+
     return company[lowerCaseKey] || company[sentenceCaseKey];
   }
-  
+
 }

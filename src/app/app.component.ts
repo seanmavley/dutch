@@ -1,19 +1,34 @@
-import { Component, ChangeDetectionStrategy, ViewChild, ElementRef, HostListener, ChangeDetectorRef } from '@angular/core';
-import { SharedModule } from './shared/shared.module';
+import { Component, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
 import { DutchService } from './services/dutch.service';
 import { iCompany, iCategory } from './models/dutch.interface';
-import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { CardComponent } from './card/card.component';
 import { debounceTime, distinctUntilChanged } from 'rxjs';
 import { MatBottomSheet } from '@angular/material/bottom-sheet';
 import { AboutDialogComponent } from './partials/about-dialog/about-dialog.component';
 import { SwUpdate } from '@angular/service-worker';
-import { FormControl } from '@angular/forms';
+import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
+import { MatSelectModule } from '@angular/material/select';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule, MatNavList } from '@angular/material/list';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatTabsModule } from '@angular/material/tabs';
+import { ScrollingModule } from '@angular/cdk/scrolling';
+import { MatInputModule } from '@angular/material/input';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [SharedModule, CardComponent],
+  imports: [CommonModule, RouterModule, MatSnackBarModule, MatToolbarModule, FormsModule, ReactiveFormsModule, MatFormFieldModule, MatIconModule, MatSelectModule, MatButtonModule, MatSidenavModule, MatNavList, MatListModule, MatMenuModule, MatProgressBarModule, MatTooltipModule, MatDialogModule, MatSnackBarModule, MatTabsModule, ScrollingModule, MatInputModule,    CardComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   providers: [MatBottomSheet],
@@ -126,14 +141,14 @@ export class AppComponent {
       const category = this.list_of_categories.find(cat => cat.category.slug.toLowerCase() === this.activeCategory.toLowerCase());
       this.filteredCompanies = category ? category.category.companies : [];
     }
-  
+
     if (searchTerm) {
       this.filteredCompanies = this.filteredCompanies.filter(company =>
         company.name.toLowerCase().includes(searchTerm.toLowerCase())
       );
     }
   }
-  
+
 
   filterCompanies(categorySlug: string = 'all', searchTerm: string = '') {
     this.activeCategory = categorySlug;
