@@ -5,7 +5,7 @@ import { iCompany, iCategory } from './models/dutch.interface';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { CardComponent } from './card/card.component';
 import { debounceTime, distinctUntilChanged } from 'rxjs';
-import { MatBottomSheetModule, MatBottomSheet } from '@angular/material/bottom-sheet';
+import { MatBottomSheet } from '@angular/material/bottom-sheet';
 import { AboutDialogComponent } from './partials/about-dialog/about-dialog.component';
 import { SwUpdate } from '@angular/service-worker';
 import { FormControl } from '@angular/forms';
@@ -13,21 +13,13 @@ import { FormControl } from '@angular/forms';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [SharedModule, MatBottomSheetModule, CardComponent],
+  imports: [SharedModule, CardComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   providers: [MatBottomSheet],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent {
-
-  @ViewChild('scrollupButton') scrollupButton!: ElementRef;
-  isButtonVisible = false;
-
-  @HostListener('window:scroll', [])
-  onWindowScroll() {
-    this.isButtonVisible = window.scrollY > 200;
-  }
 
   busy: boolean = false;
   is_done: boolean = false;
