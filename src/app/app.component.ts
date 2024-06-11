@@ -5,7 +5,6 @@ import { iCompany, iCategory } from './models/dutch.interface';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { CardComponent } from './card/card.component';
 import { Subject, debounceTime, distinctUntilChanged } from 'rxjs';
-import { NgForm, NgModel } from '@angular/forms';
 import { MatBottomSheetModule, MatBottomSheet } from '@angular/material/bottom-sheet';
 import { AboutDialogComponent } from './partials/about-dialog/about-dialog.component';
 import { SwUpdate } from '@angular/service-worker';
@@ -46,9 +45,7 @@ export class AppComponent {
     private snack: MatSnackBar,
     private ref: ChangeDetectorRef,
     private updates: SwUpdate,
-  ) {
-    this.busy = true;
-  }
+  ) { }
 
 
   ngOnInit() {
@@ -93,6 +90,7 @@ export class AppComponent {
     }, 1000);
   }
 
+
   loadLocal() {
     this.busy = true;
     const data = localStorage.getItem('data');
@@ -121,6 +119,10 @@ export class AppComponent {
   }
 
   onCategoryChange(categorySlug: string) {
+    if (this.busy) {
+      this.snack.open('Please wait while we load data', 'Ok', { duration: 5000 })
+      return;
+    }
     this.activeCategory = categorySlug;
     this.updateFilteredCompanies();
   }

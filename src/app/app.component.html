@@ -7,7 +7,7 @@
       <div class="col-md-6">
         <form class="pt-4" #searchForm="ngForm">
           <mat-form-field appearance="fill" class="full-width">
-            <input matInput placeholder="Search company name" name="searchTerm" [formControl]="searchTerm">
+            <input matInput placeholder="Search company name" name="searchTerm" [formControl]="searchTerm" [disabled]="busy">
             @if (searchTerm.value) {
             <button matSuffix mat-icon-button aria-label="Clear" (click)="searchTerm.reset(); filterCompanies()">
               <mat-icon>close</mat-icon>
