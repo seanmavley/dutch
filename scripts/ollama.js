@@ -135,12 +135,18 @@ async function fetchCompanyInfo(company) {
     const response = await axios.post('http://localhost:11434/api/generate', payload);
     let parsedResponse = JSON.parse(response.data.response);
 
+    // Ensure all keys are lowercase
+    parsedResponse = Object.fromEntries(
+      Object.entries(parsedResponse).map(([key, value]) => [key.toLowerCase(), value])
+    );
+    
     // Clean up category
     parsedResponse.category = cleanCategory(parsedResponse.category);
 
-    parsedResponse.id = company.id;
-    parsedResponse.name = company.name;
-    parsedResponse.kvk = company.kvk;
+    // Ensure keys for these fields are lowercase
+    parsedResponse.id = company.id.toLowerCase(); 
+    parsedResponse.name = company.name.toLowerCase();
+    parsedResponse.kvk = company.kvk.toLowerCase();
 
     console.log('Final output, ' + parsedResponse.name + ' ' + parsedResponse.id)
 
