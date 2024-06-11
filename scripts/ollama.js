@@ -29,6 +29,7 @@ const categories = [
 
 // Function to clean up category
 function cleanCategory(rawCategory) {
+  rawCategory = rawCategory.toLowerCase();
   if (typeof rawCategory !== 'string') {
     return "ot";
   }

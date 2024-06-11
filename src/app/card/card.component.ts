@@ -13,7 +13,7 @@ import { UtilsService } from '../services/utils.service';
 })
 export class CardComponent {
 
-  @Input() company!: iCompany;
+  @Input() company!: iCompany | null;
   url!: string;
 
   constructor(

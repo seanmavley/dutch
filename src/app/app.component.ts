@@ -4,7 +4,7 @@ import { DutchService } from './services/dutch.service';
 import { iCompany, iCategory } from './models/dutch.interface';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { CardComponent } from './card/card.component';
-import { Subject, debounceTime, distinctUntilChanged } from 'rxjs';
+import { debounceTime, distinctUntilChanged } from 'rxjs';
 import { MatBottomSheetModule, MatBottomSheet } from '@angular/material/bottom-sheet';
 import { AboutDialogComponent } from './partials/about-dialog/about-dialog.component';
 import { SwUpdate } from '@angular/service-worker';
@@ -31,7 +31,7 @@ export class AppComponent {
 
   busy: boolean = false;
   is_done: boolean = false;
-  selected_company!: iCompany;
+  active_company!: iCompany | null;;
   filteredCompanies!: iCompany[] | null;
   activeCategory: string = 'all';
 
@@ -115,7 +115,7 @@ export class AppComponent {
   }
 
   selectCompany(company: iCompany) {
-    this.selected_company = company;
+    this.active_company = company;
   }
 
   onCategoryChange(categorySlug: string) {

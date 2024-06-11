@@ -7,7 +7,7 @@
       <div class="col-md-6">
         <form class="pt-4" #searchForm="ngForm">
           <mat-form-field appearance="fill" class="full-width">
-            <input matInput placeholder="Search company name" name="searchTerm" [formControl]="searchTerm" [disabled]="busy">
+            <input matInput placeholder="Search company name" name="searchTerm" [formControl]="searchTerm">
             @if (searchTerm.value) {
             <button matSuffix mat-icon-button aria-label="Clear" (click)="searchTerm.reset(); filterCompanies()">
               <mat-icon>close</mat-icon>
@@ -103,8 +103,7 @@
     </mat-toolbar>
     <mat-nav-list>
       <cdk-virtual-scroll-viewport appendOnly itemSize="10" class="desktop-viewport">
-
-        <a mat-list-item (click)="selectCompany(company)" *cdkVirtualFor="let company of filteredCompanies">
+        <a mat-list-item (click)="selectCompany(company)" *cdkVirtualFor="let company of filteredCompanies" [activated]="active_company?.id === company?.id">
           <mat-icon matListItemIcon>arrow_right</mat-icon>{{ company.name }}
         </a>
         @if (busy) {
@@ -114,7 +113,6 @@
         <a mat-list-item>No Companies. Please try another search or category</a>
         }
       </cdk-virtual-scroll-viewport>
-
     </mat-nav-list>
   </mat-drawer>
 
@@ -144,7 +142,7 @@
     <div class="container mt-5 d-none d-md-block">
       <div class="row justify-content-center">
         <div class="col-md-8">
-          <app-card [company]="selected_company"></app-card>
+          <app-card [company]="active_company"></app-card>
         </div>
       </div>
     </div>
