@@ -128,19 +128,20 @@ export class AppComponent {
   }
 
   updateFilteredCompanies(searchTerm: string = '') {
-    if (this.activeCategory === 'all') {
+    if (this.activeCategory.toLowerCase() === 'all') {
       this.filteredCompanies = this.list_of_categories.flatMap(category => category.category.companies);
     } else {
-      const category = this.list_of_categories.find(cat => cat.category.slug === this.activeCategory);
+      const category = this.list_of_categories.find(cat => cat.category.slug.toLowerCase() === this.activeCategory.toLowerCase());
       this.filteredCompanies = category ? category.category.companies : [];
     }
-
+  
     if (searchTerm) {
       this.filteredCompanies = this.filteredCompanies.filter(company =>
         company.name.toLowerCase().includes(searchTerm.toLowerCase())
       );
     }
   }
+  
 
   filterCompanies(categorySlug: string = 'all', searchTerm: string = '') {
     this.activeCategory = categorySlug;
