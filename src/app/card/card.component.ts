@@ -51,4 +51,20 @@ export class CardComponent {
   copyText(text: string) {
     navigator.clipboard.writeText(text);
   }
+
+  /**
+   * 
+   * @param company 
+   * @param key 
+   * @returns 
+   */
+  getCompanyProperty(company: any, key: string): any {
+    if (!company) return null;
+    
+    const lowerCaseKey = key.toLowerCase();
+    const sentenceCaseKey = key.charAt(0).toUpperCase() + key.slice(1);
+    
+    return company[lowerCaseKey] || company[sentenceCaseKey];
+  }
+  
 }
