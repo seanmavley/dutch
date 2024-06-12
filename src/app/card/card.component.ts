@@ -31,7 +31,7 @@ export class CardComponent {
   onPopState() {
     console.log('Popstate triggered')
     if (this._bottomSheetRef && this._bottomSheetRef.dismiss) {
-      this._bottomSheetRef.dismiss(); // Close the bottom sheet
+      this._bottomSheetRef.dismiss();
       // Prevent default behavior to avoid actual navigation
       return false;
     }

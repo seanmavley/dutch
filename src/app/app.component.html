@@ -123,7 +123,7 @@
       <div class="row justify-content-center">
         <mat-nav-list>
           <cdk-virtual-scroll-viewport appendOnly itemSize="10" class="mobile-viewport">
-            <a mat-list-item (click)="openCompanyCard(company)" *cdkVirtualFor="let company of filteredCompanies">
+            <a mat-list-item (click)="openCompanyCard(company)" *cdkVirtualFor="let company of filteredCompanies" [activated]="active_company?.id === company?.id">
               <mat-icon matListItemIcon>arrow_right</mat-icon>{{ company.name }}
             </a>
             @if (busy) {
