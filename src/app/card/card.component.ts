@@ -2,10 +2,6 @@ import { Component, HostListener, Inject, Input, Optional } from '@angular/core'
 import { iCompany, iIndustry } from '../models/dutch.interface';
 import { MAT_BOTTOM_SHEET_DATA, MatBottomSheetRef } from '@angular/material/bottom-sheet';
 import { UtilsService } from '../services/utils.service';
-import { MatCardModule } from '@angular/material/card';
-import { MatDividerModule } from '@angular/material/divider';
-import { MatTooltipModule } from '@angular/material/tooltip';
-import { MatButtonModule } from '@angular/material/button';
 import { SharedModule } from '../shared/shared.module';
 
 @Component({

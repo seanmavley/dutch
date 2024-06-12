@@ -1,29 +1,13 @@
 import { Component, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
 import { DutchService } from './services/dutch.service';
 import { iCompany, iCategory } from './models/dutch.interface';
-import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { CardComponent } from './card/card.component';
 import { debounceTime, distinctUntilChanged } from 'rxjs';
-import { MatBottomSheet, MatBottomSheetModule } from '@angular/material/bottom-sheet';
+import { MatBottomSheet } from '@angular/material/bottom-sheet';
 import { AboutDialogComponent } from './partials/about-dialog/about-dialog.component';
 import { SwUpdate } from '@angular/service-worker';
-import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatIconModule } from '@angular/material/icon';
-import { MatSelectModule } from '@angular/material/select';
-import { MatButtonModule } from '@angular/material/button';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatListModule } from '@angular/material/list';
-import { MatMenuModule } from '@angular/material/menu';
-import { MatProgressBarModule } from '@angular/material/progress-bar';
-import { MatTooltipModule } from '@angular/material/tooltip';
-import { MatDialogModule } from '@angular/material/dialog';
-import { MatTabsModule } from '@angular/material/tabs';
-import { ScrollingModule } from '@angular/cdk/scrolling';
-import { MatInputModule } from '@angular/material/input';
+import { FormControl } from '@angular/forms';
 import { SharedModule } from './shared/shared.module';
 
 @Component({
