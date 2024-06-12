@@ -4,7 +4,7 @@ import { iCompany, iCategory } from './models/dutch.interface';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { CardComponent } from './card/card.component';
 import { debounceTime, distinctUntilChanged } from 'rxjs';
-import { MatBottomSheet } from '@angular/material/bottom-sheet';
+import { MatBottomSheet, MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import { AboutDialogComponent } from './partials/about-dialog/about-dialog.component';
 import { SwUpdate } from '@angular/service-worker';
 import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -16,7 +16,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatListModule, MatNavList } from '@angular/material/list';
+import { MatListModule } from '@angular/material/list';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatTooltipModule } from '@angular/material/tooltip';
@@ -24,26 +24,27 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatTabsModule } from '@angular/material/tabs';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { MatInputModule } from '@angular/material/input';
+import { SharedModule } from './shared/shared.module';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterModule, MatSnackBarModule, MatToolbarModule, FormsModule, ReactiveFormsModule, MatFormFieldModule, MatIconModule, MatSelectModule, MatButtonModule, MatSidenavModule, MatNavList, MatListModule, MatMenuModule, MatProgressBarModule, MatTooltipModule, MatDialogModule, MatSnackBarModule, MatTabsModule, ScrollingModule, MatInputModule,    CardComponent],
+  imports: [
+    SharedModule,
+    CardComponent
+  ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  providers: [MatBottomSheet],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent {
-
   busy: boolean = false;
   is_done: boolean = false;
-  active_company!: iCompany | null;;
+  active_company!: iCompany | null;
   filteredCompanies!: iCompany[] | null;
   activeCategory: string = 'all';
 
   list_of_categories: iCategory[] = [];
-
   searchTerm = new FormControl();
 
   constructor(
@@ -53,7 +54,6 @@ export class AppComponent {
     private ref: ChangeDetectorRef,
     private updates: SwUpdate,
   ) { }
-
 
   ngOnInit() {
     this.is_done = localStorage.getItem('task') === 'done' ? true : false;
@@ -96,7 +96,6 @@ export class AppComponent {
       window.location.reload();
     }, 1000);
   }
-
 
   loadLocal() {
     this.busy = true;
@@ -149,7 +148,6 @@ export class AppComponent {
     }
   }
 
-
   filterCompanies(categorySlug: string = 'all', searchTerm: string = '') {
     this.activeCategory = categorySlug;
     this.updateFilteredCompanies(searchTerm);
@@ -166,29 +164,4 @@ export class AppComponent {
   scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
-
-  // checkForUpdate() {
-  //   if (this.updates.isEnabled) {
-  //     this.updates.available.subscribe(() => {
-  //       if (confirm('New version available. Load new version?')) {
-  //         this.updates.activateUpdate().then(() => document.location.reload());
-  //       }
-  //     });
-  //   }
-  // }
-
-}
-
-if (typeof Worker !== 'undefined') {
-  // Create a new
-  const worker = new Worker(new URL('./app.worker', import.meta.url));
-  worker.onmessage = ({ data }) => {
-    console.log(`page got message: ${data}`);
-  };
-  worker.postMessage('hello');
-} else {
-  // Web Workers are not supported in this environment.
-  // You should add a fallback so that your program still executes correctly.
-  console.log('Web Workers are not supported in this environment.');
-  alert('Web Workers are not supported in this environment.');
 }

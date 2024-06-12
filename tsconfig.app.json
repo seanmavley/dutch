@@ -2,6 +2,7 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
+    "noImplicitReturns": false,
     "outDir": "./out-tsc/app",
     "types": []
   },
