@@ -2,6 +2,11 @@ const axios = require('axios');
 const fs = require('fs').promises;
 const path = require('path');
 
+const MODEL_NAME = 'llama3.1:8b';
+const API_URL = 'http://localhost:11434/api/generate';
+// const API_URL = 'https://visitors-mill-airfare-immediate.trycloudflare.com/api/generate';
+
+
 // Define the categories
 const categories = [
   {
@@ -29,13 +34,14 @@ const categories = [
 
 // Function to clean up category
 function cleanCategory(rawCategory) {
-  rawCategory = rawCategory.toLowerCase();
   if (typeof rawCategory !== 'string') {
     return "ot";
   }
+  rawCategory = rawCategory.toLowerCase();
   const cleaned = categories.find(cat => rawCategory.includes(cat.slug));
   return cleaned ? cleaned.slug : "ot";
 }
+
 
 // Function to read the input JSON file
 async function readInputFile(filePath) {
@@ -125,14 +131,14 @@ async function fetchCompanyInfo(company) {
   `;
 
   const payload = {
-    model: 'llama3',
+    model: MODEL_NAME,
     prompt: prompt,
     format: 'json',
     stream: false,
   };
 
   try {
-    const response = await axios.post('http://localhost:11434/api/generate', payload);
+    const response = await axios.post(API_URL, payload);
     let parsedResponse = JSON.parse(response.data.response);
 
     // Ensure all keys are lowercase
@@ -144,7 +150,7 @@ async function fetchCompanyInfo(company) {
     parsedResponse.category = cleanCategory(parsedResponse.category);
 
     // Ensure keys for these fields are lowercase
-    parsedResponse.id = company.id.toLowerCase(); 
+    parsedResponse.id = company.id; 
     parsedResponse.name = company.name.toLowerCase();
     parsedResponse.kvk = company.kvk.toLowerCase();
 
@@ -176,10 +182,31 @@ async function fetchCompanyInfo(company) {
   }
 }
 
+// Function to read progress file
+async function readProgressFile(progressFilePath) {
+  try {
+    const data = await fs.readFile(progressFilePath, 'utf8');
+    return JSON.parse(data);
+  } catch (error) {
+    console.error('Error reading progress file:', error);
+    return null;
+  }
+}
+
+// Function to write progress to file
+async function writeProgressFile(progressFilePath, companyId) {
+  try {
+    await fs.writeFile(progressFilePath, JSON.stringify({ lastProcessedId: companyId }), 'utf8');
+  } catch (error) {
+    console.error('Error writing to progress file:', error);
+  }
+}
+
 // Main function to read input, make API calls, and write output
 async function main() {
   const inputFilePath = path.resolve(__dirname, 'organizations.json');
   const outputFilePath = path.resolve(__dirname, 'output.json');
+  const progressFilePath = path.resolve(__dirname, 'progress.json');
 
   // Read input file
   const companies = await readInputFile(inputFilePath);
@@ -188,12 +215,23 @@ async function main() {
     return;
   }
 
-  for (const company of companies) {
+  // Read progress file
+  const progress = await readProgressFile(progressFilePath);
+  let startIndex = 0;
+
+  if (progress && progress.lastProcessedId) {
+    startIndex = companies.findIndex(company => company.id === progress.lastProcessedId) + 1;
+  }
+
+  for (let i = startIndex; i < companies.length; i++) {
+    const company = companies[i];
     // Fetch company info from API
     const companyInfo = await fetchCompanyInfo(company);
     if (companyInfo) {
       // Append to output file
       await appendToOutputFile(outputFilePath, companyInfo);
+      // Write progress
+      await writeProgressFile(progressFilePath, company.id);
     }
   }
 

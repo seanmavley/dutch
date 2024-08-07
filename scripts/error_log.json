@@ -1,0 +1,14 @@
+[
+  {
+    "id": 371,
+    "name": "AL International Transport & Logistics B.V.",
+    "kvk": "57661383",
+    "error": "JSON Parse error: Expected ':' before value in object property definition"
+  },
+  {
+    "id": 434,
+    "name": "Allseas Welding Services B.V.",
+    "kvk": "83351574",
+    "error": "JSON Parse error: Expected ':' before value in object property definition"
+  }
+]
