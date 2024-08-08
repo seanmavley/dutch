@@ -115,7 +115,7 @@ async function fetchCompanyInfo(company) {
       * if Manufacturing and Industrials, say "mi"
       * if None of the above, say "ot"
   
-  3. **Website:** Provide the company's official website URL. If no website is found, respond with "empty".
+  3. **Website:** Provide the company's official website URL *only*. Add NO explanation. If no website is found, respond with "empty".
   4. **Tags:** List up to THREE relevant tags (keywords) that best describe the company's focus, industry, or target market. 
   
   **Response Format:**

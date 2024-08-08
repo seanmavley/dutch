@@ -17,11 +17,12 @@
       <mat-divider></mat-divider>
     </mat-card-content>
     <mat-card-actions>
-      <a [href]="getCompanyProperty(company, 'website')" target="_blank" [disabled]="!getCompanyProperty(company, 'website')" 
-         [matTooltip]="getCompanyProperty(company, 'website') || 'No website available'" mat-button>
-        Company website
-      </a>
-      <a [href]="url" target="_blank" mat-button>Web search</a>
+      @if (getCompanyProperty(company, 'website') !== 'empty') {
+        <a [href]="getCompanyProperty(company, 'website')" target="_blank" [matTooltip]="getCompanyProperty(company, 'website')" mat-button>
+          Company website
+        </a>
+      }
+      <a [href]="search_url" target="_blank" mat-button>Web search</a>
     </mat-card-actions>
     <mat-divider></mat-divider>
     <p style="color:rgb(105, 105, 105)" class="fs-6 ms-3 mt-2 italic">

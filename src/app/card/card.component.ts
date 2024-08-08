@@ -15,7 +15,7 @@ import { SharedModule } from '../shared/shared.module';
 })
 export class CardComponent {
   @Input() company!: iCompany | null;
-  url!: string;
+  search_url!: string;
 
   constructor(
     @Optional() private _bottomSheetRef: MatBottomSheetRef<CardComponent>,
@@ -38,7 +38,7 @@ export class CardComponent {
   }
 
   ngOnChanges(): void {
-    this.url = `https://www.google.com/search?q=${this.company?.name}`
+    this.search_url = `https://www.google.com/search?q=${this.company?.name}`
   }
 
   getIndustryName(categorySlug: string): string {
