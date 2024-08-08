@@ -1,14 +1,158 @@
 [
   {
-    "id": 371,
-    "name": "AL International Transport & Logistics B.V.",
-    "kvk": "57661383",
+    "id": 2594,
+    "name": "Desyde B.V.",
+    "kvk": "31043048",
+    "error": "JSON Parse error: Unterminated string"
+  },
+  {
+    "id": 2828,
+    "name": "dutchfounders.fund B.V.",
+    "kvk": "73154520",
     "error": "JSON Parse error: Expected ':' before value in object property definition"
   },
   {
-    "id": 434,
-    "name": "Allseas Welding Services B.V.",
-    "kvk": "83351574",
+    "id": 2954,
+    "name": "Eekels Technology B.V.",
+    "kvk": "02309166",
+    "error": "JSON Parse error: Expected ':' before value in object property definition"
+  },
+  {
+    "id": 2976,
+    "name": "Egypt Solar B.V.",
+    "kvk": "64352897",
+    "error": "JSON Parse error: Expected ':' before value in object property definition"
+  },
+  {
+    "id": 3060,
+    "name": "E-magy B.V.",
+    "kvk": "74270338",
+    "error": "JSON Parse error: Expected ':' before value in object property definition"
+  },
+  {
+    "id": 3076,
+    "name": "EMG Group B.V.",
+    "kvk": "28100791",
+    "error": "JSON Parse error: Expected ':' before value in object property definition"
+  },
+  {
+    "id": 3109,
+    "name": "Energy Essentials Group B.V.",
+    "kvk": "58192077",
+    "error": "JSON Parse error: Expected ':' before value in object property definition"
+  },
+  {
+    "id": 3368,
+    "name": "EWART AMSTERDAM B.V.",
+    "kvk": "63206900",
+    "error": "JSON Parse error: Expected ':' before value in object property definition"
+  },
+  {
+    "id": 3389,
+    "name": "Expedia.nl. B.V.",
+    "kvk": "34204970",
+    "error": "JSON Parse error: Expected ':' before value in object property definition"
+  },
+  {
+    "id": 3659,
+    "name": "Forbon Technology Netherlands B.V.",
+    "kvk": "63585685",
+    "error": "JSON Parse error: Expected ':' before value in object property definition"
+  },
+  {
+    "id": 3972,
+    "name": "Glassworks Amsterdam Ltd",
+    "kvk": "61618411",
+    "error": "JSON Parse error: Expected ':' before value in object property definition"
+  },
+  {
+    "id": 4034,
+    "name": "Gomocha B.V.",
+    "kvk": "61927201",
+    "error": "JSON Parse error: Expected ':' before value in object property definition"
+  },
+  {
+    "id": 4129,
+    "name": "Growth Tribe B.V.",
+    "kvk": "63203405",
+    "error": "JSON Parse error: Unterminated string"
+  },
+  {
+    "id": 4244,
+    "name": "Hari's Treasure B.V.",
+    "kvk": "34318216",
+    "error": "JSON Parse error: Expected ':' before value in object property definition"
+  },
+  {
+    "id": 4279,
+    "name": "HBG Betonstaal B.V.",
+    "kvk": "78050138",
+    "error": "JSON Parse error: Expected ':' before value in object property definition"
+  },
+  {
+    "id": 4568,
+    "name": "Husqvarna Nederland B.V.",
+    "kvk": "33285749",
+    "error": "JSON Parse error: Expected ':' before value in object property definition"
+  },
+  {
+    "id": 4679,
+    "name": "IJs-Garant",
+    "kvk": "67516637",
+    "error": "JSON Parse error: Expected ':' before value in object property definition"
+  },
+  {
+    "id": 4727,
+    "name": "Improvement Centre B.V.",
+    "kvk": "27277600",
+    "error": "JSON Parse error: Expected ':' before value in object property definition"
+  },
+  {
+    "id": 4935,
+    "name": "International Direct Sourcing B.V.",
+    "kvk": "62992112",
+    "error": "JSON Parse error: Expected ':' before value in object property definition"
+  },
+  {
+    "id": 5599,
+    "name": "Labyrinth onderzoek & advies",
+    "kvk": "30188330",
+    "error": "JSON Parse error: Expected ':' before value in object property definition"
+  },
+  {
+    "id": 5695,
+    "name": "Lets Blinq B.V.",
+    "kvk": "53125444",
+    "error": "JSON Parse error: Expected ':' before value in object property definition"
+  },
+  {
+    "id": 6003,
+    "name": "Manpower B.V.",
+    "kvk": "33138744",
+    "error": "JSON Parse error: Expected ':' before value in object property definition"
+  },
+  {
+    "id": 6095,
+    "name": "Max Europe B.V.",
+    "kvk": "39093032",
+    "error": "JSON Parse error: Expected ':' before value in object property definition"
+  },
+  {
+    "id": 6122,
+    "name": "MBP Netherlands B.V.",
+    "kvk": "22053787",
+    "error": "JSON Parse error: Expected ':' before value in object property definition"
+  },
+  {
+    "id": 6174,
+    "name": "Medify B.V.",
+    "kvk": "58734325",
+    "error": "JSON Parse error: Expected ':' before value in object property definition"
+  },
+  {
+    "id": 6394,
+    "name": "MM Flowers Europe B.V.",
+    "kvk": "58781803",
     "error": "JSON Parse error: Expected ':' before value in object property definition"
   }
 ]
