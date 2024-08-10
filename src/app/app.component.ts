@@ -94,7 +94,7 @@ export class AppComponent {
 
   loadJson() {
     this.busy = true;
-    this.dutchService.loadJson('assets/8-8-2024.json')
+    this.dutchService.loadJson('assets/10-08-2024.json')
       .subscribe((data: iCategory[]) => {
         this.list_of_categories = data;
         this.updateFilteredCompanies();
