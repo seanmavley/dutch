@@ -28,7 +28,7 @@ async function scrapeWebsite() {
 
   // Find elements containing organization names and KvK numbers
   $('table tbody tr').each((index, element) => {
-    const name = $(element).find('th[scope="row"]').text().trim();
+    const name = $(element).find('th').text().trim();
     const kvk = $(element).find('td').text().trim();
     let primary_key = index + 1;
 

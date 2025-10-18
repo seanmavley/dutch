@@ -2,7 +2,7 @@ const axios = require('axios');
 const fs = require('fs').promises;
 const path = require('path');
 
-const MODEL_NAME = 'llama3.1:8b';
+const MODEL_NAME = 'llama3.2:latest';
 const API_URL = 'http://localhost:11434/api/generate';
 // const API_URL = 'https://visitors-mill-airfare-immediate.trycloudflare.com/api/generate';
 

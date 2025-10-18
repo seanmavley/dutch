@@ -10,6 +10,10 @@ See the live application running at [dutch.khophi.com](dutch.khophi.com)
 
 ![wide](https://github.com/seanmavley/dutch/assets/5289083/2bd7aba1-c321-4b46-8fc8-1cddc084558a)
 
+## To-Do
+
+- Automate the update, to only include the new organization names added
+
 ## How to run the Angular application locally
 
 - Clone this repository and change directory to the project folder
