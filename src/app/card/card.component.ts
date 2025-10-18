@@ -5,13 +5,12 @@ import { UtilsService } from '../services/utils.service';
 import { SharedModule } from '../shared/shared.module';
 
 @Component({
-  selector: 'app-card',
-  standalone: true,
-  imports: [
-    SharedModule
-  ],
-  templateUrl: './card.component.html',
-  styleUrls: ['./card.component.scss']
+    selector: 'app-card',
+    imports: [
+        SharedModule
+    ],
+    templateUrl: './card.component.html',
+    styleUrls: ['./card.component.scss']
 })
 export class CardComponent {
   @Input() company!: iCompany | null;

@@ -11,15 +11,14 @@ import { FormControl } from '@angular/forms';
 import { SharedModule } from './shared/shared.module';
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [
-    SharedModule,
-    CardComponent
-  ],
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+    selector: 'app-root',
+    imports: [
+        SharedModule,
+        CardComponent
+    ],
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent {
   busy: boolean = false;
