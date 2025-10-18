@@ -9,9 +9,9 @@
           <mat-form-field appearance="fill" class="full-width">
             <input matInput placeholder="Search company name" name="searchTerm" [formControl]="searchTerm">
             @if (searchTerm.value) {
-            <button matSuffix mat-icon-button aria-label="Clear" (click)="searchTerm.reset(); filterCompanies()">
-              <mat-icon>close</mat-icon>
-            </button>
+              <button matSuffix mat-icon-button aria-label="Clear" (click)="searchTerm.reset(); filterCompanies()">
+                <mat-icon>close</mat-icon>
+              </button>
             }
           </mat-form-field>
         </form>
@@ -44,9 +44,9 @@
           <mat-form-field appearance="outline" class="full-width">
             <input matInput placeholder="Search company name" name="searchTerm" [formControl]="searchTerm">
             @if (searchTerm.value) {
-            <button matSuffix mat-icon-button aria-label="Clear" (click)="searchTerm.reset(); filterCompanies()">
-              <mat-icon>close</mat-icon>
-            </button>
+              <button matSuffix mat-icon-button aria-label="Clear" (click)="searchTerm.reset(); filterCompanies()">
+                <mat-icon>close</mat-icon>
+              </button>
             }
           </mat-form-field>
         </form>
@@ -74,27 +74,37 @@
           <!-- So in 2024, are we saying there's NO better way to do this in Angular 18+ using Angular Material? -->
           <!-- I've tried different ways, such as swapping out the attributes via [attr.mat-flat-button] or [class.mat-flat-button] -->
           <!-- Anyway, below is verbose, but works -->
-          <button mat-flat-button *ngIf="activeCategory === 'all'" color="primary" class="me-2 mb-3"
+          @if (activeCategory === 'all') {
+            <button mat-flat-button color="primary" class="me-2 mb-3"
             (click)="filterCompanies()" [disabled]="busy" matTooltip="Show all the companies">All</button>
-          <button mat-stroked-button *ngIf="activeCategory !== 'all'" color="primary" class="me-2 mb-3"
+          }
+          @if (activeCategory !== 'all') {
+            <button mat-stroked-button color="primary" class="me-2 mb-3"
             (click)="filterCompanies()" [disabled]="busy">All</button>
+          }
 
           @for (category of list_of_categories; track $index) {
-            <button mat-flat-button *ngIf="activeCategory === category.category.slug" color="primary" class="me-2 mb-3"
-              (click)="filterCompanies(category.category.slug)" [matTooltip]="category.category.description">
-              {{ category.category.name }}
-            </button>
-            <button mat-stroked-button *ngIf="activeCategory !== category.category.slug" color="primary"
-              class="me-2 mb-3" (click)="filterCompanies(category.category.slug)" [matTooltip]="category.category.description">
-              {{ category.category.name }}
-            </button>
+            @if (activeCategory === category.category.slug) {
+              <button mat-flat-button color="primary" class="me-2 mb-3"
+                (click)="filterCompanies(category.category.slug)" [matTooltip]="category.category.description">
+                {{ category.category.name }}
+              </button>
+            }
+            @if (activeCategory !== category.category.slug) {
+              <button mat-stroked-button color="primary"
+                class="me-2 mb-3" (click)="filterCompanies(category.category.slug)" [matTooltip]="category.category.description">
+                {{ category.category.name }}
+              </button>
+            }
           }
         </section>
       </div>
     </div>
   </div>
 </div>
-<mat-progress-bar *ngIf="busy" mode="indeterminate"></mat-progress-bar>
+@if (busy) {
+  <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+}
 <mat-tab-nav-panel #tabPanel></mat-tab-nav-panel>
 <mat-drawer-container>
   <mat-drawer #drawer mode="side" opened="true" class="d-none d-md-block">
@@ -107,10 +117,10 @@
           <mat-icon matListItemIcon>arrow_right</mat-icon>{{ company.name }}
         </a>
         @if (busy) {
-        <a mat-list-item>Loading...</a>
+          <a mat-list-item>Loading...</a>
         }
         @if (filteredCompanies?.length === 0) {
-        <a mat-list-item>No Companies. Please try another search or category</a>
+          <a mat-list-item>No Companies. Please try another search or category</a>
         }
       </cdk-virtual-scroll-viewport>
     </mat-nav-list>
@@ -127,10 +137,10 @@
               <mat-icon matListItemIcon>arrow_right</mat-icon>{{ company.name }}
             </a>
             @if (busy) {
-            <a mat-list-item>Loading...</a>
+              <a mat-list-item>Loading...</a>
             }
             @if (filteredCompanies?.length === 0) {
-            <a mat-list-item>No Companies. Please try another search or category</a>
+              <a mat-list-item>No Companies. Please try another search or category</a>
             }
           </cdk-virtual-scroll-viewport>
 

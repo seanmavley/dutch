@@ -12,6 +12,7 @@ import { SharedModule } from './shared/shared.module';
 
 @Component({
     selector: 'app-root',
+    standalone: true,
     imports: [
         SharedModule,
         CardComponent

@@ -4,6 +4,7 @@ import { SharedModule } from '../../shared/shared.module';
 @Component({
     selector: 'app-about-dialog',
     imports: [SharedModule],
+    standalone: true,
     templateUrl: './about-dialog.component.html',
     styleUrl: './about-dialog.component.scss'
 })

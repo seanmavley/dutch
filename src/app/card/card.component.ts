@@ -7,8 +7,9 @@ import { SharedModule } from '../shared/shared.module';
 @Component({
     selector: 'app-card',
     imports: [
-        SharedModule
+        SharedModule,
     ],
+    standalone: true,
     templateUrl: './card.component.html',
     styleUrls: ['./card.component.scss']
 })
