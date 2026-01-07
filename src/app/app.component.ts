@@ -11,15 +11,15 @@ import { FormControl } from '@angular/forms';
 import { SharedModule } from './shared/shared.module';
 
 @Component({
-    selector: 'app-root',
-    standalone: true,
-    imports: [
-        SharedModule,
-        CardComponent
-    ],
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss'],
-    changeDetection: ChangeDetectionStrategy.OnPush
+  selector: 'app-root',
+  standalone: true,
+  imports: [
+    SharedModule,
+    CardComponent
+  ],
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent {
   busy: boolean = false;
@@ -147,5 +147,22 @@ export class AppComponent {
 
   scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  exportCategory() {
+    if (!this.filteredCompanies || this.filteredCompanies.length === 0) {
+      this.snack.open('No companies to export', 'Ok', { duration: 3000 });
+      return;
+    }
+
+    const data = this.filteredCompanies.map(c => `${c.name} - ${c.website}`).join('\n');
+    const blob = new Blob([data], { type: 'text/plain' });
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `${this.activeCategory}-companies.txt`;
+    a.click();
+    window.URL.revokeObjectURL(url);
+    this.snack.open(`Exported ${this.filteredCompanies.length} companies`, 'Ok', { duration: 5000 });
   }
 }
