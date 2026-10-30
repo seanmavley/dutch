@@ -1,4 +1,4 @@
-import { Component, HostListener, Inject, Input, Optional } from '@angular/core';
+import { Component, HostListener, Inject, Input, Optional, ChangeDetectionStrategy } from '@angular/core';
 import { iCompany, iIndustry } from '../models/dutch.interface';
 import { MAT_BOTTOM_SHEET_DATA, MatBottomSheetRef } from '@angular/material/bottom-sheet';
 import { UtilsService } from '../services/utils.service';
@@ -11,6 +11,7 @@ import { SharedModule } from '../shared/shared.module';
     ],
     standalone: true,
     templateUrl: './card.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrls: ['./card.component.scss']
 })
 export class CardComponent {
@@ -35,6 +36,7 @@ export class CardComponent {
       // Prevent default behavior to avoid actual navigation
       return false;
     }
+    return true;
   }
 
   ngOnChanges(): void {

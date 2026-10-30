@@ -19,8 +19,8 @@ describe('AppComponent', () => {
   let bottomSheetSpy: jasmine.SpyObj<MatBottomSheet>;
 
   const mockData: iCategory[] = [
-    { category: { name: 'Category 1', slug: 'category-1', companies: [] } },
-    { category: { name: 'Category 2', slug: 'category-2', companies: [] } }
+    { category: { name: 'Category 1', slug: 'category-1', description: 'Desc 1', companies: [] } },
+    { category: { name: 'Category 2', slug: 'category-2', description: 'Desc 2', companies: [] } }
   ];
 
   beforeEach(async () => {
@@ -29,8 +29,7 @@ describe('AppComponent', () => {
     bottomSheetSpy = jasmine.createSpyObj('MatBottomSheet', ['open']);
 
     await TestBed.configureTestingModule({
-      imports: [SharedModule], 
-      declarations: [AppComponent],
+      imports: [SharedModule, AppComponent],
       providers: [
         { provide: DutchService, useValue: dutchServiceSpy },
         { provide: MatSnackBar, useValue: snackBarSpy },
