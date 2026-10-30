@@ -6,7 +6,11 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "scrape": "node scripts/scraper.js",
+    "enrich": "node scripts/enrich_gemini.js",
+    "sync:data": "node -e \"require('./scripts/enrich_gemini').syncToAssets(require('path').resolve('./scripts/output.json'))\"",
+    "pipeline": "npm run scrape && npm run enrich"
   },
   "private": true,
   "dependencies": {

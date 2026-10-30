@@ -1,0 +1,5752 @@
+[
+  {
+    "id": 9,
+    "name": "123ATEX.eu Techniek B.V.",
+    "kvk": "87022729"
+  },
+  {
+    "id": 30,
+    "name": "3BM Engineering",
+    "kvk": "20155514"
+  },
+  {
+    "id": 44,
+    "name": "4EandR B.V.",
+    "kvk": "81234775"
+  },
+  {
+    "id": 61,
+    "name": "A Consultancy Company B.V.",
+    "kvk": "80182909"
+  },
+  {
+    "id": 62,
+    "name": "A Nice Group B.V.",
+    "kvk": "87108674"
+  },
+  {
+    "id": 82,
+    "name": "Aage Hempel Netherlands B.V.",
+    "kvk": "56101392"
+  },
+  {
+    "id": 86,
+    "name": "Aalberts integrated piping systems group B.V.",
+    "kvk": "08052094"
+  },
+  {
+    "id": 155,
+    "name": "ACCN B.V.",
+    "kvk": "67500269"
+  },
+  {
+    "id": 158,
+    "name": "AccountNL.com B.V.",
+    "kvk": "84734396"
+  },
+  {
+    "id": 173,
+    "name": "ACES Energy B.V.",
+    "kvk": "62404547"
+  },
+  {
+    "id": 179,
+    "name": "ACL Airshop B.V.",
+    "kvk": "34178161"
+  },
+  {
+    "id": 185,
+    "name": "Acorn B.V.",
+    "kvk": "98756834"
+  },
+  {
+    "id": 207,
+    "name": "Actuation B.V.",
+    "kvk": "82934754"
+  },
+  {
+    "id": 213,
+    "name": "ACV Holdings B.V.",
+    "kvk": "74561111"
+  },
+  {
+    "id": 216,
+    "name": "ADAMA Agriculture B.V.",
+    "kvk": "33265509"
+  },
+  {
+    "id": 245,
+    "name": "ADM Investor Services B.V.",
+    "kvk": "34154187"
+  },
+  {
+    "id": 248,
+    "name": "Administratiekantoor DPAD B.V.",
+    "kvk": "78606853"
+  },
+  {
+    "id": 249,
+    "name": "ADNOC Global Trading Services B.V.",
+    "kvk": "88712885"
+  },
+  {
+    "id": 264,
+    "name": "Advapay B.V.",
+    "kvk": "93420196"
+  },
+  {
+    "id": 268,
+    "name": "Advies- en Ingenieursbureau van de Laar B.V.",
+    "kvk": "17050552"
+  },
+  {
+    "id": 269,
+    "name": "Adviesbureau Tielemans Bouwconstructies B.V.",
+    "kvk": "17112028"
+  },
+  {
+    "id": 275,
+    "name": "Adyen Netherlands B.V.",
+    "kvk": "98924397"
+  },
+  {
+    "id": 293,
+    "name": "AEROWORKS EUROPE B.V.",
+    "kvk": "54067502"
+  },
+  {
+    "id": 298,
+    "name": "Aevean B.V.",
+    "kvk": "94137714"
+  },
+  {
+    "id": 300,
+    "name": "AEVO Innovate B.V.",
+    "kvk": "97770639"
+  },
+  {
+    "id": 340,
+    "name": "AGRI3 Fund Manager B.V.",
+    "kvk": "72908114"
+  },
+  {
+    "id": 355,
+    "name": "AHI Amsterdam Hair Institute B.V.",
+    "kvk": "80834183"
+  },
+  {
+    "id": 356,
+    "name": "Ahlem S.A.S.U.",
+    "kvk": "89049713"
+  },
+  {
+    "id": 357,
+    "name": "AHMTER Engineering B.V.",
+    "kvk": "94464502"
+  },
+  {
+    "id": 369,
+    "name": "Ailcol Chiropractie B.V.",
+    "kvk": "96409118"
+  },
+  {
+    "id": 384,
+    "name": "Airborne Aerospace B.V.",
+    "kvk": "27241237"
+  },
+  {
+    "id": 385,
+    "name": "Airborne Composites Automation B.V.",
+    "kvk": "27341670"
+  },
+  {
+    "id": 390,
+    "name": "Airflo B.V.",
+    "kvk": "34209311"
+  },
+  {
+    "id": 401,
+    "name": "AIT Worldwide Logistics B.V.",
+    "kvk": "58386599"
+  },
+  {
+    "id": 402,
+    "name": "AIXTRON B.V.",
+    "kvk": "90375807"
+  },
+  {
+    "id": 407,
+    "name": "AKF/AGF Industrie B.V.",
+    "kvk": "32072590"
+  },
+  {
+    "id": 435,
+    "name": "Aldonk B.V.",
+    "kvk": "23029188"
+  },
+  {
+    "id": 441,
+    "name": "Alexia Kliniek Echt B.V.",
+    "kvk": "17214152"
+  },
+  {
+    "id": 447,
+    "name": "Alfred C. Toepfer International Netherlands B.V.",
+    "kvk": "24367223"
+  },
+  {
+    "id": 448,
+    "name": "AlgaSpring B.V.",
+    "kvk": "54667992"
+  },
+  {
+    "id": 455,
+    "name": "AliExpress International (Netherlands) B.V.",
+    "kvk": "91662834"
+  },
+  {
+    "id": 506,
+    "name": "Alp Lift B.V.",
+    "kvk": "30126463"
+  },
+  {
+    "id": 545,
+    "name": "Amaseu Consulting B.V.",
+    "kvk": "30271504"
+  },
+  {
+    "id": 577,
+    "name": "Amice Advocaten",
+    "kvk": "30235009"
+  },
+  {
+    "id": 587,
+    "name": "Amolé B.V.",
+    "kvk": "54329183"
+  },
+  {
+    "id": 625,
+    "name": "AMVS Global B.V.",
+    "kvk": "72588179"
+  },
+  {
+    "id": 635,
+    "name": "Analytic Artisans B.V.",
+    "kvk": "89194497"
+  },
+  {
+    "id": 639,
+    "name": "Anamata B.V.",
+    "kvk": "78520185"
+  },
+  {
+    "id": 666,
+    "name": "Animal Nutrition & Health Nederland B.V.",
+    "kvk": "95646248"
+  },
+  {
+    "id": 684,
+    "name": "Antaras ERP Solutions B.V.",
+    "kvk": "57377111"
+  },
+  {
+    "id": 688,
+    "name": "Anter Consulting B.V.",
+    "kvk": "91907195"
+  },
+  {
+    "id": 697,
+    "name": "Anthura Research 4 B.V.",
+    "kvk": "76004597"
+  },
+  {
+    "id": 707,
+    "name": "Anywell Health Holding B.V.",
+    "kvk": "94801134"
+  },
+  {
+    "id": 752,
+    "name": "AQPHA Medical B.V.",
+    "kvk": "65456149"
+  },
+  {
+    "id": 758,
+    "name": "Aqua-Spark Management B.V.",
+    "kvk": "60040017"
+  },
+  {
+    "id": 766,
+    "name": "Aramco Europe B.V.",
+    "kvk": "99144867"
+  },
+  {
+    "id": 792,
+    "name": "Ardagh Glass Moerdijk B.V.",
+    "kvk": "33178991"
+  },
+  {
+    "id": 798,
+    "name": "ARDOSZ B.V.",
+    "kvk": "69510474"
+  },
+  {
+    "id": 831,
+    "name": "Arriva Personenvervoer Nederland B.V.",
+    "kvk": "30124575"
+  },
+  {
+    "id": 841,
+    "name": "Artific B.V.",
+    "kvk": "92661564"
+  },
+  {
+    "id": 850,
+    "name": "Aryo Systems B.V.",
+    "kvk": "78555299"
+  },
+  {
+    "id": 852,
+    "name": "AS Colour B.V.",
+    "kvk": "93779240"
+  },
+  {
+    "id": 868,
+    "name": "Asian Bistro Nijmegen",
+    "kvk": "94335109"
+  },
+  {
+    "id": 881,
+    "name": "Asmi Technology Consulting B.V.",
+    "kvk": "89396693"
+  },
+  {
+    "id": 908,
+    "name": "AsterX B.V.",
+    "kvk": "94279306"
+  },
+  {
+    "id": 915,
+    "name": "AT Forwarding B.V.",
+    "kvk": "77089480"
+  },
+  {
+    "id": 924,
+    "name": "ATELIERFRONT",
+    "kvk": "71944249"
+  },
+  {
+    "id": 960,
+    "name": "ATTERO B.V.",
+    "kvk": "05053670"
+  },
+  {
+    "id": 962,
+    "name": "Audax Energy Trade Nederland B.V.",
+    "kvk": "96822546"
+  },
+  {
+    "id": 963,
+    "name": "Audax Security & Services B.V.",
+    "kvk": "69625239"
+  },
+  {
+    "id": 969,
+    "name": "Augusta Life Sciences B.V.",
+    "kvk": "98258508"
+  },
+  {
+    "id": 975,
+    "name": "Aurelia Netherlands B.V.",
+    "kvk": "91831342"
+  },
+  {
+    "id": 976,
+    "name": "Aurelia Netherlands TargetCo B.V.",
+    "kvk": "94449589"
+  },
+  {
+    "id": 982,
+    "name": "Ausnutria B.V.",
+    "kvk": "67043305"
+  },
+  {
+    "id": 1008,
+    "name": "Avant-Garde Health B.V.",
+    "kvk": "74557025"
+  },
+  {
+    "id": 1014,
+    "name": "AVB Language Group",
+    "kvk": "33159215"
+  },
+  {
+    "id": 1027,
+    "name": "Avi Air",
+    "kvk": "34098789"
+  },
+  {
+    "id": 1028,
+    "name": "Aviaco Group B.V.",
+    "kvk": "70127182"
+  },
+  {
+    "id": 1039,
+    "name": "Avisi Solutions B.V.",
+    "kvk": "76625664"
+  },
+  {
+    "id": 1074,
+    "name": "AZ Legal Services B.V.",
+    "kvk": "83232168"
+  },
+  {
+    "id": 1082,
+    "name": "B H S Kinetic B.V.",
+    "kvk": "93955480"
+  },
+  {
+    "id": 1086,
+    "name": "B&S B.V.",
+    "kvk": "24225407"
+  },
+  {
+    "id": 1088,
+    "name": "B&S Retail B.V.",
+    "kvk": "64793362"
+  },
+  {
+    "id": 1100,
+    "name": "B.V. Esbro",
+    "kvk": "09029096"
+  },
+  {
+    "id": 1101,
+    "name": "B.V. Intergroup Trading (I.G.T.)",
+    "kvk": "33134110"
+  },
+  {
+    "id": 1109,
+    "name": "B2B Renew Netherlands B.V.",
+    "kvk": "98293729"
+  },
+  {
+    "id": 1110,
+    "name": "B2Press B.V.",
+    "kvk": "89402960"
+  },
+  {
+    "id": 1112,
+    "name": "baann. B.V.",
+    "kvk": "98201743"
+  },
+  {
+    "id": 1116,
+    "name": "Babor Cosmetics B.V.",
+    "kvk": "14055612"
+  },
+  {
+    "id": 1124,
+    "name": "Backoffice Salaris Groep B.V.",
+    "kvk": "64492974"
+  },
+  {
+    "id": 1135,
+    "name": "Bakels International Trading B.V.",
+    "kvk": "91161037"
+  },
+  {
+    "id": 1156,
+    "name": "Ballast Nedam Ontwikkelingsmaatschappij B.V.",
+    "kvk": "24237504"
+  },
+  {
+    "id": 1175,
+    "name": "Bandimex B.V.",
+    "kvk": "24124067"
+  },
+  {
+    "id": 1218,
+    "name": "Batenburg Bellt B.V.",
+    "kvk": "30111733"
+  },
+  {
+    "id": 1219,
+    "name": "Batoni Khinkali B.V.",
+    "kvk": "64306860"
+  },
+  {
+    "id": 1227,
+    "name": "BAWAG AG Branch Netherlands",
+    "kvk": "98391631"
+  },
+  {
+    "id": 1248,
+    "name": "BCS B.V.",
+    "kvk": "16055073"
+  },
+  {
+    "id": 1256,
+    "name": "BDT Holland B.V.",
+    "kvk": "63696223"
+  },
+  {
+    "id": 1258,
+    "name": "Be Informed B.V.",
+    "kvk": "60027541"
+  },
+  {
+    "id": 1261,
+    "name": "Beakwise Europe B.V.",
+    "kvk": "98002740"
+  },
+  {
+    "id": 1265,
+    "name": "Beautinow B.V.",
+    "kvk": "81920237"
+  },
+  {
+    "id": 1275,
+    "name": "Behre Consulting B.V.",
+    "kvk": "72259582"
+  },
+  {
+    "id": 1286,
+    "name": "Bell Dredging Pumps B.V.",
+    "kvk": "56775245"
+  },
+  {
+    "id": 1288,
+    "name": "Bella Vista Veranda's B.V.",
+    "kvk": "68930372"
+  },
+  {
+    "id": 1292,
+    "name": "Ben Ocean B.V.",
+    "kvk": "84838930"
+  },
+  {
+    "id": 1294,
+    "name": "Benem",
+    "kvk": "67648975"
+  },
+  {
+    "id": 1297,
+    "name": "BENK PROJECTS OCE B.V.",
+    "kvk": "72716630"
+  },
+  {
+    "id": 1305,
+    "name": "Berg Van Rijk Logistics B.V.",
+    "kvk": "91594464"
+  },
+  {
+    "id": 1325,
+    "name": "Beter Verwijs B.V.",
+    "kvk": "94517606"
+  },
+  {
+    "id": 1331,
+    "name": "Beumer Group Benelux B.V.",
+    "kvk": "09094528"
+  },
+  {
+    "id": 1334,
+    "name": "BEWi RAW B.V.",
+    "kvk": "20033648"
+  },
+  {
+    "id": 1338,
+    "name": "Beyond Payrolling B.V.",
+    "kvk": "87442957"
+  },
+  {
+    "id": 1371,
+    "name": "Binfinity B.V.",
+    "kvk": "27277126"
+  },
+  {
+    "id": 1387,
+    "name": "Bionomic B.V.",
+    "kvk": "83535543"
+  },
+  {
+    "id": 1389,
+    "name": "Bioseutica B.V.",
+    "kvk": "34297739"
+  },
+  {
+    "id": 1411,
+    "name": "BITZER Benelux B.V.",
+    "kvk": "77693221"
+  },
+  {
+    "id": 1418,
+    "name": "BK Food Ingredients B.V.",
+    "kvk": "30210091"
+  },
+  {
+    "id": 1442,
+    "name": "Blits B.V.",
+    "kvk": "77021282"
+  },
+  {
+    "id": 1454,
+    "name": "BLoSH B.V.",
+    "kvk": "89154320"
+  },
+  {
+    "id": 1477,
+    "name": "Blue Wireless (Europe) B.V.",
+    "kvk": "72713887"
+  },
+  {
+    "id": 1495,
+    "name": "BMAir International B.V.",
+    "kvk": "18122402"
+  },
+  {
+    "id": 1498,
+    "name": "BMClinical B.V.",
+    "kvk": "66517478"
+  },
+  {
+    "id": 1506,
+    "name": "BNC Tax & Accounting B.V.",
+    "kvk": "86407090"
+  },
+  {
+    "id": 1517,
+    "name": "BOB INFRATECHNIEK B.V.",
+    "kvk": "76898253"
+  },
+  {
+    "id": 1523,
+    "name": "Boek 9 B.V.",
+    "kvk": "30226743"
+  },
+  {
+    "id": 1527,
+    "name": "Boer Speeltoestellen B.V.",
+    "kvk": "18126982"
+  },
+  {
+    "id": 1528,
+    "name": "Boersema Installatie-Adviseurs B.V.",
+    "kvk": "31041634"
+  },
+  {
+    "id": 1540,
+    "name": "Bolsius International B.V.",
+    "kvk": "16083219"
+  },
+  {
+    "id": 1545,
+    "name": "Bonana B.V.",
+    "kvk": "86494708"
+  },
+  {
+    "id": 1546,
+    "name": "Bonash B.V.",
+    "kvk": "65087852"
+  },
+  {
+    "id": 1556,
+    "name": "Booking Holdings B.V.",
+    "kvk": "96407204"
+  },
+  {
+    "id": 1567,
+    "name": "BookThat Holding B.V.",
+    "kvk": "76101126"
+  },
+  {
+    "id": 1573,
+    "name": "Boon & Breg B.V.",
+    "kvk": "37150252"
+  },
+  {
+    "id": 1575,
+    "name": "Boon Food Group B.V.",
+    "kvk": "23048500"
+  },
+  {
+    "id": 1611,
+    "name": "Boundless Payroll Netherlands B.V.",
+    "kvk": "80109934"
+  },
+  {
+    "id": 1612,
+    "name": "Bouter Cheese B.V.",
+    "kvk": "11023210"
+  },
+  {
+    "id": 1614,
+    "name": "Bouwhuis Enthoven B.V.",
+    "kvk": "38019263"
+  },
+  {
+    "id": 1616,
+    "name": "Bouwregelgeving Informatiesystemen (Bris) B.V.",
+    "kvk": "24196261"
+  },
+  {
+    "id": 1617,
+    "name": "Bovemij Interne Diensten B.V.",
+    "kvk": "67440711"
+  },
+  {
+    "id": 1641,
+    "name": "Brainberry B.V.",
+    "kvk": "87340682"
+  },
+  {
+    "id": 1654,
+    "name": "Brand Infrastructure Services B.V.",
+    "kvk": "59003871"
+  },
+  {
+    "id": 1665,
+    "name": "Braskem Netherlands Green B.V.",
+    "kvk": "84020040"
+  },
+  {
+    "id": 1674,
+    "name": "Breatec B.V. (Biocatalysts)",
+    "kvk": "17186282"
+  },
+  {
+    "id": 1693,
+    "name": "Bright Smile Dental Clinic B.V.",
+    "kvk": "65639863"
+  },
+  {
+    "id": 1703,
+    "name": "Brilmij Groep B.V.",
+    "kvk": "31047357"
+  },
+  {
+    "id": 1719,
+    "name": "Broekhuis Dealer Holding B.V.",
+    "kvk": "08024152"
+  },
+  {
+    "id": 1726,
+    "name": "Brother International Europe Limited",
+    "kvk": "84423013"
+  },
+  {
+    "id": 1746,
+    "name": "BUCC B.V.",
+    "kvk": "88442969"
+  },
+  {
+    "id": 1759,
+    "name": "Building Careers B.V.",
+    "kvk": "41231221"
+  },
+  {
+    "id": 1787,
+    "name": "Buro Sant en Co",
+    "kvk": "97934402"
+  },
+  {
+    "id": 1788,
+    "name": "Buro Sant en Co B.V.",
+    "kvk": "42072680"
+  },
+  {
+    "id": 1792,
+    "name": "Bushe",
+    "kvk": "71264779"
+  },
+  {
+    "id": 1802,
+    "name": "BWT B.V.",
+    "kvk": "16037101"
+  },
+  {
+    "id": 1813,
+    "name": "C Concept Design B.V.",
+    "kvk": "65231112"
+  },
+  {
+    "id": 1820,
+    "name": "C.C. Jensen Benelux B.V.",
+    "kvk": "24436922"
+  },
+  {
+    "id": 1845,
+    "name": "Caely Biofuels B.V.",
+    "kvk": "96166452"
+  },
+  {
+    "id": 1846,
+    "name": "Caely Holding B.V.",
+    "kvk": "83477667"
+  },
+  {
+    "id": 1854,
+    "name": "Cakta B.V.",
+    "kvk": "89636112"
+  },
+  {
+    "id": 1861,
+    "name": "Callista B.V.",
+    "kvk": "89110773"
+  },
+  {
+    "id": 1903,
+    "name": "CarbonsAI B.V.",
+    "kvk": "90829891"
+  },
+  {
+    "id": 1921,
+    "name": "Cargoplot B.V.",
+    "kvk": "77768817"
+  },
+  {
+    "id": 1927,
+    "name": "Carpro Systems International B.V.",
+    "kvk": "20128404"
+  },
+  {
+    "id": 1942,
+    "name": "CaseNine B.V.",
+    "kvk": "58243968"
+  },
+  {
+    "id": 1948,
+    "name": "Castor International B.V.",
+    "kvk": "17108188"
+  },
+  {
+    "id": 1963,
+    "name": "Caya Studios B.V.",
+    "kvk": "84051213"
+  },
+  {
+    "id": 1964,
+    "name": "CBABenelux",
+    "kvk": "34109894"
+  },
+  {
+    "id": 1982,
+    "name": "CC B.V.",
+    "kvk": "89958373"
+  },
+  {
+    "id": 1984,
+    "name": "CC Diagnostics B.V.",
+    "kvk": "66882273"
+  },
+  {
+    "id": 1985,
+    "name": "CC.Talent Netherlands B.V.",
+    "kvk": "75058634"
+  },
+  {
+    "id": 1987,
+    "name": "CCI International Holland B.V.",
+    "kvk": "33305338"
+  },
+  {
+    "id": 1993,
+    "name": "C-Cube International B.V.",
+    "kvk": "34231544"
+  },
+  {
+    "id": 2001,
+    "name": "Cebo-Holland B.V.",
+    "kvk": "34044683"
+  },
+  {
+    "id": 2012,
+    "name": "Celanese Sales Netherlands B.V.",
+    "kvk": "62739131"
+  },
+  {
+    "id": 2026,
+    "name": "Centa Nederland B.V.",
+    "kvk": "23074110"
+  },
+  {
+    "id": 2034,
+    "name": "Central Doctors B.V.",
+    "kvk": "65314433"
+  },
+  {
+    "id": 2035,
+    "name": "Centrale Tandarts Dienst B.V.",
+    "kvk": "58781552"
+  },
+  {
+    "id": 2051,
+    "name": "Cert2Connect Services B.V.",
+    "kvk": "63321858"
+  },
+  {
+    "id": 2058,
+    "name": "CETIN International N.V.",
+    "kvk": "95116648"
+  },
+  {
+    "id": 2066,
+    "name": "CFP Engineering B.V.",
+    "kvk": "63644665"
+  },
+  {
+    "id": 2142,
+    "name": "Chiropractie Holystaete B.V.",
+    "kvk": "74261487"
+  },
+  {
+    "id": 2162,
+    "name": "Christengemeente Central City Church",
+    "kvk": "30248452"
+  },
+  {
+    "id": 2166,
+    "name": "Chromodynamics B.V.",
+    "kvk": "74016911"
+  },
+  {
+    "id": 2176,
+    "name": "CIBG",
+    "kvk": "50000535"
+  },
+  {
+    "id": 2183,
+    "name": "Cimcool Industrial Products B.V.",
+    "kvk": "24212814"
+  },
+  {
+    "id": 2186,
+    "name": "Cimsa Building Solutions B.V.",
+    "kvk": "80905781"
+  },
+  {
+    "id": 2199,
+    "name": "Circolide Technologies B.V.",
+    "kvk": "93525621"
+  },
+  {
+    "id": 2209,
+    "name": "Citadel Securities Netherlands Services B.V.",
+    "kvk": "99181207"
+  },
+  {
+    "id": 2218,
+    "name": "Cityfi Europe B.V.",
+    "kvk": "94892644"
+  },
+  {
+    "id": 2220,
+    "name": "Civaan B.V.",
+    "kvk": "68251386"
+  },
+  {
+    "id": 2234,
+    "name": "Claassen Diensten B.V.",
+    "kvk": "90231813"
+  },
+  {
+    "id": 2241,
+    "name": "Clear Timber Analytics B.V.",
+    "kvk": "92554407"
+  },
+  {
+    "id": 2256,
+    "name": "ClimAd Technology B.V.",
+    "kvk": "76599671"
+  },
+  {
+    "id": 2270,
+    "name": "Cloud Crafters B.V.",
+    "kvk": "94486565"
+  },
+  {
+    "id": 2271,
+    "name": "Cloud Garden Consumer Electronics B.V.",
+    "kvk": "93371713"
+  },
+  {
+    "id": 2272,
+    "name": "Cloud Integrate B.V.",
+    "kvk": "72242272"
+  },
+  {
+    "id": 2290,
+    "name": "CMB.TECH Netherlands B.V.",
+    "kvk": "86933027"
+  },
+  {
+    "id": 2301,
+    "name": "Coagulation Profile B.V.",
+    "kvk": "72462051"
+  },
+  {
+    "id": 2312,
+    "name": "Cocoroco B.V.",
+    "kvk": "81761449"
+  },
+  {
+    "id": 2315,
+    "name": "Code for Good B.V.",
+    "kvk": "95162003"
+  },
+  {
+    "id": 2328,
+    "name": "Codex Architectuurstudio",
+    "kvk": "73278777"
+  },
+  {
+    "id": 2346,
+    "name": "Collab Consulting Services B.V.",
+    "kvk": "91803659"
+  },
+  {
+    "id": 2358,
+    "name": "Colosseum Robotics B.V.",
+    "kvk": "42048092"
+  },
+  {
+    "id": 2368,
+    "name": "Comecer Netherlands B.V.",
+    "kvk": "01087139"
+  },
+  {
+    "id": 2385,
+    "name": "Compeer B.V.",
+    "kvk": "28106582"
+  },
+  {
+    "id": 2404,
+    "name": "Concordia Damen Shipbuilding B.V.",
+    "kvk": "59715731"
+  },
+  {
+    "id": 2433,
+    "name": "Constellation Holding Netherlands B.V.",
+    "kvk": "09089665"
+  },
+  {
+    "id": 2436,
+    "name": "Construction Logistics Group B.V.",
+    "kvk": "85366706"
+  },
+  {
+    "id": 2473,
+    "name": "Cooll Components B.V.",
+    "kvk": "80294006"
+  },
+  {
+    "id": 2474,
+    "name": "Coolned B.V.",
+    "kvk": "60861169"
+  },
+  {
+    "id": 2476,
+    "name": "Coolset B.V.",
+    "kvk": "84039264"
+  },
+  {
+    "id": 2478,
+    "name": "Coöperatie ConFirm U.A.",
+    "kvk": "58510052"
+  },
+  {
+    "id": 2482,
+    "name": "Coöperatie Koninklijke CRV U.A.",
+    "kvk": "09101003"
+  },
+  {
+    "id": 2497,
+    "name": "Corbier Consultancy & Sales B.V.",
+    "kvk": "70203954"
+  },
+  {
+    "id": 2500,
+    "name": "Core LEAN B.V.",
+    "kvk": "78640512"
+  },
+  {
+    "id": 2509,
+    "name": "Corex Holding B.V.",
+    "kvk": "94340080"
+  },
+  {
+    "id": 2512,
+    "name": "Cornerstone Consultancy B.V.",
+    "kvk": "76718409"
+  },
+  {
+    "id": 2534,
+    "name": "Cosine Science & Computing B.V.",
+    "kvk": "28077080"
+  },
+  {
+    "id": 2564,
+    "name": "Cradle to Cradle Products Innovation Institute B.V.",
+    "kvk": "66481260"
+  },
+  {
+    "id": 2566,
+    "name": "Crane Worldwide Group Cooperatief U.A.",
+    "kvk": "34310910"
+  },
+  {
+    "id": 2575,
+    "name": "Createq B.V.",
+    "kvk": "66469678"
+  },
+  {
+    "id": 2600,
+    "name": "CROP accountants & adviseurs B.V.",
+    "kvk": "67690580"
+  },
+  {
+    "id": 2603,
+    "name": "cropr B.V.",
+    "kvk": "96106441"
+  },
+  {
+    "id": 2635,
+    "name": "CTK Refrigerations",
+    "kvk": "66044774"
+  },
+  {
+    "id": 2647,
+    "name": "Cumulocity GmbH, Netherlands Branch",
+    "kvk": "95171401"
+  },
+  {
+    "id": 2648,
+    "name": "Cura Packaging B.V.",
+    "kvk": "85949876"
+  },
+  {
+    "id": 2654,
+    "name": "Curiosity Venture Capital B.V.",
+    "kvk": "83446168"
+  },
+  {
+    "id": 2664,
+    "name": "CY2 IT Services B.V.",
+    "kvk": "51449072"
+  },
+  {
+    "id": 2667,
+    "name": "Cyber Freight Amsterdam B.V.",
+    "kvk": "34119762"
+  },
+  {
+    "id": 2670,
+    "name": "Cybermeister B.V.",
+    "kvk": "88347990"
+  },
+  {
+    "id": 2680,
+    "name": "Cytec Industries B.V.",
+    "kvk": "24108520"
+  },
+  {
+    "id": 2683,
+    "name": "D&L Chiropractic",
+    "kvk": "90232348"
+  },
+  {
+    "id": 2701,
+    "name": "Daelmans Oss B.V.",
+    "kvk": "16076011"
+  },
+  {
+    "id": 2715,
+    "name": "Daiwa House Modular Europe Jan Snel B.V.",
+    "kvk": "30124318"
+  },
+  {
+    "id": 2741,
+    "name": "Danish Crown Netherlands B.V.",
+    "kvk": "71777326"
+  },
+  {
+    "id": 2763,
+    "name": "DataBalk B.V.",
+    "kvk": "30203836"
+  },
+  {
+    "id": 2772,
+    "name": "DataLabFabriek B.V.",
+    "kvk": "80613586"
+  },
+  {
+    "id": 2780,
+    "name": "Datelnet Group B.V.",
+    "kvk": "71780076"
+  },
+  {
+    "id": 2795,
+    "name": "DC Airco Company B.V.",
+    "kvk": "37130167"
+  },
+  {
+    "id": 2797,
+    "name": "DCA Dienstverlening",
+    "kvk": "83940464"
+  },
+  {
+    "id": 2806,
+    "name": "DDJ Accountants B.V.",
+    "kvk": "09155872"
+  },
+  {
+    "id": 2822,
+    "name": "De Herenkliniek B.V.",
+    "kvk": "92194397"
+  },
+  {
+    "id": 2826,
+    "name": "De Jong Gorredijk B.V.",
+    "kvk": "01041354"
+  },
+  {
+    "id": 2834,
+    "name": "De Kwaadsteniet B.V.",
+    "kvk": "24266381"
+  },
+  {
+    "id": 2844,
+    "name": "de Ronners",
+    "kvk": "02069112"
+  },
+  {
+    "id": 2849,
+    "name": "De Urbanisten B.V.",
+    "kvk": "68453302"
+  },
+  {
+    "id": 2852,
+    "name": "De Vries Titan B.V.",
+    "kvk": "18076391"
+  },
+  {
+    "id": 2853,
+    "name": "De WarmteTransitieMakers B.V.",
+    "kvk": "71166645"
+  },
+  {
+    "id": 2855,
+    "name": "De Zalen van Zeven B.V.",
+    "kvk": "75203626"
+  },
+  {
+    "id": 2861,
+    "name": "DEBx Medical Holding B.V.",
+    "kvk": "74639919"
+  },
+  {
+    "id": 2873,
+    "name": "Deep Sleep Technologies B.V.",
+    "kvk": "92846343"
+  },
+  {
+    "id": 2882,
+    "name": "Defne Supermarkt B.V.",
+    "kvk": "70879451"
+  },
+  {
+    "id": 2883,
+    "name": "Deftpower B.V.",
+    "kvk": "78087627"
+  },
+  {
+    "id": 2918,
+    "name": "DeLorentz & Partners B.V.",
+    "kvk": "32077533"
+  },
+  {
+    "id": 2929,
+    "name": "Delta International Holding Limited B.V.",
+    "kvk": "76359751"
+  },
+  {
+    "id": 2933,
+    "name": "Delta Technics Engineering B.V.",
+    "kvk": "20047835"
+  },
+  {
+    "id": 2936,
+    "name": "DeltaIoT B.V.",
+    "kvk": "81671180"
+  },
+  {
+    "id": 2941,
+    "name": "DEMCON data driven solutions B.V.",
+    "kvk": "84337257"
+  },
+  {
+    "id": 2942,
+    "name": "Demcon High-Tech Systems Delft B.V.",
+    "kvk": "84337060"
+  },
+  {
+    "id": 2955,
+    "name": "Den Mulder Boomteelt B.V.",
+    "kvk": "55428142"
+  },
+  {
+    "id": 2968,
+    "name": "Dental Benelux B.V.",
+    "kvk": "81057660"
+  },
+  {
+    "id": 2978,
+    "name": "Dentsu Netherlands B.V.",
+    "kvk": "33202665"
+  },
+  {
+    "id": 2981,
+    "name": "Denys Engineers & Contractors B.V.",
+    "kvk": "27142635"
+  },
+  {
+    "id": 2991,
+    "name": "Design & Trading Roermond B.V.",
+    "kvk": "90531876"
+  },
+  {
+    "id": 2999,
+    "name": "Destinus NL B.V.",
+    "kvk": "93018169"
+  },
+  {
+    "id": 3012,
+    "name": "Devleaps B.V.",
+    "kvk": "90337034"
+  },
+  {
+    "id": 3022,
+    "name": "DFDS Seaways B.V.",
+    "kvk": "27111677"
+  },
+  {
+    "id": 3028,
+    "name": "DGM Projecten B.V.",
+    "kvk": "93110227"
+  },
+  {
+    "id": 3040,
+    "name": "DHO Logistics B.V.",
+    "kvk": "81514190"
+  },
+  {
+    "id": 3062,
+    "name": "DigiBoox B.V.",
+    "kvk": "67731082"
+  },
+  {
+    "id": 3075,
+    "name": "Dijkstra Plastics B.V.",
+    "kvk": "06070178"
+  },
+  {
+    "id": 3098,
+    "name": "Discovery Global Nederland B.V.",
+    "kvk": "98523589"
+  },
+  {
+    "id": 3132,
+    "name": "DocPlanner SubHoldings B.V.",
+    "kvk": "66835364"
+  },
+  {
+    "id": 3136,
+    "name": "Docuwork B.V.",
+    "kvk": "04086230"
+  },
+  {
+    "id": 3139,
+    "name": "Doka Nederland B.V.",
+    "kvk": "16057142"
+  },
+  {
+    "id": 3145,
+    "name": "Dongfeng Motor Europe B.V.",
+    "kvk": "97304824"
+  },
+  {
+    "id": 3147,
+    "name": "Donkers Automotive Group B.V.",
+    "kvk": "16063110"
+  },
+  {
+    "id": 3148,
+    "name": "DOOR architecten B.V.",
+    "kvk": "97348902"
+  },
+  {
+    "id": 3183,
+    "name": "DRB Group B.V.",
+    "kvk": "89757602"
+  },
+  {
+    "id": 3184,
+    "name": "DRCT Containers B.V.",
+    "kvk": "83016686"
+  },
+  {
+    "id": 3197,
+    "name": "Driscoll International Holding B.V.",
+    "kvk": "20124630"
+  },
+  {
+    "id": 3201,
+    "name": "DroneShield B.V.",
+    "kvk": "97860557"
+  },
+  {
+    "id": 3246,
+    "name": "DUPI Underwriting Agencies B.V.",
+    "kvk": "24494411"
+  },
+  {
+    "id": 3249,
+    "name": "Dura Vermeer Techniek B.V.",
+    "kvk": "82982511"
+  },
+  {
+    "id": 3256,
+    "name": "Dutch Boosting Group B.V.",
+    "kvk": "09216835"
+  },
+  {
+    "id": 3260,
+    "name": "Dutch Expert Payroll B.V.",
+    "kvk": "89043383"
+  },
+  {
+    "id": 3261,
+    "name": "Dutch Flower Group Facilities B.V.",
+    "kvk": "34101608"
+  },
+  {
+    "id": 3268,
+    "name": "Dutch Research Institute for Transitions B.V.",
+    "kvk": "51760630"
+  },
+  {
+    "id": 3272,
+    "name": "DutchAero Services B.V.",
+    "kvk": "17232085"
+  },
+  {
+    "id": 3279,
+    "name": "DVA engineering B.V.",
+    "kvk": "18076018"
+  },
+  {
+    "id": 3298,
+    "name": "Dynapps NL B.V.",
+    "kvk": "87735369"
+  },
+  {
+    "id": 3307,
+    "name": "E & C Nederland B.V.",
+    "kvk": "14109676"
+  },
+  {
+    "id": 3315,
+    "name": "E. van Wijk Forwarding Group B.V.",
+    "kvk": "56536631"
+  },
+  {
+    "id": 3346,
+    "name": "EasyDMARC B.V.",
+    "kvk": "82516138"
+  },
+  {
+    "id": 3350,
+    "name": "Easypark B.V.",
+    "kvk": "34202913"
+  },
+  {
+    "id": 3391,
+    "name": "eCONOwind B.V.",
+    "kvk": "67605028"
+  },
+  {
+    "id": 3395,
+    "name": "Eco-Well B.V.",
+    "kvk": "72223405"
+  },
+  {
+    "id": 3401,
+    "name": "Eddy Technologies B.V.",
+    "kvk": "89767330"
+  },
+  {
+    "id": 3410,
+    "name": "Edsson Software B.V.",
+    "kvk": "30248006"
+  },
+  {
+    "id": 3427,
+    "name": "Efficy Nederland B.V.",
+    "kvk": "27247845"
+  },
+  {
+    "id": 3481,
+    "name": "Electro-Cirkel RETAIL B.V.",
+    "kvk": "66895332"
+  },
+  {
+    "id": 3490,
+    "name": "Element Air B.V.",
+    "kvk": "93989873"
+  },
+  {
+    "id": 3501,
+    "name": "Elfa Elementenfabriek B.V.",
+    "kvk": "33068133"
+  },
+  {
+    "id": 3511,
+    "name": "Eliyan Technology Netherlands B.V.",
+    "kvk": "97996491"
+  },
+  {
+    "id": 3547,
+    "name": "EMK Capital (Netherlands) B.V.",
+    "kvk": "75577682"
+  },
+  {
+    "id": 3567,
+    "name": "ENCG B.V.",
+    "kvk": "42067780"
+  },
+  {
+    "id": 3580,
+    "name": "Energy Shift B.V.",
+    "kvk": "54074851"
+  },
+  {
+    "id": 3600,
+    "name": "Eni Netherlands CCUS B.V.",
+    "kvk": "81669798"
+  },
+  {
+    "id": 3603,
+    "name": "Enka Horeca B.V.",
+    "kvk": "69627339"
+  },
+  {
+    "id": 3605,
+    "name": "Ennatuurlijk Aardwarmte Holding B.V.",
+    "kvk": "56518757"
+  },
+  {
+    "id": 3634,
+    "name": "Enza Zaden Services B.V.",
+    "kvk": "97160970"
+  },
+  {
+    "id": 3637,
+    "name": "EOC Belgium N.V.",
+    "kvk": "01176611"
+  },
+  {
+    "id": 3646,
+    "name": "EPC Project Control Consulting B.V.",
+    "kvk": "92641016"
+  },
+  {
+    "id": 3648,
+    "name": "EPHI B.V.",
+    "kvk": "61611441"
+  },
+  {
+    "id": 3660,
+    "name": "ePublic Solutions",
+    "kvk": "75539829"
+  },
+  {
+    "id": 3665,
+    "name": "Equal 1 Laboratories (The Netherlands) B.V.",
+    "kvk": "93396627"
+  },
+  {
+    "id": 3679,
+    "name": "EQvolve B.V.",
+    "kvk": "90754654"
+  },
+  {
+    "id": 3681,
+    "name": "ERA Montage Service B.V.",
+    "kvk": "78551749"
+  },
+  {
+    "id": 3691,
+    "name": "ERD Service B.V.",
+    "kvk": "82751528"
+  },
+  {
+    "id": 3712,
+    "name": "ESHA Infra Solutions B.V.",
+    "kvk": "96124075"
+  },
+  {
+    "id": 3714,
+    "name": "Eshuis Registeraccountants B.V.",
+    "kvk": "08151214"
+  },
+  {
+    "id": 3717,
+    "name": "Esler B.V.",
+    "kvk": "51462389"
+  },
+  {
+    "id": 3718,
+    "name": "Esmati Engineering & Advies B.V.",
+    "kvk": "84801085"
+  },
+  {
+    "id": 3730,
+    "name": "Essity Operations Suameer B.V.",
+    "kvk": "01031782"
+  },
+  {
+    "id": 3732,
+    "name": "Es-Steel B.V.",
+    "kvk": "65116003"
+  },
+  {
+    "id": 3776,
+    "name": "EuroCTP B.V.",
+    "kvk": "91169410"
+  },
+  {
+    "id": 3783,
+    "name": "Eurofins Bactimm B.V.",
+    "kvk": "10146813"
+  },
+  {
+    "id": 3787,
+    "name": "Eurofins MASER B.V.",
+    "kvk": "06069104"
+  },
+  {
+    "id": 3810,
+    "name": "European Asset Management B.V.",
+    "kvk": "71657479"
+  },
+  {
+    "id": 3839,
+    "name": "Eve Reverse B.V.",
+    "kvk": "87512599"
+  },
+  {
+    "id": 3842,
+    "name": "Eventim Systems B.V.",
+    "kvk": "01151915"
+  },
+  {
+    "id": 3862,
+    "name": "Evim Makelaars B.V.",
+    "kvk": "67535070"
+  },
+  {
+    "id": 3864,
+    "name": "Evity Technologies B.V.",
+    "kvk": "99075245"
+  },
+  {
+    "id": 3868,
+    "name": "Evolution Security B.V.",
+    "kvk": "84849010"
+  },
+  {
+    "id": 3869,
+    "name": "Evondos Group B.V.",
+    "kvk": "75613379"
+  },
+  {
+    "id": 3870,
+    "name": "Evondos Netherlands B.V.",
+    "kvk": "75613352"
+  },
+  {
+    "id": 3883,
+    "name": "Excellent Food Expert B.V.",
+    "kvk": "72993871"
+  },
+  {
+    "id": 3924,
+    "name": "Exyte Netherlands B.V.",
+    "kvk": "86349724"
+  },
+  {
+    "id": 3931,
+    "name": "Eye Security B.V.",
+    "kvk": "88574903"
+  },
+  {
+    "id": 3940,
+    "name": "F. Wellink Lekkerkerk B.V.",
+    "kvk": "29022235"
+  },
+  {
+    "id": 3944,
+    "name": "FAAD B.V.",
+    "kvk": "59424168"
+  },
+  {
+    "id": 3976,
+    "name": "Famelab B.V.",
+    "kvk": "78604478"
+  },
+  {
+    "id": 3984,
+    "name": "Farmina Pet Foods Holding B.V.",
+    "kvk": "72868341"
+  },
+  {
+    "id": 3986,
+    "name": "Faro Architecten B.V.",
+    "kvk": "34100318"
+  },
+  {
+    "id": 4001,
+    "name": "Favorite Fruit Export B.V.",
+    "kvk": "78042232"
+  },
+  {
+    "id": 4005,
+    "name": "FC Talos B.V.",
+    "kvk": "97541575"
+  },
+  {
+    "id": 4010,
+    "name": "FDR Risk B.V.",
+    "kvk": "87242885"
+  },
+  {
+    "id": 4011,
+    "name": "FEA Consultancy B.V.",
+    "kvk": "88402533"
+  },
+  {
+    "id": 4021,
+    "name": "Feelogic B.V.",
+    "kvk": "69936153"
+  },
+  {
+    "id": 4025,
+    "name": "Fellowmind Netherlands B.V.",
+    "kvk": "12060560"
+  },
+  {
+    "id": 4029,
+    "name": "Feniks Warehousing Solutions B.V.",
+    "kvk": "90377168"
+  },
+  {
+    "id": 4031,
+    "name": "Fenix EPIC B.V.",
+    "kvk": "57902585"
+  },
+  {
+    "id": 4035,
+    "name": "Feralco Nederland B.V.",
+    "kvk": "21010824"
+  },
+  {
+    "id": 4040,
+    "name": "Fertiglobe MENA B.V.",
+    "kvk": "58726160"
+  },
+  {
+    "id": 4042,
+    "name": "Fertipaq B.V.",
+    "kvk": "57691851"
+  },
+  {
+    "id": 4064,
+    "name": "Fietshangar B.V.",
+    "kvk": "82482187"
+  },
+  {
+    "id": 4075,
+    "name": "Financial Transaction Services B.V.",
+    "kvk": "68914016"
+  },
+  {
+    "id": 4085,
+    "name": "FinFlow B.V.",
+    "kvk": "91890586"
+  },
+  {
+    "id": 4086,
+    "name": "Finish Profiles B.V.",
+    "kvk": "36053467"
+  },
+  {
+    "id": 4095,
+    "name": "Fire and Medical Training Centre B.V.",
+    "kvk": "24439266"
+  },
+  {
+    "id": 4096,
+    "name": "Fire Protection Engineering B.V.",
+    "kvk": "69445184"
+  },
+  {
+    "id": 4101,
+    "name": "Firma H. Holland en Zoon",
+    "kvk": "06012627"
+  },
+  {
+    "id": 4102,
+    "name": "First European Compliance Services B.V.",
+    "kvk": "75654822"
+  },
+  {
+    "id": 4105,
+    "name": "FirstFocus Internet Marketing B.V.",
+    "kvk": "56706375"
+  },
+  {
+    "id": 4119,
+    "name": "Fivenines Global Datacentre Infrastructure Limited",
+    "kvk": "82845514"
+  },
+  {
+    "id": 4147,
+    "name": "FlexiTog Eu B.V.",
+    "kvk": "81896778"
+  },
+  {
+    "id": 4158,
+    "name": "Flink Nederland B.V.",
+    "kvk": "70667381"
+  },
+  {
+    "id": 4169,
+    "name": "Floret Trading B.V.",
+    "kvk": "24328956"
+  },
+  {
+    "id": 4171,
+    "name": "Florius B.V.",
+    "kvk": "17198722"
+  },
+  {
+    "id": 4173,
+    "name": "Flow Traders Amsterdam Services B.V.",
+    "kvk": "98525085"
+  },
+  {
+    "id": 4176,
+    "name": "Flowboost Industries B.V.",
+    "kvk": "90025393"
+  },
+  {
+    "id": 4192,
+    "name": "Flynth adviseurs en accountants B.V.",
+    "kvk": "34058255"
+  },
+  {
+    "id": 4194,
+    "name": "Flyover Attractions B.V.",
+    "kvk": "99268108"
+  },
+  {
+    "id": 4205,
+    "name": "Foamlab B.V.",
+    "kvk": "94290083"
+  },
+  {
+    "id": 4225,
+    "name": "FoodJet B.V.",
+    "kvk": "10143883"
+  },
+  {
+    "id": 4271,
+    "name": "Founders Quarter B.V.",
+    "kvk": "42086360"
+  },
+  {
+    "id": 4294,
+    "name": "François Nicolle Hoortoestellen Alkmaar B.V.",
+    "kvk": "54079349"
+  },
+  {
+    "id": 4309,
+    "name": "Freiberga Dental B.V.",
+    "kvk": "77806875"
+  },
+  {
+    "id": 4310,
+    "name": "Freight International Holding B.V.",
+    "kvk": "51487454"
+  },
+  {
+    "id": 4312,
+    "name": "Frencken Machining B.V.",
+    "kvk": "98177370"
+  },
+  {
+    "id": 4337,
+    "name": "Frontera NewCo B.V.",
+    "kvk": "42127630"
+  },
+  {
+    "id": 4341,
+    "name": "FrostByte B.V.",
+    "kvk": "97984876"
+  },
+  {
+    "id": 4350,
+    "name": "Fues Connect B.V.",
+    "kvk": "75219115"
+  },
+  {
+    "id": 4392,
+    "name": "FusionAIx B.V.",
+    "kvk": "90567129"
+  },
+  {
+    "id": 4395,
+    "name": "Future Insight",
+    "kvk": "63664836"
+  },
+  {
+    "id": 4402,
+    "name": "Fyffes International SA - Netherlands",
+    "kvk": "86706071"
+  },
+  {
+    "id": 4404,
+    "name": "Fysio Alphen B.V.",
+    "kvk": "85267031"
+  },
+  {
+    "id": 4407,
+    "name": "Fysiotherapie de Tochten B.V.",
+    "kvk": "96071370"
+  },
+  {
+    "id": 4409,
+    "name": "Fysiotherapie Wateringse Veld",
+    "kvk": "72408529"
+  },
+  {
+    "id": 4412,
+    "name": "G. van Beek & Zn. Kalverstalinrichting B.V.",
+    "kvk": "08080624"
+  },
+  {
+    "id": 4417,
+    "name": "G2 Surveys B.V.",
+    "kvk": "71322183"
+  },
+  {
+    "id": 4428,
+    "name": "Galileo B.V.",
+    "kvk": "17146233"
+  },
+  {
+    "id": 4429,
+    "name": "Galvamé Metaalveredeling B.V.",
+    "kvk": "24158637"
+  },
+  {
+    "id": 4434,
+    "name": "Ganzeboom Parts B.V.",
+    "kvk": "85050245"
+  },
+  {
+    "id": 4454,
+    "name": "GC Energy spółka z ograniczoną odpowiedzialnością",
+    "kvk": "65337441"
+  },
+  {
+    "id": 4456,
+    "name": "GCC Groen & Civiele Cultuur B.V.",
+    "kvk": "09177553"
+  },
+  {
+    "id": 4473,
+    "name": "Gebr. Van Kessel Wegenbouw B.V.",
+    "kvk": "11016659"
+  },
+  {
+    "id": 4494,
+    "name": "General Atlantic Coöperatief U.A.",
+    "kvk": "34278003"
+  },
+  {
+    "id": 4495,
+    "name": "General Entertainment Associates B.V.",
+    "kvk": "34193875"
+  },
+  {
+    "id": 4503,
+    "name": "Genlumina B.V.",
+    "kvk": "94693943"
+  },
+  {
+    "id": 4515,
+    "name": "Geodis C.L. Netherlands B.V.",
+    "kvk": "12037189"
+  },
+  {
+    "id": 4517,
+    "name": "GeoICT Opleidingen B.V.",
+    "kvk": "51710471"
+  },
+  {
+    "id": 4524,
+    "name": "Geosonda B.V.",
+    "kvk": "27184822"
+  },
+  {
+    "id": 4525,
+    "name": "Geotherm Electric B.V.",
+    "kvk": "86430386"
+  },
+  {
+    "id": 4533,
+    "name": "Get Payrolling B.V.",
+    "kvk": "51279088"
+  },
+  {
+    "id": 4544,
+    "name": "GF Netherlands B.V.",
+    "kvk": "42021885"
+  },
+  {
+    "id": 4546,
+    "name": "GGM Consulting B.V.",
+    "kvk": "93622732"
+  },
+  {
+    "id": 4558,
+    "name": "GIDARA Energy Investments B.V.",
+    "kvk": "82955360"
+  },
+  {
+    "id": 4574,
+    "name": "GISI Global Treasury Holdings B.V.",
+    "kvk": "97655066"
+  },
+  {
+    "id": 4580,
+    "name": "GL Link (Europe) B.V.",
+    "kvk": "64356337"
+  },
+  {
+    "id": 4593,
+    "name": "Global Drilling B.V.",
+    "kvk": "91188172"
+  },
+  {
+    "id": 4597,
+    "name": "Global Food Group B.V.",
+    "kvk": "55990347"
+  },
+  {
+    "id": 4620,
+    "name": "Globalscan B.V.",
+    "kvk": "08187278"
+  },
+  {
+    "id": 4621,
+    "name": "Globus Medical B.V.",
+    "kvk": "66693608"
+  },
+  {
+    "id": 4626,
+    "name": "GLUE-ID B.V.",
+    "kvk": "80491340"
+  },
+  {
+    "id": 4642,
+    "name": "Goedegebuure Slaaptechniek B.V.",
+    "kvk": "30283043"
+  },
+  {
+    "id": 4659,
+    "name": "Goodman Netherlands B.V.",
+    "kvk": "17086670"
+  },
+  {
+    "id": 4668,
+    "name": "Gorilla Services",
+    "kvk": "63707217"
+  },
+  {
+    "id": 4683,
+    "name": "GP-Connect B.V.",
+    "kvk": "72293276"
+  },
+  {
+    "id": 4684,
+    "name": "GPI De Gouwe B.V.",
+    "kvk": "24404648"
+  },
+  {
+    "id": 4694,
+    "name": "Grain Finance B.V.",
+    "kvk": "89212797"
+  },
+  {
+    "id": 4700,
+    "name": "Grant Thornton Accountants en Adviseurs B.V.",
+    "kvk": "97954918"
+  },
+  {
+    "id": 4712,
+    "name": "Green and Smart Mobility Netherlands B.V.",
+    "kvk": "99996901"
+  },
+  {
+    "id": 4714,
+    "name": "Green Cat Renewables Europe B.V.",
+    "kvk": "97130966"
+  },
+  {
+    "id": 4717,
+    "name": "Green Energy Storage B.V.",
+    "kvk": "84761083"
+  },
+  {
+    "id": 4718,
+    "name": "Green Gas & Liquids Process Solutions B.V.",
+    "kvk": "92062601"
+  },
+  {
+    "id": 4723,
+    "name": "GreenAnt B.V.",
+    "kvk": "82892121"
+  },
+  {
+    "id": 4734,
+    "name": "GreenShift B.V.",
+    "kvk": "95880011"
+  },
+  {
+    "id": 4739,
+    "name": "Greif Tholu B.V.",
+    "kvk": "09189379"
+  },
+  {
+    "id": 4742,
+    "name": "Gresham Hunt B.V.",
+    "kvk": "75884305"
+  },
+  {
+    "id": 4755,
+    "name": "Grolleman Vrieshuis Exploitatie Maatschappij B.V.",
+    "kvk": "38023985"
+  },
+  {
+    "id": 4776,
+    "name": "GS accountants & adviseurs B.V.",
+    "kvk": "08164809"
+  },
+  {
+    "id": 4786,
+    "name": "Guapa B.V.",
+    "kvk": "57717729"
+  },
+  {
+    "id": 4790,
+    "name": "Guideways B.V.",
+    "kvk": "96540885"
+  },
+  {
+    "id": 4793,
+    "name": "GUILLEMOT NETHERLANDS B.V.",
+    "kvk": "88538559"
+  },
+  {
+    "id": 4801,
+    "name": "Gunvor International B.V.",
+    "kvk": "34275373"
+  },
+  {
+    "id": 4808,
+    "name": "GVA Textielveredeling B.V.",
+    "kvk": "09136361"
+  },
+  {
+    "id": 4813,
+    "name": "Gyes B.V.",
+    "kvk": "87045710"
+  },
+  {
+    "id": 4824,
+    "name": "H.J. Heinz B.V.",
+    "kvk": "35015086"
+  },
+  {
+    "id": 4842,
+    "name": "HABO GWW B.V.",
+    "kvk": "27162618"
+  },
+  {
+    "id": 4855,
+    "name": "Hairworld Istanbul B.V.",
+    "kvk": "66559367"
+  },
+  {
+    "id": 4861,
+    "name": "Hal Beheer B.V.",
+    "kvk": "24119233"
+  },
+  {
+    "id": 4880,
+    "name": "Hanab Installations B.V.",
+    "kvk": "23079181"
+  },
+  {
+    "id": 4885,
+    "name": "Handelsonderneming Compact B.V.",
+    "kvk": "78473284"
+  },
+  {
+    "id": 4896,
+    "name": "Hanjin Global Logistics Europe Sro.",
+    "kvk": "97286494"
+  },
+  {
+    "id": 4909,
+    "name": "Hanwha Power Systems Netherlands B.V.",
+    "kvk": "99194996"
+  },
+  {
+    "id": 4915,
+    "name": "Harbour Energy Netherlands Holdings B.V.",
+    "kvk": "94262497"
+  },
+  {
+    "id": 4935,
+    "name": "HatchTech B.V.",
+    "kvk": "30133132"
+  },
+  {
+    "id": 4943,
+    "name": "Havenfysio",
+    "kvk": "95625615"
+  },
+  {
+    "id": 4953,
+    "name": "HBF Techniek B.V.",
+    "kvk": "94320357"
+  },
+  {
+    "id": 4960,
+    "name": "HD HYUNDAI and SHELL Base Oil Europe B.V.",
+    "kvk": "99580829"
+  },
+  {
+    "id": 4969,
+    "name": "Healthcare for Internationals Limburg B.V.",
+    "kvk": "82947708"
+  },
+  {
+    "id": 4976,
+    "name": "Heathland B.V.",
+    "kvk": "17246130"
+  },
+  {
+    "id": 4981,
+    "name": "Heema B.V.",
+    "kvk": "75103834"
+  },
+  {
+    "id": 4985,
+    "name": "Heerema Vlissingen B.V.",
+    "kvk": "22024277"
+  },
+  {
+    "id": 4992,
+    "name": "Heijmans Utiliteit Metaal B.V.",
+    "kvk": "17109863"
+  },
+  {
+    "id": 4996,
+    "name": "Heineken N.V.",
+    "kvk": "33011433"
+  },
+  {
+    "id": 5020,
+    "name": "Hendi B.V.",
+    "kvk": "30053484"
+  },
+  {
+    "id": 5040,
+    "name": "HES Bulk Terminal Rotterdam B.V.",
+    "kvk": "24117182"
+  },
+  {
+    "id": 5042,
+    "name": "Hesta Eindhoven B.V.",
+    "kvk": "17167908"
+  },
+  {
+    "id": 5043,
+    "name": "Hestocon Certification Services",
+    "kvk": "64813673"
+  },
+  {
+    "id": 5048,
+    "name": "Het Koninklijk Concertgebouw N.V.",
+    "kvk": "33014504"
+  },
+  {
+    "id": 5049,
+    "name": "Het Nederlandse Rode Kruis",
+    "kvk": "40409352"
+  },
+  {
+    "id": 5051,
+    "name": "Heusden",
+    "kvk": "17278565"
+  },
+  {
+    "id": 5054,
+    "name": "Heutink B.V.",
+    "kvk": "06042440"
+  },
+  {
+    "id": 5070,
+    "name": "Highrise B.V.",
+    "kvk": "76707105"
+  },
+  {
+    "id": 5089,
+    "name": "Hinder Chiropractic B.V.",
+    "kvk": "71164782"
+  },
+  {
+    "id": 5095,
+    "name": "Hirexa Solutions B.V.",
+    "kvk": "68736428"
+  },
+  {
+    "id": 5098,
+    "name": "Hisamitsu Netherlands B.V.",
+    "kvk": "99009250"
+  },
+  {
+    "id": 5103,
+    "name": "Hitachi High-Tech Europe GmbH",
+    "kvk": "42010966"
+  },
+  {
+    "id": 5104,
+    "name": "Hitachi Rail GTS Netherlands B.V.",
+    "kvk": "50907514"
+  },
+  {
+    "id": 5110,
+    "name": "Hitit Computer Services Netherlands",
+    "kvk": "90046390"
+  },
+  {
+    "id": 5122,
+    "name": "HMB Meubelen B.V.",
+    "kvk": "81227728"
+  },
+  {
+    "id": 5149,
+    "name": "Holdfast and Stipe B.V.",
+    "kvk": "92024238"
+  },
+  {
+    "id": 5150,
+    "name": "HoldPoint B.V.",
+    "kvk": "96515562"
+  },
+  {
+    "id": 5151,
+    "name": "Holie Foods B.V.",
+    "kvk": "71334238"
+  },
+  {
+    "id": 5152,
+    "name": "Holland & Barrett",
+    "kvk": "27113817"
+  },
+  {
+    "id": 5164,
+    "name": "Holland Shipyards B.V.",
+    "kvk": "24421492"
+  },
+  {
+    "id": 5195,
+    "name": "Horizon3 AI B.V.",
+    "kvk": "98906003"
+  },
+  {
+    "id": 5219,
+    "name": "Hotel Zaan Inn B.V.",
+    "kvk": "55121616"
+  },
+  {
+    "id": 5229,
+    "name": "Houten",
+    "kvk": "30279619"
+  },
+  {
+    "id": 5230,
+    "name": "Houtense MC Apotheken B.V.",
+    "kvk": "60217529"
+  },
+  {
+    "id": 5232,
+    "name": "Howden M&A (Germany) GmbH",
+    "kvk": "74880071"
+  },
+  {
+    "id": 5238,
+    "name": "Hoyer Global Transport B.V.",
+    "kvk": "24113981"
+  },
+  {
+    "id": 5280,
+    "name": "Huisman Etech Experts B.V.",
+    "kvk": "10031181"
+  },
+  {
+    "id": 5298,
+    "name": "Huvepharma Netherlands B.V.",
+    "kvk": "61374245"
+  },
+  {
+    "id": 5309,
+    "name": "Hydryx B.V.",
+    "kvk": "92281524"
+  },
+  {
+    "id": 5314,
+    "name": "HyFly B.V.",
+    "kvk": "77248538"
+  },
+  {
+    "id": 5337,
+    "name": "i29 interior architects B.V.",
+    "kvk": "60851279"
+  },
+  {
+    "id": 5343,
+    "name": "IA Bouwkunde b.v.",
+    "kvk": "09134803"
+  },
+  {
+    "id": 5345,
+    "name": "IAC Audit & Assurance B.V.",
+    "kvk": "77096134"
+  },
+  {
+    "id": 5350,
+    "name": "iAuditor Accountants B.V.",
+    "kvk": "87009439"
+  },
+  {
+    "id": 5374,
+    "name": "ICE Securities Netherlands B.V.",
+    "kvk": "86999974"
+  },
+  {
+    "id": 5384,
+    "name": "ICM Polymers",
+    "kvk": "88052931"
+  },
+  {
+    "id": 5386,
+    "name": "Iconic Works B.V.",
+    "kvk": "96927763"
+  },
+  {
+    "id": 5402,
+    "name": "IDfuse B.V.",
+    "kvk": "63059673"
+  },
+  {
+    "id": 5406,
+    "name": "iDMed B.V.",
+    "kvk": "96437588"
+  },
+  {
+    "id": 5411,
+    "name": "IF Image Factory B.V.",
+    "kvk": "57776458"
+  },
+  {
+    "id": 5412,
+    "name": "IF Technology",
+    "kvk": "09065422"
+  },
+  {
+    "id": 5413,
+    "name": "Ifco Funderingsexpertise B.V.",
+    "kvk": "29032656"
+  },
+  {
+    "id": 5429,
+    "name": "ihomer one B.V.",
+    "kvk": "51483343"
+  },
+  {
+    "id": 5488,
+    "name": "In2Intel B.V.",
+    "kvk": "75572958"
+  },
+  {
+    "id": 5491,
+    "name": "Inarchitects B.V.",
+    "kvk": "72271302"
+  },
+  {
+    "id": 5520,
+    "name": "Indurex B.V.",
+    "kvk": "97502278"
+  },
+  {
+    "id": 5522,
+    "name": "Industrial Material Supply Centre",
+    "kvk": "63804395"
+  },
+  {
+    "id": 5524,
+    "name": "indysource B.V.",
+    "kvk": "70243859"
+  },
+  {
+    "id": 5529,
+    "name": "Infestos Nederland B.V.",
+    "kvk": "52089916"
+  },
+  {
+    "id": 5567,
+    "name": "Ingenieursbureau IOB B.V.",
+    "kvk": "24230842"
+  },
+  {
+    "id": 5589,
+    "name": "Ink.Fish Kitchen B.V.",
+    "kvk": "97725617"
+  },
+  {
+    "id": 5608,
+    "name": "Innocor Dienstverlening B.V.",
+    "kvk": "33268605"
+  },
+  {
+    "id": 5613,
+    "name": "Innolume B.V.",
+    "kvk": "98757660"
+  },
+  {
+    "id": 5664,
+    "name": "Integer Technologies B.V.",
+    "kvk": "84670150"
+  },
+  {
+    "id": 5666,
+    "name": "Integrated Laser Photonics B.V.",
+    "kvk": "98077465"
+  },
+  {
+    "id": 5707,
+    "name": "International Dental Center B.V.",
+    "kvk": "84643250"
+  },
+  {
+    "id": 5757,
+    "name": "Intuitive Surgical B.V.",
+    "kvk": "60958650"
+  },
+  {
+    "id": 5766,
+    "name": "Invesis Group B.V.",
+    "kvk": "30200530"
+  },
+  {
+    "id": 5773,
+    "name": "Invisix Measuring Systems B.V.",
+    "kvk": "97757772"
+  },
+  {
+    "id": 5797,
+    "name": "Ipsen Farmaceutica B.V.",
+    "kvk": "33221355"
+  },
+  {
+    "id": 5826,
+    "name": "ISIFLO",
+    "kvk": "09023510"
+  },
+  {
+    "id": 5834,
+    "name": "iSprout B.V.",
+    "kvk": "87408287"
+  },
+  {
+    "id": 5850,
+    "name": "itizi B.V.",
+    "kvk": "65679083"
+  },
+  {
+    "id": 5863,
+    "name": "ITT Desk B.V.",
+    "kvk": "53583426"
+  },
+  {
+    "id": 5873,
+    "name": "Iver Ships B.V.",
+    "kvk": "22065813"
+  },
+  {
+    "id": 5896,
+    "name": "J. van Walraven Holding B.V.",
+    "kvk": "30065779"
+  },
+  {
+    "id": 5903,
+    "name": "Jaap Trading B.V.",
+    "kvk": "80316638"
+  },
+  {
+    "id": 5915,
+    "name": "James Walker Benelux B.V.",
+    "kvk": "23036695"
+  },
+  {
+    "id": 5936,
+    "name": "Jasmin Garden B.V.",
+    "kvk": "06069300"
+  },
+  {
+    "id": 5944,
+    "name": "JD Engineers B.V.",
+    "kvk": "01084602"
+  },
+  {
+    "id": 5948,
+    "name": "JDriven B.V.",
+    "kvk": "51739070"
+  },
+  {
+    "id": 5955,
+    "name": "Jen's Bing B.V.",
+    "kvk": "89630459"
+  },
+  {
+    "id": 5957,
+    "name": "Jeol (Europe) B.V.",
+    "kvk": "34041225"
+  },
+  {
+    "id": 5958,
+    "name": "Jera ICT",
+    "kvk": "70479097"
+  },
+  {
+    "id": 5964,
+    "name": "Jetting Systems Europe B.V.",
+    "kvk": "23062986"
+  },
+  {
+    "id": 5975,
+    "name": "Jiamei Garden Europe B.V.",
+    "kvk": "51114364"
+  },
+  {
+    "id": 5982,
+    "name": "JJ-Medical B.V.",
+    "kvk": "64749657"
+  },
+  {
+    "id": 5987,
+    "name": "Job-agency B.V.",
+    "kvk": "95095438"
+  },
+  {
+    "id": 5999,
+    "name": "Joloda B.V.",
+    "kvk": "12059857"
+  },
+  {
+    "id": 6012,
+    "name": "JouwWeb B.V.",
+    "kvk": "73261505"
+  },
+  {
+    "id": 6016,
+    "name": "JRCS Euro Marine Service B.V.",
+    "kvk": "24410919"
+  },
+  {
+    "id": 6025,
+    "name": "Judo Bond Nederland",
+    "kvk": "40410022"
+  },
+  {
+    "id": 6033,
+    "name": "Just Audit B.V.",
+    "kvk": "92879365"
+  },
+  {
+    "id": 6052,
+    "name": "K3D B.V.",
+    "kvk": "70225354"
+  },
+  {
+    "id": 6059,
+    "name": "KAEFER Nederland B.V.",
+    "kvk": "23051919"
+  },
+  {
+    "id": 6087,
+    "name": "Karhu Holding B.V.",
+    "kvk": "24235272"
+  },
+  {
+    "id": 6098,
+    "name": "Katoni Engineering B.V.",
+    "kvk": "94638543"
+  },
+  {
+    "id": 6109,
+    "name": "KC International Netherlands B.V.",
+    "kvk": "34299160"
+  },
+  {
+    "id": 6123,
+    "name": "Keldow Enterprises B.V.",
+    "kvk": "24259636"
+  },
+  {
+    "id": 6126,
+    "name": "Kelp Blue Biotech B.V.",
+    "kvk": "81744382"
+  },
+  {
+    "id": 6131,
+    "name": "Kenbri Fire Fighting B.V.",
+    "kvk": "24308115"
+  },
+  {
+    "id": 6132,
+    "name": "KENC Engineering B.V.",
+    "kvk": "08131007"
+  },
+  {
+    "id": 6137,
+    "name": "Kenter Employment B.V.",
+    "kvk": "89107853"
+  },
+  {
+    "id": 6142,
+    "name": "Kepa B.V.",
+    "kvk": "88206920"
+  },
+  {
+    "id": 6151,
+    "name": "Keune Hair Cosmetics Export B.V.",
+    "kvk": "31026449"
+  },
+  {
+    "id": 6154,
+    "name": "Kevin's Garages Supply B.V.",
+    "kvk": "83848495"
+  },
+  {
+    "id": 6157,
+    "name": "Key Arg B.V.",
+    "kvk": "89388496"
+  },
+  {
+    "id": 6197,
+    "name": "Kinderdagverblijf De Maan Rotterdam B.V.",
+    "kvk": "54583985"
+  },
+  {
+    "id": 6202,
+    "name": "King Environmental Services Limited",
+    "kvk": "64091899"
+  },
+  {
+    "id": 6230,
+    "name": "Klets B.V.",
+    "kvk": "63001217"
+  },
+  {
+    "id": 6245,
+    "name": "KMG EP Netherlands Energy Coöperatief U.A.",
+    "kvk": "34284345"
+  },
+  {
+    "id": 6251,
+    "name": "KNAV audit B.V.",
+    "kvk": "31038934"
+  },
+  {
+    "id": 6272,
+    "name": "Koers B.V.",
+    "kvk": "89732103"
+  },
+  {
+    "id": 6278,
+    "name": "Kok Groep Personeel B.V.",
+    "kvk": "88004538"
+  },
+  {
+    "id": 6303,
+    "name": "Koninklijke Drukkerij Em. de Jong bv",
+    "kvk": "18022186"
+  },
+  {
+    "id": 6321,
+    "name": "Koninklijke Utermöhlen N.V.",
+    "kvk": "30093632"
+  },
+  {
+    "id": 6329,
+    "name": "Konutherm B.V.",
+    "kvk": "08125528"
+  },
+  {
+    "id": 6357,
+    "name": "Kraaijeveld Groente en Fruit B.V.",
+    "kvk": "24064917"
+  },
+  {
+    "id": 6359,
+    "name": "Kraft EPC B.V.",
+    "kvk": "93728247"
+  },
+  {
+    "id": 6365,
+    "name": "Kramer Container Repairs B.V.",
+    "kvk": "24268200"
+  },
+  {
+    "id": 6384,
+    "name": "Krones Nederland B.V.",
+    "kvk": "29040986"
+  },
+  {
+    "id": 6392,
+    "name": "KSB Industries B.V.",
+    "kvk": "28058288"
+  },
+  {
+    "id": 6394,
+    "name": "KTBA Netherlands B.V.",
+    "kvk": "18047485"
+  },
+  {
+    "id": 6422,
+    "name": "Kuunders Technoworks",
+    "kvk": "62988662"
+  },
+  {
+    "id": 6426,
+    "name": "Kvadrat Shade Services B.V.",
+    "kvk": "06054791"
+  },
+  {
+    "id": 6433,
+    "name": "Kwetta Europe B.V.",
+    "kvk": "97418269"
+  },
+  {
+    "id": 6442,
+    "name": "KYOCERA Fastening Solutions Netherlands B.V.",
+    "kvk": "09011566"
+  },
+  {
+    "id": 6462,
+    "name": "LAG Velsen B.V.",
+    "kvk": "98856561"
+  },
+  {
+    "id": 6463,
+    "name": "Lagerwey Wind B.V.",
+    "kvk": "08151204"
+  },
+  {
+    "id": 6481,
+    "name": "LANXESS Chemical B.V.",
+    "kvk": "34304785"
+  },
+  {
+    "id": 6482,
+    "name": "Lanza Engineers B.V.",
+    "kvk": "85973122"
+  },
+  {
+    "id": 6485,
+    "name": "Lapp Benelux B.V.",
+    "kvk": "17091235"
+  },
+  {
+    "id": 6498,
+    "name": "LBC Tank Terminals Group B.V.",
+    "kvk": "83453784"
+  },
+  {
+    "id": 6500,
+    "name": "LCDH Holland B.V.",
+    "kvk": "73969095"
+  },
+  {
+    "id": 6509,
+    "name": "Leadinfo B.V.",
+    "kvk": "78116643"
+  },
+  {
+    "id": 6519,
+    "name": "LearnWise Software International B.V.",
+    "kvk": "90064011"
+  },
+  {
+    "id": 6545,
+    "name": "Leli Holland B.V.",
+    "kvk": "78361931"
+  },
+  {
+    "id": 6548,
+    "name": "Lely Nederland N.V.",
+    "kvk": "24441878"
+  },
+  {
+    "id": 6555,
+    "name": "Lemon Solutions B.V.",
+    "kvk": "70820635"
+  },
+  {
+    "id": 6577,
+    "name": "levvr B.V.",
+    "kvk": "82015899"
+  },
+  {
+    "id": 6580,
+    "name": "Lewis Trading Corporation B.V.",
+    "kvk": "88123189"
+  },
+  {
+    "id": 6597,
+    "name": "Liberty Blume B.V.",
+    "kvk": "98248359"
+  },
+  {
+    "id": 6601,
+    "name": "Lidya Globus B.V.",
+    "kvk": "92455603"
+  },
+  {
+    "id": 6613,
+    "name": "Liftoff-MCE B.V.",
+    "kvk": "86199722"
+  },
+  {
+    "id": 6625,
+    "name": "Lily Maas Logistics B.V.",
+    "kvk": "87795418"
+  },
+  {
+    "id": 6637,
+    "name": "Lindor Machinefabrieken B.V.",
+    "kvk": "23074334"
+  },
+  {
+    "id": 6649,
+    "name": "LinQ Vastgoed Adviseurs B.V.",
+    "kvk": "58215441"
+  },
+  {
+    "id": 6665,
+    "name": "Lisman Vorkheftrucks N.V.",
+    "kvk": "30041674"
+  },
+  {
+    "id": 6683,
+    "name": "Lleverage B.V.",
+    "kvk": "94442045"
+  },
+  {
+    "id": 6688,
+    "name": "loadmaster.ai B.V.",
+    "kvk": "91802881"
+  },
+  {
+    "id": 6690,
+    "name": "Local Bookkeeping B.V.",
+    "kvk": "84836369"
+  },
+  {
+    "id": 6695,
+    "name": "Locus People Professionals B.V.",
+    "kvk": "89318714"
+  },
+  {
+    "id": 6729,
+    "name": "LOTTE Global Logistics Hungary KFT, Netherlands Branch",
+    "kvk": "42044497"
+  },
+  {
+    "id": 6744,
+    "name": "LS MnM Inc.",
+    "kvk": "42108582"
+  },
+  {
+    "id": 6763,
+    "name": "Lumen Business Solutions B.V.",
+    "kvk": "67636918"
+  },
+  {
+    "id": 6765,
+    "name": "Lumiad B.V.",
+    "kvk": "62302477"
+  },
+  {
+    "id": 6791,
+    "name": "LYB CLCS Sales NL B.V.",
+    "kvk": "60316292"
+  },
+  {
+    "id": 6804,
+    "name": "M&M Glasvezeltechniek B.V.",
+    "kvk": "90698797"
+  },
+  {
+    "id": 6822,
+    "name": "Maatschap Chiropractie Alkmaar en Bergen",
+    "kvk": "56926553"
+  },
+  {
+    "id": 6844,
+    "name": "Machinefabriek G. Naaktgeboren Rotterdam B.V.",
+    "kvk": "24119154"
+  },
+  {
+    "id": 6847,
+    "name": "Machinefabriek West-End B.V.",
+    "kvk": "28011121"
+  },
+  {
+    "id": 6853,
+    "name": "Maden Food B.V.",
+    "kvk": "88503763"
+  },
+  {
+    "id": 6867,
+    "name": "Magneto B.V.",
+    "kvk": "74519824"
+  },
+  {
+    "id": 6880,
+    "name": "Main Capital Partners B.V.",
+    "kvk": "33294313"
+  },
+  {
+    "id": 6907,
+    "name": "Mammoet Global Support B.V.",
+    "kvk": "59486244"
+  },
+  {
+    "id": 6911,
+    "name": "Management Service Holland B.V.",
+    "kvk": "90243714"
+  },
+  {
+    "id": 6923,
+    "name": "Mans Infra Techniek B.V.",
+    "kvk": "94078343"
+  },
+  {
+    "id": 6929,
+    "name": "Manychat NL B.V.",
+    "kvk": "95887830"
+  },
+  {
+    "id": 6931,
+    "name": "MapGear B.V.",
+    "kvk": "63022087"
+  },
+  {
+    "id": 6942,
+    "name": "Marble Finance B.V.",
+    "kvk": "82936943"
+  },
+  {
+    "id": 6956,
+    "name": "Margies’s Streetkitchen & Bar",
+    "kvk": "57537259"
+  },
+  {
+    "id": 6957,
+    "name": "Mariene Informatie Service \"\"Maris\"\" B.V.",
+    "kvk": "27157480"
+  },
+  {
+    "id": 6972,
+    "name": "Marktlink Capital Management Coöperatief U.A.",
+    "kvk": "80340180"
+  },
+  {
+    "id": 6984,
+    "name": "Martime B.V.",
+    "kvk": "95200029"
+  },
+  {
+    "id": 6996,
+    "name": "Masr Fruit International B.V.",
+    "kvk": "24479979"
+  },
+  {
+    "id": 7001,
+    "name": "Mastercard Nederland",
+    "kvk": "50304348"
+  },
+  {
+    "id": 7036,
+    "name": "Maxol Finance Services B.V.",
+    "kvk": "85989509"
+  },
+  {
+    "id": 7058,
+    "name": "McCain Appetizers Europe B.V.",
+    "kvk": "11052882"
+  },
+  {
+    "id": 7092,
+    "name": "MedCare+ B.V.",
+    "kvk": "89108671"
+  },
+  {
+    "id": 7148,
+    "name": "Meluna Research B.V.",
+    "kvk": "30279918"
+  },
+  {
+    "id": 7154,
+    "name": "Menicon B.V.",
+    "kvk": "04040621"
+  },
+  {
+    "id": 7157,
+    "name": "Mental Support Rotterdam B.V.",
+    "kvk": "71378685"
+  },
+  {
+    "id": 7158,
+    "name": "Mentech Innovation B.V.",
+    "kvk": "66736439"
+  },
+  {
+    "id": 7166,
+    "name": "Mercedes-Benz Capital Investments B.V.",
+    "kvk": "59229594"
+  },
+  {
+    "id": 7189,
+    "name": "Merus B.V.",
+    "kvk": "98602152"
+  },
+  {
+    "id": 7198,
+    "name": "Metaalwarenindustrie Lichtenvoorde B.V.",
+    "kvk": "08019413"
+  },
+  {
+    "id": 7205,
+    "name": "METAL YAPI NL B.V.",
+    "kvk": "72601264"
+  },
+  {
+    "id": 7215,
+    "name": "Methyl Europe B.V.",
+    "kvk": "75398427"
+  },
+  {
+    "id": 7230,
+    "name": "Mews Systems NL B.V.",
+    "kvk": "98856650"
+  },
+  {
+    "id": 7231,
+    "name": "Meyer Chiropractic B.V.",
+    "kvk": "95845984"
+  },
+  {
+    "id": 7233,
+    "name": "M-Factory B.V.",
+    "kvk": "67049664"
+  },
+  {
+    "id": 7235,
+    "name": "MGC Consultancy",
+    "kvk": "77266137"
+  },
+  {
+    "id": 7274,
+    "name": "Mijn Sofie B.V.",
+    "kvk": "80799655"
+  },
+  {
+    "id": 7299,
+    "name": "MiniMed Netherlands B.V.",
+    "kvk": "96317922"
+  },
+  {
+    "id": 7301,
+    "name": "Ministerie van Sociale Zaken en Werkgelegenheid",
+    "kvk": "27365117"
+  },
+  {
+    "id": 7311,
+    "name": "MiSi NeuroPsy B.V.",
+    "kvk": "68947208"
+  },
+  {
+    "id": 7314,
+    "name": "Mistral AI NL B.V.",
+    "kvk": "99923777"
+  },
+  {
+    "id": 7355,
+    "name": "MMS Online Nederland B.V.",
+    "kvk": "24471203"
+  },
+  {
+    "id": 7356,
+    "name": "MMS Platform Services Benelux B.V.",
+    "kvk": "91545005"
+  },
+  {
+    "id": 7357,
+    "name": "MN Logistics International B.V.",
+    "kvk": "81660561"
+  },
+  {
+    "id": 7359,
+    "name": "MNWHL B.V.",
+    "kvk": "67642543"
+  },
+  {
+    "id": 7373,
+    "name": "Modéca Europe B.V.",
+    "kvk": "56607180"
+  },
+  {
+    "id": 7379,
+    "name": "MoederscheimMoonen B.V.",
+    "kvk": "84707836"
+  },
+  {
+    "id": 7380,
+    "name": "Moekotte Groep B.V.",
+    "kvk": "08197816"
+  },
+  {
+    "id": 7389,
+    "name": "Mola B.V.",
+    "kvk": "17136176"
+  },
+  {
+    "id": 7394,
+    "name": "Mollie Business B.V.",
+    "kvk": "99776006"
+  },
+  {
+    "id": 7401,
+    "name": "Mondelez Nederland B.V.",
+    "kvk": "34087364"
+  },
+  {
+    "id": 7405,
+    "name": "Mondial Engineering",
+    "kvk": "74703528"
+  },
+  {
+    "id": 7410,
+    "name": "Mondzorgcentrum Beek en Donk B.V.",
+    "kvk": "77853199"
+  },
+  {
+    "id": 7413,
+    "name": "Monkey and River B.V.",
+    "kvk": "89310810"
+  },
+  {
+    "id": 7433,
+    "name": "Moore MKW Audit B.V.",
+    "kvk": "08150987"
+  },
+  {
+    "id": 7434,
+    "name": "Moos Accountants B.V.",
+    "kvk": "84439661"
+  },
+  {
+    "id": 7453,
+    "name": "Mothers Kitchen Almere",
+    "kvk": "76329852"
+  },
+  {
+    "id": 7470,
+    "name": "Moxba B.V.",
+    "kvk": "06043203"
+  },
+  {
+    "id": 7495,
+    "name": "MSCI Solutions (Nederland) B.V.",
+    "kvk": "27310957"
+  },
+  {
+    "id": 7507,
+    "name": "MTC Maritime B.V.",
+    "kvk": "92628664"
+  },
+  {
+    "id": 7533,
+    "name": "Multi-Post Nederland B.V.",
+    "kvk": "23067595"
+  },
+  {
+    "id": 7548,
+    "name": "MV Corp B.V.",
+    "kvk": "75732475"
+  },
+  {
+    "id": 7555,
+    "name": "My Jewellery B.V.",
+    "kvk": "65961137"
+  },
+  {
+    "id": 7558,
+    "name": "MyBookings.com B.V.",
+    "kvk": "92197264"
+  },
+  {
+    "id": 7613,
+    "name": "Navitas Netherlands B.V.",
+    "kvk": "72176571"
+  },
+  {
+    "id": 7616,
+    "name": "Naya B.V.",
+    "kvk": "85911984"
+  },
+  {
+    "id": 7629,
+    "name": "Nebul B.V.",
+    "kvk": "86737627"
+  },
+  {
+    "id": 7640,
+    "name": "Nederlands Dagblad B.V.",
+    "kvk": "09056943"
+  },
+  {
+    "id": 7644,
+    "name": "Nederlands Philharmonisch Orkest",
+    "kvk": "41198970"
+  },
+  {
+    "id": 7662,
+    "name": "NedZink B.V.",
+    "kvk": "17067114"
+  },
+  {
+    "id": 7679,
+    "name": "NEO International B.V.",
+    "kvk": "81246277"
+  },
+  {
+    "id": 7686,
+    "name": "Neohance B.V.",
+    "kvk": "90884116"
+  },
+  {
+    "id": 7720,
+    "name": "Netvice B.V.",
+    "kvk": "61755990"
+  },
+  {
+    "id": 7735,
+    "name": "New Dawn Bio B.V.",
+    "kvk": "94839778"
+  },
+  {
+    "id": 7752,
+    "name": "NewCompliance IT",
+    "kvk": "27306802"
+  },
+  {
+    "id": 7753,
+    "name": "NewDeal Seals B.V.",
+    "kvk": "37070153"
+  },
+  {
+    "id": 7763,
+    "name": "Newstyle Fitness Holding B.V.",
+    "kvk": "30264037"
+  },
+  {
+    "id": 7770,
+    "name": "Nexia DHW B.V.",
+    "kvk": "93680244"
+  },
+  {
+    "id": 7779,
+    "name": "Nextage NL B.V.",
+    "kvk": "99879395"
+  },
+  {
+    "id": 7792,
+    "name": "NGC International, Inc., Netherlands Branch",
+    "kvk": "97544035"
+  },
+  {
+    "id": 7800,
+    "name": "Nice to Meat B.V.",
+    "kvk": "33254924"
+  },
+  {
+    "id": 7808,
+    "name": "Nidegro International Trading Company Holland B.V.",
+    "kvk": "24244979"
+  },
+  {
+    "id": 7814,
+    "name": "Niestern Sander Nieuwbouw B.V.",
+    "kvk": "89414233"
+  },
+  {
+    "id": 7824,
+    "name": "Nijman/Zeetank Holding B.V.",
+    "kvk": "24218512"
+  },
+  {
+    "id": 7829,
+    "name": "NINtec Systems B.V.",
+    "kvk": "90812506"
+  },
+  {
+    "id": 7834,
+    "name": "Nipper B.V.",
+    "kvk": "58338829"
+  },
+  {
+    "id": 7863,
+    "name": "NLMTD B.V.",
+    "kvk": "71707867"
+  },
+  {
+    "id": 7875,
+    "name": "NNPC Management B.V.",
+    "kvk": "62423711"
+  },
+  {
+    "id": 7881,
+    "name": "Nobian Corporate Center B.V.",
+    "kvk": "99105543"
+  },
+  {
+    "id": 7883,
+    "name": "Nobian Netherlands Salt B.V.",
+    "kvk": "99105985"
+  },
+  {
+    "id": 7896,
+    "name": "NOICO B.V.",
+    "kvk": "84228474"
+  },
+  {
+    "id": 7901,
+    "name": "NomexiaSys B.V.",
+    "kvk": "98432222"
+  },
+  {
+    "id": 7908,
+    "name": "Nongshim Europe B.V.",
+    "kvk": "96605340"
+  },
+  {
+    "id": 7912,
+    "name": "Noordwijkse Golfclub",
+    "kvk": "40445956"
+  },
+  {
+    "id": 7922,
+    "name": "Nordkraft B.V.",
+    "kvk": "94018847"
+  },
+  {
+    "id": 7945,
+    "name": "Norvato IT & Communications B.V.",
+    "kvk": "39067259"
+  },
+  {
+    "id": 7949,
+    "name": "Notariskantoor Spier & Hazenberg",
+    "kvk": "34362638"
+  },
+  {
+    "id": 7968,
+    "name": "Novenda Technologies B.V.",
+    "kvk": "75129825"
+  },
+  {
+    "id": 7974,
+    "name": "Novonesis Nederland B.V.",
+    "kvk": "30169166"
+  },
+  {
+    "id": 7988,
+    "name": "NRG Partners B.V.",
+    "kvk": "93591179"
+  },
+  {
+    "id": 7991,
+    "name": "NS Stations B.V.",
+    "kvk": "30124364"
+  },
+  {
+    "id": 8010,
+    "name": "Nucleaire Energie Organisatie Nederland B.V.",
+    "kvk": "99805480"
+  },
+  {
+    "id": 8016,
+    "name": "Numbered Studio B.V.",
+    "kvk": "81354789"
+  },
+  {
+    "id": 8050,
+    "name": "O&J Automotive Netherlands B.V.",
+    "kvk": "91447704"
+  },
+  {
+    "id": 8051,
+    "name": "O3 Partners N.V.",
+    "kvk": "96066717"
+  },
+  {
+    "id": 8070,
+    "name": "Oceanwide Expeditions Crew & Staff B.V.",
+    "kvk": "76178048"
+  },
+  {
+    "id": 8073,
+    "name": "OCI Ammonia Distribution B.V.",
+    "kvk": "97554545"
+  },
+  {
+    "id": 8114,
+    "name": "Oil Shipping (Bunkering) B.V.",
+    "kvk": "24140854"
+  },
+  {
+    "id": 8120,
+    "name": "Okamura Trading Netherlands B.V.",
+    "kvk": "42034389"
+  },
+  {
+    "id": 8138,
+    "name": "Oliford Holdings B.V.",
+    "kvk": "60911611"
+  },
+  {
+    "id": 8146,
+    "name": "Olmega B.V.",
+    "kvk": "24263223"
+  },
+  {
+    "id": 8160,
+    "name": "OMMAX Netherlands B.V.",
+    "kvk": "99407027"
+  },
+  {
+    "id": 8180,
+    "name": "One Evolve AI B.V.",
+    "kvk": "42118977"
+  },
+  {
+    "id": 8181,
+    "name": "ONE Institute TWO B.V.",
+    "kvk": "87117517"
+  },
+  {
+    "id": 8183,
+    "name": "One Solution B.V.",
+    "kvk": "83095756"
+  },
+  {
+    "id": 8198,
+    "name": "OneTrust Netherlands",
+    "kvk": "91737826"
+  },
+  {
+    "id": 8221,
+    "name": "OOS Energy Rig Management Services",
+    "kvk": "72408782"
+  },
+  {
+    "id": 8224,
+    "name": "Ooze B.V.",
+    "kvk": "95098542"
+  },
+  {
+    "id": 8225,
+    "name": "Opella Healthcare Participations B.V.",
+    "kvk": "90728092"
+  },
+  {
+    "id": 8226,
+    "name": "Open Dutch Fiber B.V.",
+    "kvk": "81920717"
+  },
+  {
+    "id": 8252,
+    "name": "Optima Mobility Holding B.V.",
+    "kvk": "34201725"
+  },
+  {
+    "id": 8255,
+    "name": "Optimum Media Direction Nederland B.V.",
+    "kvk": "30139037"
+  },
+  {
+    "id": 8270,
+    "name": "Orange Food Group B.V.",
+    "kvk": "67173071"
+  },
+  {
+    "id": 8280,
+    "name": "ORBIS SE Vestiging Netherlands",
+    "kvk": "87491400"
+  },
+  {
+    "id": 8283,
+    "name": "OrbusNeich Medical B.V.",
+    "kvk": "32116966"
+  },
+  {
+    "id": 8299,
+    "name": "Orim Energy B.V.",
+    "kvk": "61297976"
+  },
+  {
+    "id": 8326,
+    "name": "OSL Flags B.V.",
+    "kvk": "73188786"
+  },
+  {
+    "id": 8352,
+    "name": "Owens-Corning Veil Netherlands B.V.",
+    "kvk": "08037383"
+  },
+  {
+    "id": 8379,
+    "name": "P3 Logistic Parks B.V.",
+    "kvk": "82270171"
+  },
+  {
+    "id": 8392,
+    "name": "Pagus Informatie Technologie B.V.",
+    "kvk": "32072771"
+  },
+  {
+    "id": 8396,
+    "name": "Palfinger Marine Europe B.V.",
+    "kvk": "30023259"
+  },
+  {
+    "id": 8412,
+    "name": "Pandriks Bake Off B.V.",
+    "kvk": "53254597"
+  },
+  {
+    "id": 8415,
+    "name": "Panta Rhei Consult B.V.",
+    "kvk": "89488695"
+  },
+  {
+    "id": 8420,
+    "name": "Pantheon Bouw B.V.",
+    "kvk": "42047991"
+  },
+  {
+    "id": 8474,
+    "name": "Pathways B.V.",
+    "kvk": "90611144"
+  },
+  {
+    "id": 8481,
+    "name": "PAXX B.V.",
+    "kvk": "77759850"
+  },
+  {
+    "id": 8496,
+    "name": "Payt B.V.",
+    "kvk": "08155915"
+  },
+  {
+    "id": 8497,
+    "name": "Paytec Technologies B.V.",
+    "kvk": "90126041"
+  },
+  {
+    "id": 8512,
+    "name": "PECG B.V.",
+    "kvk": "42067487"
+  },
+  {
+    "id": 8520,
+    "name": "Pellikaan Bouwbedrijf B.V.",
+    "kvk": "18022549"
+  },
+  {
+    "id": 8537,
+    "name": "Perceptra Technologies B.V.",
+    "kvk": "98209159"
+  },
+  {
+    "id": 8548,
+    "name": "Perfo Tec B.V.",
+    "kvk": "24190937"
+  },
+  {
+    "id": 8557,
+    "name": "Personeel.com B.V.",
+    "kvk": "90258614"
+  },
+  {
+    "id": 8562,
+    "name": "Peterson Solutions B.V.",
+    "kvk": "96134534"
+  },
+  {
+    "id": 8564,
+    "name": "PETKUS Selecta B.V.",
+    "kvk": "70353700"
+  },
+  {
+    "id": 8565,
+    "name": "Petro Inspect (Netherlands) B.V.",
+    "kvk": "73316474"
+  },
+  {
+    "id": 8590,
+    "name": "Pharmanovia Benelux B.V.",
+    "kvk": "18124078"
+  },
+  {
+    "id": 8604,
+    "name": "Phenomenex B.V.",
+    "kvk": "30239057"
+  },
+  {
+    "id": 8606,
+    "name": "Phenovation B.V.",
+    "kvk": "94329826"
+  },
+  {
+    "id": 8619,
+    "name": "Photon Bridge B.V.",
+    "kvk": "78118964"
+  },
+  {
+    "id": 8643,
+    "name": "Pink RF B.V.",
+    "kvk": "63712091"
+  },
+  {
+    "id": 8664,
+    "name": "Plant Solutions Noord-Oost B.V.",
+    "kvk": "02332820"
+  },
+  {
+    "id": 8667,
+    "name": "Plante Moran Benelux B.V.",
+    "kvk": "99930285"
+  },
+  {
+    "id": 8682,
+    "name": "Please B.V.",
+    "kvk": "17146033"
+  },
+  {
+    "id": 8685,
+    "name": "Please LiZa B.V.",
+    "kvk": "17203466"
+  },
+  {
+    "id": 8705,
+    "name": "Podimo Netherlands B.V.",
+    "kvk": "80989071"
+  },
+  {
+    "id": 8712,
+    "name": "PolarReal Debt & Capital Advisory B.V.",
+    "kvk": "72363622"
+  },
+  {
+    "id": 8714,
+    "name": "Polat Beauty & Wellness Holding B.V.",
+    "kvk": "80484174"
+  },
+  {
+    "id": 8717,
+    "name": "Pollux Personeelsdiensten B.V.",
+    "kvk": "20134671"
+  },
+  {
+    "id": 8723,
+    "name": "Polygon B.V.",
+    "kvk": "23065642"
+  },
+  {
+    "id": 8732,
+    "name": "Pon's Automobielhandel B.V.",
+    "kvk": "31038797"
+  },
+  {
+    "id": 8737,
+    "name": "Poppies Bakeries Bunschoten B.V.",
+    "kvk": "31042697"
+  },
+  {
+    "id": 8751,
+    "name": "Potgieter Chiropractie B.V.",
+    "kvk": "24337909"
+  },
+  {
+    "id": 8756,
+    "name": "Power Plant Rotterdam B.V.",
+    "kvk": "72366931"
+  },
+  {
+    "id": 8775,
+    "name": "Practical B.V.",
+    "kvk": "57443130"
+  },
+  {
+    "id": 8778,
+    "name": "Praktijk Berestein B.V.",
+    "kvk": "70726760"
+  },
+  {
+    "id": 8788,
+    "name": "PRECEYES B.V. a ZEISS company",
+    "kvk": "63927756"
+  },
+  {
+    "id": 8789,
+    "name": "Preen Power B.V.",
+    "kvk": "95898638"
+  },
+  {
+    "id": 8814,
+    "name": "PrioTicket B.V.",
+    "kvk": "69008280"
+  },
+  {
+    "id": 8820,
+    "name": "PRMSE B.V.",
+    "kvk": "95437924"
+  },
+  {
+    "id": 8827,
+    "name": "Probat B.V.",
+    "kvk": "35000213"
+  },
+  {
+    "id": 8854,
+    "name": "Profextru Productie B.V.",
+    "kvk": "05082357"
+  },
+  {
+    "id": 8857,
+    "name": "Profinis Accountants B.V.",
+    "kvk": "39053964"
+  },
+  {
+    "id": 8861,
+    "name": "Proformance B.V.",
+    "kvk": "92283403"
+  },
+  {
+    "id": 8873,
+    "name": "Prolepha Research B.V.",
+    "kvk": "20038557"
+  },
+  {
+    "id": 8877,
+    "name": "Promelca B.V.",
+    "kvk": "08131136"
+  },
+  {
+    "id": 8883,
+    "name": "Promptwatch B.V.",
+    "kvk": "97074756"
+  },
+  {
+    "id": 8893,
+    "name": "Prospect Transport & Logistiek B.V.",
+    "kvk": "82600848"
+  },
+  {
+    "id": 8899,
+    "name": "Protempo B.V.",
+    "kvk": "10023226"
+  },
+  {
+    "id": 8920,
+    "name": "PS Project Development & Engineering",
+    "kvk": "66297826"
+  },
+  {
+    "id": 8936,
+    "name": "Pure DC (Amsterdam) OpCo B.V.",
+    "kvk": "97364525"
+  },
+  {
+    "id": 8962,
+    "name": "Q Squared Solutions B.V.",
+    "kvk": "63869535"
+  },
+  {
+    "id": 8964,
+    "name": "Q3 Heavy Lift B.V.",
+    "kvk": "66393086"
+  },
+  {
+    "id": 8965,
+    "name": "QAD Netherlands B.V.",
+    "kvk": "30152748"
+  },
+  {
+    "id": 8993,
+    "name": "QolorTech B.V.",
+    "kvk": "08045694"
+  },
+  {
+    "id": 8999,
+    "name": "QRMS B.V.",
+    "kvk": "71063765"
+  },
+  {
+    "id": 9008,
+    "name": "QTS Netherlands B.V.",
+    "kvk": "59397098"
+  },
+  {
+    "id": 9010,
+    "name": "Quadrant Automatisering B.V.",
+    "kvk": "24140938"
+  },
+  {
+    "id": 9022,
+    "name": "Quality Royal B.V.",
+    "kvk": "59563273"
+  },
+  {
+    "id": 9028,
+    "name": "Quantamap B.V.",
+    "kvk": "88280195"
+  },
+  {
+    "id": 9039,
+    "name": "Quantum Wellbeing B.V.",
+    "kvk": "63371987"
+  },
+  {
+    "id": 9053,
+    "name": "QuinteQ Energy B.V.",
+    "kvk": "65697669"
+  },
+  {
+    "id": 9063,
+    "name": "Quotation Factory B.V.",
+    "kvk": "75407353"
+  },
+  {
+    "id": 9067,
+    "name": "R&D Car Parts",
+    "kvk": "55009131"
+  },
+  {
+    "id": 9071,
+    "name": "R. Meijer Chiropractie B.V.",
+    "kvk": "68892411"
+  },
+  {
+    "id": 9083,
+    "name": "Radio Holland Group B.V.",
+    "kvk": "33178593"
+  },
+  {
+    "id": 9096,
+    "name": "Rainmaker Holland B.V.",
+    "kvk": "64148718"
+  },
+  {
+    "id": 9103,
+    "name": "Rami Yokota B.V.",
+    "kvk": "33174218"
+  },
+  {
+    "id": 9107,
+    "name": "Randstad B.V.",
+    "kvk": "97788139"
+  },
+  {
+    "id": 9114,
+    "name": "Randstad Professional Consultancy B.V.",
+    "kvk": "82130760"
+  },
+  {
+    "id": 9123,
+    "name": "Rapidez B.V.",
+    "kvk": "73014206"
+  },
+  {
+    "id": 9131,
+    "name": "Ravo Holding B.V.",
+    "kvk": "37031884"
+  },
+  {
+    "id": 9136,
+    "name": "RB+ Consultancy B.V.",
+    "kvk": "18089599"
+  },
+  {
+    "id": 9158,
+    "name": "Reasoning Engine B.V.",
+    "kvk": "91730074"
+  },
+  {
+    "id": 9171,
+    "name": "Recreatiecentra Nederland B.V.",
+    "kvk": "30051016"
+  },
+  {
+    "id": 9184,
+    "name": "Rede Partners (Netherlands) B.V.",
+    "kvk": "84851686"
+  },
+  {
+    "id": 9186,
+    "name": "Redefine Meat EMEA B.V.",
+    "kvk": "84315253"
+  },
+  {
+    "id": 9190,
+    "name": "Redevco Services B.V.",
+    "kvk": "99937875"
+  },
+  {
+    "id": 9197,
+    "name": "Redwise Maritime Services B.V.",
+    "kvk": "31015193"
+  },
+  {
+    "id": 9202,
+    "name": "Referral Factory B.V.",
+    "kvk": "71193529"
+  },
+  {
+    "id": 9206,
+    "name": "Refresco Benelux B.V.",
+    "kvk": "17018990"
+  },
+  {
+    "id": 9210,
+    "name": "Refurb Battery Productions B.V.",
+    "kvk": "86644483"
+  },
+  {
+    "id": 9217,
+    "name": "re-ing B.V.",
+    "kvk": "96470801"
+  },
+  {
+    "id": 9224,
+    "name": "re-lion group B.V.",
+    "kvk": "51352516"
+  },
+  {
+    "id": 9225,
+    "name": "Relitech Development B.V.",
+    "kvk": "32118100"
+  },
+  {
+    "id": 9233,
+    "name": "REMOBIS Refund Service C.V.",
+    "kvk": "28095858"
+  },
+  {
+    "id": 9249,
+    "name": "Renger Insurance B.V.",
+    "kvk": "64350614"
+  },
+  {
+    "id": 9250,
+    "name": "Renkum",
+    "kvk": "09215649"
+  },
+  {
+    "id": 9258,
+    "name": "Reparatie-, Installatie- en Garagebedrijf Markerink B.V.",
+    "kvk": "09050440"
+  },
+  {
+    "id": 9288,
+    "name": "Return Storage B.V.",
+    "kvk": "90323106"
+  },
+  {
+    "id": 9302,
+    "name": "RGF Staffing Shared Services the Netherlands B.V.",
+    "kvk": "39041438"
+  },
+  {
+    "id": 9341,
+    "name": "Risketeers B.V.",
+    "kvk": "85553638"
+  },
+  {
+    "id": 9367,
+    "name": "RoadSoft Nederland B.V.",
+    "kvk": "66962293"
+  },
+  {
+    "id": 9377,
+    "name": "RobotX B.V.",
+    "kvk": "67741061"
+  },
+  {
+    "id": 9395,
+    "name": "Rodamco Nederland B.V.",
+    "kvk": "33289687"
+  },
+  {
+    "id": 9399,
+    "name": "Róhe Frames B.V.",
+    "kvk": "82281734"
+  },
+  {
+    "id": 9414,
+    "name": "Romonta B.V.",
+    "kvk": "34079749"
+  },
+  {
+    "id": 9439,
+    "name": "Rotom Europe B.V.",
+    "kvk": "17193759"
+  },
+  {
+    "id": 9442,
+    "name": "Rotra Air & Ocean B.V.",
+    "kvk": "09139175"
+  },
+  {
+    "id": 9444,
+    "name": "Rotterdam Olefins & Polyolefins B.V.",
+    "kvk": "97826677"
+  },
+  {
+    "id": 9455,
+    "name": "Royal Fish B.V.",
+    "kvk": "62067478"
+  },
+  {
+    "id": 9464,
+    "name": "Royal Steensma B.V.",
+    "kvk": "01044522"
+  },
+  {
+    "id": 9494,
+    "name": "RUIMTEVOLK B.V.",
+    "kvk": "70345376"
+  },
+  {
+    "id": 9512,
+    "name": "S.C. Johnson Benelux",
+    "kvk": "30120990"
+  },
+  {
+    "id": 9521,
+    "name": "SA Group B.V.",
+    "kvk": "95874305"
+  },
+  {
+    "id": 9537,
+    "name": "SAG Group B.V.",
+    "kvk": "89411315"
+  },
+  {
+    "id": 9538,
+    "name": "Sahin B.V.",
+    "kvk": "86678876"
+  },
+  {
+    "id": 9543,
+    "name": "Saimatrix Technology Solutions B.V.",
+    "kvk": "77929845"
+  },
+  {
+    "id": 9551,
+    "name": "Salgoe B.V.",
+    "kvk": "77295544"
+  },
+  {
+    "id": 9553,
+    "name": "Salnova Nutritec B.V.",
+    "kvk": "82561796"
+  },
+  {
+    "id": 9584,
+    "name": "Sanday B.V.",
+    "kvk": "30173391"
+  },
+  {
+    "id": 9586,
+    "name": "Sanders & Creemers Flex Services B.V.",
+    "kvk": "94409587"
+  },
+  {
+    "id": 9595,
+    "name": "Sanofi Foreign Participations B.V.",
+    "kvk": "33302572"
+  },
+  {
+    "id": 9597,
+    "name": "Sanorice Holding B.V.",
+    "kvk": "30061349"
+  },
+  {
+    "id": 9609,
+    "name": "Sappé Reiniging, Onderhoud en Renovatie B.V.",
+    "kvk": "01047218"
+  },
+  {
+    "id": 9612,
+    "name": "SARCLE Europe B.V.",
+    "kvk": "74803638"
+  },
+  {
+    "id": 9626,
+    "name": "Saulx B.V.",
+    "kvk": "71852166"
+  },
+  {
+    "id": 9629,
+    "name": "Savills Consultancy B.V.",
+    "kvk": "33220695"
+  },
+  {
+    "id": 9680,
+    "name": "Schippers Europe B.V.",
+    "kvk": "17042016"
+  },
+  {
+    "id": 9690,
+    "name": "Schöck Nederland B.V.",
+    "kvk": "32065885"
+  },
+  {
+    "id": 9710,
+    "name": "SCILDON N.V.",
+    "kvk": "32037902"
+  },
+  {
+    "id": 9711,
+    "name": "Scinus Cell Expansion Netherlands B.V.",
+    "kvk": "74900188"
+  },
+  {
+    "id": 9728,
+    "name": "SD Guthrie International Europe B.V.",
+    "kvk": "62152726"
+  },
+  {
+    "id": 9744,
+    "name": "SeaO2 B.V.",
+    "kvk": "89086600"
+  },
+  {
+    "id": 9754,
+    "name": "SecRep B.V.",
+    "kvk": "77301528"
+  },
+  {
+    "id": 9765,
+    "name": "Sedico B.V.",
+    "kvk": "33251397"
+  },
+  {
+    "id": 9773,
+    "name": "SEFE Energy Limited",
+    "kvk": "55351727"
+  },
+  {
+    "id": 9776,
+    "name": "SEIKO Benelux, branch of Seiko Watch Europe S.A.S.",
+    "kvk": "87531313"
+  },
+  {
+    "id": 9782,
+    "name": "Select Nederland B.V.",
+    "kvk": "61763314"
+  },
+  {
+    "id": 9800,
+    "name": "Sendt Online Marketing B.V.",
+    "kvk": "61050520"
+  },
+  {
+    "id": 9809,
+    "name": "Sense Company International B.V.",
+    "kvk": "55023622"
+  },
+  {
+    "id": 9822,
+    "name": "Sentary B.V.",
+    "kvk": "30191378"
+  },
+  {
+    "id": 9830,
+    "name": "Seqora B.V.",
+    "kvk": "11012722"
+  },
+  {
+    "id": 9839,
+    "name": "Service Technisch Beheer (STB) B.V.",
+    "kvk": "17074021"
+  },
+  {
+    "id": 9843,
+    "name": "Servilocker B.V.",
+    "kvk": "56792549"
+  },
+  {
+    "id": 9849,
+    "name": "Setflow B.V.",
+    "kvk": "91658942"
+  },
+  {
+    "id": 9855,
+    "name": "SEVENTREES Group B.V.",
+    "kvk": "64503658"
+  },
+  {
+    "id": 9859,
+    "name": "SF Express (Netherlands) B.V.",
+    "kvk": "75936445"
+  },
+  {
+    "id": 9860,
+    "name": "SF Intra-city Delivery (Netherlands) B.V.",
+    "kvk": "88031187"
+  },
+  {
+    "id": 9903,
+    "name": "Shilla Food Group B.V.",
+    "kvk": "94704686"
+  },
+  {
+    "id": 9939,
+    "name": "SiccaDania B.V.",
+    "kvk": "75637502"
+  },
+  {
+    "id": 9941,
+    "name": "Sidilco Suikerwerkfabriek B.V.",
+    "kvk": "05075411"
+  },
+  {
+    "id": 9959,
+    "name": "SIG Netherlands Solutions B.V.",
+    "kvk": "76420728"
+  },
+  {
+    "id": 9961,
+    "name": "Signet Ingrediens B.V.",
+    "kvk": "90368029"
+  },
+  {
+    "id": 9980,
+    "name": "Simco (Nederland) B.V.",
+    "kvk": "08046136"
+  },
+  {
+    "id": 9985,
+    "name": "Simona Electroplast B.V.",
+    "kvk": "23048173"
+  },
+  {
+    "id": 9988,
+    "name": "Simplex Trading B.V.",
+    "kvk": "42117335"
+  },
+  {
+    "id": 10004,
+    "name": "Sinochem (Netherlands) B.V.",
+    "kvk": "34289324"
+  },
+  {
+    "id": 10021,
+    "name": "Sissy-Boy B.V.",
+    "kvk": "74585517"
+  },
+  {
+    "id": 10034,
+    "name": "SK picglobal Europe B.V.",
+    "kvk": "99758199"
+  },
+  {
+    "id": 10042,
+    "name": "SkillsTown B.V.",
+    "kvk": "62780506"
+  },
+  {
+    "id": 10062,
+    "name": "Slick Stitch B.V.",
+    "kvk": "83369120"
+  },
+  {
+    "id": 10063,
+    "name": "Sligro Food Group Nederland B.V.",
+    "kvk": "16032202"
+  },
+  {
+    "id": 10079,
+    "name": "Smart Global Enterprises & Trading B.V.",
+    "kvk": "89547462"
+  },
+  {
+    "id": 10102,
+    "name": "SME Service Rotterdam B.V.",
+    "kvk": "73534684"
+  },
+  {
+    "id": 10103,
+    "name": "SMELT Europe B.V.",
+    "kvk": "05065499"
+  },
+  {
+    "id": 10113,
+    "name": "SMS Implementation Engineers B.V.",
+    "kvk": "20088708"
+  },
+  {
+    "id": 10114,
+    "name": "SMS Intermediair B.V.",
+    "kvk": "17093277"
+  },
+  {
+    "id": 10135,
+    "name": "Soaked Subsea Robotics",
+    "kvk": "86904809"
+  },
+  {
+    "id": 10143,
+    "name": "SOCOTEC Geotechnics B.V.",
+    "kvk": "17068712"
+  },
+  {
+    "id": 10163,
+    "name": "SOIL-Data B.V.",
+    "kvk": "93327897"
+  },
+  {
+    "id": 10164,
+    "name": "Soilmates International B.V.",
+    "kvk": "68643748"
+  },
+  {
+    "id": 10182,
+    "name": "Solibri Benelux B.V.",
+    "kvk": "83107290"
+  },
+  {
+    "id": 10203,
+    "name": "Solvimon B.V.",
+    "kvk": "86385879"
+  },
+  {
+    "id": 10215,
+    "name": "Sonneveld Group B.V.",
+    "kvk": "23020789"
+  },
+  {
+    "id": 10278,
+    "name": "Specs Netherlands B.V.",
+    "kvk": "98484745"
+  },
+  {
+    "id": 10280,
+    "name": "Spectades B.V.",
+    "kvk": "51618877"
+  },
+  {
+    "id": 10285,
+    "name": "SpectX B.V.",
+    "kvk": "76439364"
+  },
+  {
+    "id": 10301,
+    "name": "Spiral Hydrogen",
+    "kvk": "42018890"
+  },
+  {
+    "id": 10302,
+    "name": "Spirax-Sarco Netherlands B.V.",
+    "kvk": "58660976"
+  },
+  {
+    "id": 10311,
+    "name": "Sportmonks B.V.",
+    "kvk": "74390856"
+  },
+  {
+    "id": 10312,
+    "name": "Sports Ingredients B.V.",
+    "kvk": "75841878"
+  },
+  {
+    "id": 10334,
+    "name": "Squall International B.V.",
+    "kvk": "17124643"
+  },
+  {
+    "id": 10340,
+    "name": "SRC-Search B.V.",
+    "kvk": "64235602"
+  },
+  {
+    "id": 10341,
+    "name": "SRG International B.V.",
+    "kvk": "20077743"
+  },
+  {
+    "id": 10347,
+    "name": "Staalmeesters B.V.",
+    "kvk": "56856296"
+  },
+  {
+    "id": 10351,
+    "name": "Stacks Technologies B.V.",
+    "kvk": "93518528"
+  },
+  {
+    "id": 10354,
+    "name": "Stadshaven Brouwerij B.V.",
+    "kvk": "74271261"
+  },
+  {
+    "id": 10364,
+    "name": "Stage Entertainment Operations B.V.",
+    "kvk": "95897496"
+  },
+  {
+    "id": 10365,
+    "name": "Stage Entertainment Ticketing B.V.",
+    "kvk": "53304608"
+  },
+  {
+    "id": 10398,
+    "name": "Stass B.V.",
+    "kvk": "93204906"
+  },
+  {
+    "id": 10402,
+    "name": "Station Satcom B.V.",
+    "kvk": "75427370"
+  },
+  {
+    "id": 10404,
+    "name": "Statkraft Markets GmbH Netherlands Branch",
+    "kvk": "92299679"
+  },
+  {
+    "id": 10414,
+    "name": "SteelTrace B.V.",
+    "kvk": "69242054"
+  },
+  {
+    "id": 10415,
+    "name": "Steenfabriek Spijk B.V.",
+    "kvk": "10145486"
+  },
+  {
+    "id": 10416,
+    "name": "Steenfabriek Tolkamer B.V.",
+    "kvk": "09004469"
+  },
+  {
+    "id": 10438,
+    "name": "Stichting \"\"Article 19",
+    "kvk": "41205236"
+  },
+  {
+    "id": 10442,
+    "name": "Stichting ACAPS",
+    "kvk": "95352473"
+  },
+  {
+    "id": 10447,
+    "name": "Stichting Administratiekantoor Providentia Missio",
+    "kvk": "85869368"
+  },
+  {
+    "id": 10463,
+    "name": "Stichting Arkin",
+    "kvk": "34310392"
+  },
+  {
+    "id": 10464,
+    "name": "Stichting Artistiek Personeel Nederlandse Reisopera",
+    "kvk": "06089534"
+  },
+  {
+    "id": 10470,
+    "name": "Stichting Battery Competence Cluster The Netherlands",
+    "kvk": "95662561"
+  },
+  {
+    "id": 10476,
+    "name": "Stichting Bureau Commissie voor de Milieu-Effectrapportage",
+    "kvk": "41185216"
+  },
+  {
+    "id": 10497,
+    "name": "Stichting Cultureel Jongeren Paspoort",
+    "kvk": "41209181"
+  },
+  {
+    "id": 10498,
+    "name": "Stichting CVO Baarn/Soest",
+    "kvk": "40507708"
+  },
+  {
+    "id": 10513,
+    "name": "Stichting Effost",
+    "kvk": "09106528"
+  },
+  {
+    "id": 10527,
+    "name": "Stichting EuroQol Research Foundation",
+    "kvk": "41121799"
+  },
+  {
+    "id": 10545,
+    "name": "Stichting Glocalshift",
+    "kvk": "91546206"
+  },
+  {
+    "id": 10555,
+    "name": "Stichting Herengracht 401",
+    "kvk": "68449313"
+  },
+  {
+    "id": 10556,
+    "name": "Stichting Het Balletorkest",
+    "kvk": "41151340"
+  },
+  {
+    "id": 10569,
+    "name": "Stichting Humanitas voor Dienstverlening aan Mensen met een Hulpvraag",
+    "kvk": "41202793"
+  },
+  {
+    "id": 10570,
+    "name": "Stichting Humankind",
+    "kvk": "41208044"
+  },
+  {
+    "id": 10571,
+    "name": "Stichting HvL",
+    "kvk": "28104270"
+  },
+  {
+    "id": 10608,
+    "name": "Stichting Jeugdtandzorg West",
+    "kvk": "27184170"
+  },
+  {
+    "id": 10623,
+    "name": "Stichting Liliane Fonds",
+    "kvk": "41081480"
+  },
+  {
+    "id": 10635,
+    "name": "Stichting Metabolic Ventures",
+    "kvk": "81219202"
+  },
+  {
+    "id": 10636,
+    "name": "Stichting Movement on the Ground",
+    "kvk": "64782719"
+  },
+  {
+    "id": 10652,
+    "name": "Stichting Next Level Initiatives",
+    "kvk": "86724053"
+  },
+  {
+    "id": 10661,
+    "name": "Stichting One Family Foundation",
+    "kvk": "66742838"
+  },
+  {
+    "id": 10667,
+    "name": "Stichting Opora",
+    "kvk": "87222965"
+  },
+  {
+    "id": 10668,
+    "name": "Stichting Orange Babies",
+    "kvk": "34110520"
+  },
+  {
+    "id": 10678,
+    "name": "Stichting Profundo Research",
+    "kvk": "73734446"
+  },
+  {
+    "id": 10709,
+    "name": "Stichting SLCP",
+    "kvk": "91375061"
+  },
+  {
+    "id": 10733,
+    "name": "Stichting TSH Talent Foundation",
+    "kvk": "93921322"
+  },
+  {
+    "id": 10737,
+    "name": "Stichting Vietnamese Boeddhistische Samenwerking in Nederland",
+    "kvk": "41235082"
+  },
+  {
+    "id": 10760,
+    "name": "Stichting Willem van Oranje Onderwijsgroep",
+    "kvk": "40321201"
+  },
+  {
+    "id": 10803,
+    "name": "Strik B.V.",
+    "kvk": "32098871"
+  },
+  {
+    "id": 10804,
+    "name": "STRIK B.V.",
+    "kvk": "97693928"
+  },
+  {
+    "id": 10814,
+    "name": "Struyk Verwo Infra B.V.",
+    "kvk": "20039138"
+  },
+  {
+    "id": 10818,
+    "name": "STS Specialist Technical Engineering Services B.V.",
+    "kvk": "73387401"
+  },
+  {
+    "id": 10822,
+    "name": "Studio IDEFIX B.V.",
+    "kvk": "97968323"
+  },
+  {
+    "id": 10826,
+    "name": "Studio SAAM B.V.",
+    "kvk": "98909681"
+  },
+  {
+    "id": 10827,
+    "name": "Studio Sabine Marcelis B.V.",
+    "kvk": "70199205"
+  },
+  {
+    "id": 10871,
+    "name": "Sunny Koeriersdienst",
+    "kvk": "69543860"
+  },
+  {
+    "id": 10904,
+    "name": "Sushi Next B.V.",
+    "kvk": "70585601"
+  },
+  {
+    "id": 10905,
+    "name": "Sushi-Eight Holding B.V.",
+    "kvk": "81791127"
+  },
+  {
+    "id": 10913,
+    "name": "Sustainder B.V.",
+    "kvk": "68029047"
+  },
+  {
+    "id": 10915,
+    "name": "Sustenso Boekelermeer CO2 B.V.",
+    "kvk": "70287872"
+  },
+  {
+    "id": 10920,
+    "name": "Suzano International Finance B.V.",
+    "kvk": "88736210"
+  },
+  {
+    "id": 10942,
+    "name": "Switch Datacenter Group B.V.",
+    "kvk": "34259952"
+  },
+  {
+    "id": 10961,
+    "name": "Synergy Construction Hungary Kft.",
+    "kvk": "97424978"
+  },
+  {
+    "id": 10965,
+    "name": "Synigo B.V.",
+    "kvk": "65553527"
+  },
+  {
+    "id": 10983,
+    "name": "SysPro Risk Solutions B.V.",
+    "kvk": "82402655"
+  },
+  {
+    "id": 10998,
+    "name": "T.W.S. Transit World Service B.V.",
+    "kvk": "24162570"
+  },
+  {
+    "id": 11024,
+    "name": "TalentCare Zorg B.V.",
+    "kvk": "72021500"
+  },
+  {
+    "id": 11044,
+    "name": "Tandartsenpraktijk J.J.H.M. van Heesch B.V.",
+    "kvk": "24319927"
+  },
+  {
+    "id": 11055,
+    "name": "Tandartspraktijk de Clercqstraat",
+    "kvk": "34340547"
+  },
+  {
+    "id": 11058,
+    "name": "Tandartspraktijk Genzale B.V.",
+    "kvk": "42023347"
+  },
+  {
+    "id": 11059,
+    "name": "Tandartspraktijk Grinberg B.V.",
+    "kvk": "58934421"
+  },
+  {
+    "id": 11060,
+    "name": "Tandartspraktijk Het Nieuwe Diep B.V.",
+    "kvk": "93952619"
+  },
+  {
+    "id": 11069,
+    "name": "Tandartspraktijk West 5 B.V.",
+    "kvk": "51036843"
+  },
+  {
+    "id": 11074,
+    "name": "Tandheelkunde Het Kristal",
+    "kvk": "62808931"
+  },
+  {
+    "id": 11080,
+    "name": "Tandkliniek Hooghe Hoed",
+    "kvk": "51848988"
+  },
+  {
+    "id": 11081,
+    "name": "Tandprothetische Praktijk Broekhuis B.V.",
+    "kvk": "72041102"
+  },
+  {
+    "id": 11082,
+    "name": "Tandzorg.nl B.V.",
+    "kvk": "85922048"
+  },
+  {
+    "id": 11089,
+    "name": "Tao Enterprise Associates B.V.",
+    "kvk": "10033633"
+  },
+  {
+    "id": 11154,
+    "name": "Team Industrial Services Netherlands B.V.",
+    "kvk": "22022445"
+  },
+  {
+    "id": 11156,
+    "name": "Team Rockstars Data",
+    "kvk": "85808911"
+  },
+  {
+    "id": 11164,
+    "name": "Tecforce B.V.",
+    "kvk": "73010952"
+  },
+  {
+    "id": 11171,
+    "name": "TechNature B.V.",
+    "kvk": "67350623"
+  },
+  {
+    "id": 11191,
+    "name": "Technological Energy N.V.",
+    "kvk": "66197139"
+  },
+  {
+    "id": 11198,
+    "name": "Tective B.V.",
+    "kvk": "75314797"
+  },
+  {
+    "id": 11202,
+    "name": "Teifi Digital B.V.",
+    "kvk": "92293220"
+  },
+  {
+    "id": 11208,
+    "name": "Teko Techniek B.V.",
+    "kvk": "93496303"
+  },
+  {
+    "id": 11219,
+    "name": "TeleSol IT B.V.",
+    "kvk": "82568774"
+  },
+  {
+    "id": 11223,
+    "name": "Telfeed B.V.",
+    "kvk": "77057996"
+  },
+  {
+    "id": 11227,
+    "name": "Tellet B.V.",
+    "kvk": "91450322"
+  },
+  {
+    "id": 11256,
+    "name": "Tenaz Energy Netherlands B.V.",
+    "kvk": "86401211"
+  },
+  {
+    "id": 11268,
+    "name": "Tepe International Investment B.V.",
+    "kvk": "83920781"
+  },
+  {
+    "id": 11272,
+    "name": "Terberg Techniek B.V.",
+    "kvk": "30045873"
+  },
+  {
+    "id": 11277,
+    "name": "Terneuzen Processing Technologies B.V.",
+    "kvk": "20155214"
+  },
+  {
+    "id": 11290,
+    "name": "Tessa Corp B.V.",
+    "kvk": "71682201"
+  },
+  {
+    "id": 11314,
+    "name": "The Audit Company B.V.",
+    "kvk": "62279335"
+  },
+  {
+    "id": 11344,
+    "name": "The LCA Center B.V.",
+    "kvk": "98498452"
+  },
+  {
+    "id": 11353,
+    "name": "The McDevitt Netherlands B.V.",
+    "kvk": "56980612"
+  },
+  {
+    "id": 11354,
+    "name": "The Meat Market B.V.",
+    "kvk": "57930406"
+  },
+  {
+    "id": 11355,
+    "name": "The Media Nanny B.V.",
+    "kvk": "59173580"
+  },
+  {
+    "id": 11356,
+    "name": "The Movement B.V.",
+    "kvk": "81220901"
+  },
+  {
+    "id": 11373,
+    "name": "The Regulatory Company B.V.",
+    "kvk": "73323446"
+  },
+  {
+    "id": 11389,
+    "name": "The Waste Transformers B.V.",
+    "kvk": "53475461"
+  },
+  {
+    "id": 11397,
+    "name": "Theoden B.V.",
+    "kvk": "80827748"
+  },
+  {
+    "id": 11403,
+    "name": "Thermobile Industries B.V.",
+    "kvk": "20120375"
+  },
+  {
+    "id": 11416,
+    "name": "Thisworkz Group B.V.",
+    "kvk": "86623990"
+  },
+  {
+    "id": 11431,
+    "name": "ThroughPut Marketing B.V.",
+    "kvk": "42102623"
+  },
+  {
+    "id": 11442,
+    "name": "TIBO Energy B.V.",
+    "kvk": "88576787"
+  },
+  {
+    "id": 11495,
+    "name": "TM Construction B.V.",
+    "kvk": "24445732"
+  },
+  {
+    "id": 11500,
+    "name": "TMC Digital & IT B.V.",
+    "kvk": "56333447"
+  },
+  {
+    "id": 11524,
+    "name": "Tokio Marine Europe S.A.",
+    "kvk": "72752823"
+  },
+  {
+    "id": 11527,
+    "name": "Tokyo Gas International Holdings B.V.",
+    "kvk": "34188537"
+  },
+  {
+    "id": 11579,
+    "name": "Torrgreen Holding B.V.",
+    "kvk": "69590400"
+  },
+  {
+    "id": 11580,
+    "name": "TORWASH B.V.",
+    "kvk": "75921243"
+  },
+  {
+    "id": 11602,
+    "name": "TP Netherlands Holding B.V.",
+    "kvk": "27346334"
+  },
+  {
+    "id": 11619,
+    "name": "TradeStation Europe B.V.",
+    "kvk": "89426657"
+  },
+  {
+    "id": 11641,
+    "name": "Traton Financial Services Nederland BV",
+    "kvk": "27004973"
+  },
+  {
+    "id": 11643,
+    "name": "Travel Hotel B.V.",
+    "kvk": "34364529"
+  },
+  {
+    "id": 11648,
+    "name": "Travix International B.V.",
+    "kvk": "51734370"
+  },
+  {
+    "id": 11654,
+    "name": "Tredence B.V.",
+    "kvk": "42059059"
+  },
+  {
+    "id": 11659,
+    "name": "Trefoil Trading B.V.",
+    "kvk": "24155006"
+  },
+  {
+    "id": 11676,
+    "name": "Tricon Energy Netherlands B.V.",
+    "kvk": "89823273"
+  },
+  {
+    "id": 11696,
+    "name": "Tri-Sen Systems Corporation",
+    "kvk": "52075699"
+  },
+  {
+    "id": 11700,
+    "name": "Triumph Studios B.V.",
+    "kvk": "24280793"
+  },
+  {
+    "id": 11706,
+    "name": "TriVolt Energy B.V.",
+    "kvk": "72151161"
+  },
+  {
+    "id": 11708,
+    "name": "Tronex B.V.",
+    "kvk": "06061247"
+  },
+  {
+    "id": 11713,
+    "name": "Troy Chemical Company B.V.",
+    "kvk": "24231442"
+  },
+  {
+    "id": 11714,
+    "name": "TRS B.V.",
+    "kvk": "63156938"
+  },
+  {
+    "id": 11719,
+    "name": "True North Partners Nederland B.V.",
+    "kvk": "93924607"
+  },
+  {
+    "id": 11753,
+    "name": "TUI Airlines Nederland B.V.",
+    "kvk": "27098512"
+  },
+  {
+    "id": 11759,
+    "name": "Tune Chemical Tankers B.V.",
+    "kvk": "77763211"
+  },
+  {
+    "id": 11765,
+    "name": "Turing Europe B.V.",
+    "kvk": "97209651"
+  },
+  {
+    "id": 11776,
+    "name": "Tweede Kamer der Staten-Generaal",
+    "kvk": "82966036"
+  },
+  {
+    "id": 11799,
+    "name": "Tzu Cancer Therapeutics B.V.",
+    "kvk": "94457700"
+  },
+  {
+    "id": 11813,
+    "name": "Ubiqu Access B.V.",
+    "kvk": "24485739"
+  },
+  {
+    "id": 11823,
+    "name": "UIX Technologies SRL",
+    "kvk": "89367049"
+  },
+  {
+    "id": 11828,
+    "name": "Ulrich Architectuur B.V.",
+    "kvk": "70535337"
+  },
+  {
+    "id": 11845,
+    "name": "Uniarch Clinical Engineering B.V.",
+    "kvk": "92039200"
+  },
+  {
+    "id": 11867,
+    "name": "Uni-Program B.V.",
+    "kvk": "22031399"
+  },
+  {
+    "id": 11885,
+    "name": "United Direct Marketing Services B.V.",
+    "kvk": "34274482"
+  },
+  {
+    "id": 11886,
+    "name": "United Dutch Breweries B.V.",
+    "kvk": "30227677"
+  },
+  {
+    "id": 11893,
+    "name": "United Offshore Services",
+    "kvk": "20086568"
+  },
+  {
+    "id": 11904,
+    "name": "Universal Cosmetics B.V.",
+    "kvk": "75368536"
+  },
+  {
+    "id": 11925,
+    "name": "UNV Technology EUROPE B.V.",
+    "kvk": "75721503"
+  },
+  {
+    "id": 11939,
+    "name": "Urovo Europe B.V.",
+    "kvk": "83126074"
+  },
+  {
+    "id": 11958,
+    "name": "V.C.T. B.V.",
+    "kvk": "27254470"
+  },
+  {
+    "id": 11960,
+    "name": "V.O.F. Marakesh",
+    "kvk": "24174932"
+  },
+  {
+    "id": 11969,
+    "name": "Vacuum Specials B.V.",
+    "kvk": "30143044"
+  },
+  {
+    "id": 11972,
+    "name": "VAG B.V.",
+    "kvk": "80105130"
+  },
+  {
+    "id": 11979,
+    "name": "Validaide B.V.",
+    "kvk": "65943678"
+  },
+  {
+    "id": 11985,
+    "name": "Valori | we are Cerios B.V.",
+    "kvk": "30190531"
+  },
+  {
+    "id": 11998,
+    "name": "Van Abeelen Koeltechniek B.V.",
+    "kvk": "18070797"
+  },
+  {
+    "id": 12011,
+    "name": "Van Breda B.V.",
+    "kvk": "08032786"
+  },
+  {
+    "id": 12018,
+    "name": "Van den Oudenrijn B.V.",
+    "kvk": "29003246"
+  },
+  {
+    "id": 12019,
+    "name": "Van der Ende Pompen B.V.",
+    "kvk": "27230471"
+  },
+  {
+    "id": 12020,
+    "name": "Van der Goes en Groot Ecologisch Onderzoeks- en adviesbureau B.V.",
+    "kvk": "27178617"
+  },
+  {
+    "id": 12022,
+    "name": "Van der Laan Mediscore B.V.",
+    "kvk": "24319326"
+  },
+  {
+    "id": 12025,
+    "name": "Van der Straaten Aannemingsmaatschappij B.V.",
+    "kvk": "22022768"
+  },
+  {
+    "id": 12032,
+    "name": "Van Dorp Energie B.V.",
+    "kvk": "23076916"
+  },
+  {
+    "id": 12033,
+    "name": "Van Duuren Interport B.V.",
+    "kvk": "34078740"
+  },
+  {
+    "id": 12037,
+    "name": "Van Geleuken Kabelwerken B.V.",
+    "kvk": "13012559"
+  },
+  {
+    "id": 12047,
+    "name": "Van Laar Maritime B.V.",
+    "kvk": "34168184"
+  },
+  {
+    "id": 12055,
+    "name": "Van Olphen Company B.V.",
+    "kvk": "70165645"
+  },
+  {
+    "id": 12071,
+    "name": "Van Wankum Ingredients B.V.",
+    "kvk": "62071378"
+  },
+  {
+    "id": 12079,
+    "name": "Vandemoortele Brunssum B.V.",
+    "kvk": "14025372"
+  },
+  {
+    "id": 12115,
+    "name": "VCC Trading Group Netherlands B.V.",
+    "kvk": "75818892"
+  },
+  {
+    "id": 12140,
+    "name": "Vecon Projects B.V.",
+    "kvk": "90987535"
+  },
+  {
+    "id": 12153,
+    "name": "Velian B.V.",
+    "kvk": "35011527"
+  },
+  {
+    "id": 12154,
+    "name": "Velmon Maintenance Piping & Construction B.V.",
+    "kvk": "34218009"
+  },
+  {
+    "id": 12167,
+    "name": "Vention Technologies B.V.",
+    "kvk": "67664814"
+  },
+  {
+    "id": 12168,
+    "name": "Ventiv",
+    "kvk": "24448321"
+  },
+  {
+    "id": 12205,
+    "name": "Veromatic International B.V.",
+    "kvk": "23067794"
+  },
+  {
+    "id": 12216,
+    "name": "Vertiv Benelux B.V.",
+    "kvk": "13015967"
+  },
+  {
+    "id": 12219,
+    "name": "Verwater Industrial Services Noord Oost B.V.",
+    "kvk": "63957604"
+  },
+  {
+    "id": 12220,
+    "name": "VesCir Holland B.V.",
+    "kvk": "42056615"
+  },
+  {
+    "id": 12223,
+    "name": "Vesper Management B.V.",
+    "kvk": "91603056"
+  },
+  {
+    "id": 12237,
+    "name": "Vialto Partners Netherlands B.V.",
+    "kvk": "85189014"
+  },
+  {
+    "id": 12259,
+    "name": "Vida XL Commerce B.V.",
+    "kvk": "97895695"
+  },
+  {
+    "id": 12260,
+    "name": "vidaXL Services B.V.",
+    "kvk": "95301690"
+  },
+  {
+    "id": 12262,
+    "name": "Videoworks Europe B.V.",
+    "kvk": "66672538"
+  },
+  {
+    "id": 12267,
+    "name": "ViewSonic Netherlands B.V.",
+    "kvk": "77172329"
+  },
+  {
+    "id": 12275,
+    "name": "VIKTOR B.V.",
+    "kvk": "62601008"
+  },
+  {
+    "id": 12283,
+    "name": "Vimpex International Footwear B.V.",
+    "kvk": "53830822"
+  },
+  {
+    "id": 12292,
+    "name": "Virmer Europe B.V.",
+    "kvk": "86472178"
+  },
+  {
+    "id": 12294,
+    "name": "VIRO Beverwijk B.V.",
+    "kvk": "95973982"
+  },
+  {
+    "id": 12297,
+    "name": "VIRO Industries B.V.",
+    "kvk": "85103004"
+  },
+  {
+    "id": 12327,
+    "name": "Visser & Visser Accountants B.V.",
+    "kvk": "24399629"
+  },
+  {
+    "id": 12365,
+    "name": "Vlasman Betonbewerkings- en Slooptechnieken B.V.",
+    "kvk": "28098295"
+  },
+  {
+    "id": 12380,
+    "name": "Vodafone Enterprise Netherlands B.V.",
+    "kvk": "30188151"
+  },
+  {
+    "id": 12389,
+    "name": "Voith Paper B.V.",
+    "kvk": "08051423"
+  },
+  {
+    "id": 12393,
+    "name": "Volkswagen Financial Services N.V.",
+    "kvk": "33172400"
+  },
+  {
+    "id": 12396,
+    "name": "Volstora B.V.",
+    "kvk": "82480664"
+  },
+  {
+    "id": 12397,
+    "name": "Voltens B.V.",
+    "kvk": "70602948"
+  },
+  {
+    "id": 12402,
+    "name": "Von Gahlen Lead Precision B.V.",
+    "kvk": "64982742"
+  },
+  {
+    "id": 12435,
+    "name": "Vryhof Anchors B.V.",
+    "kvk": "24241024"
+  },
+  {
+    "id": 12437,
+    "name": "VSH Tech B.V.",
+    "kvk": "77031504"
+  },
+  {
+    "id": 12446,
+    "name": "VTM Quality Services Holland B.V.",
+    "kvk": "62174541"
+  },
+  {
+    "id": 12449,
+    "name": "VU - Ambulatory Monitoring Solutions B.V.",
+    "kvk": "94722013"
+  },
+  {
+    "id": 12457,
+    "name": "W&O Accountants en Adviseurs",
+    "kvk": "14127351"
+  },
+  {
+    "id": 12474,
+    "name": "WAI NL B.V.",
+    "kvk": "52366634"
+  },
+  {
+    "id": 12503,
+    "name": "Waters Chromatography Europe B.V.",
+    "kvk": "20073835"
+  },
+  {
+    "id": 12517,
+    "name": "Waymaker Europe B.V.",
+    "kvk": "42072681"
+  },
+  {
+    "id": 12521,
+    "name": "WD-40 Company Limited",
+    "kvk": "58533702"
+  },
+  {
+    "id": 12524,
+    "name": "We Are Social B.V.",
+    "kvk": "85230154"
+  },
+  {
+    "id": 12526,
+    "name": "WEA Noord-Holland B.V.",
+    "kvk": "67658717"
+  },
+  {
+    "id": 12528,
+    "name": "Wear Parts Europe B.V.",
+    "kvk": "75926962"
+  },
+  {
+    "id": 12565,
+    "name": "Weldmij B.V.",
+    "kvk": "01182583"
+  },
+  {
+    "id": 12571,
+    "name": "Welling Horeca Groep B.V.",
+    "kvk": "89636309"
+  },
+  {
+    "id": 12599,
+    "name": "WestNova B.V.",
+    "kvk": "72221402"
+  },
+  {
+    "id": 12619,
+    "name": "White Construction N.V.",
+    "kvk": "66197147"
+  },
+  {
+    "id": 12641,
+    "name": "WIMOROST Construction B.V.",
+    "kvk": "24364805"
+  },
+  {
+    "id": 12645,
+    "name": "Windkracht 5 Consulting B.V.",
+    "kvk": "80543758"
+  },
+  {
+    "id": 12648,
+    "name": "Winkels Techniek B.V.",
+    "kvk": "06055740"
+  },
+  {
+    "id": 12655,
+    "name": "WIOSS Witron On Site Services GmbH",
+    "kvk": "70784884"
+  },
+  {
+    "id": 12666,
+    "name": "WM Handel B.V.",
+    "kvk": "80543731"
+  },
+  {
+    "id": 12678,
+    "name": "Wolterbeek International B.V.",
+    "kvk": "88227782"
+  },
+  {
+    "id": 12706,
+    "name": "Working Talent B.V.",
+    "kvk": "67095615"
+  },
+  {
+    "id": 12717,
+    "name": "World Diamond Centre B.V.",
+    "kvk": "71365931"
+  },
+  {
+    "id": 12723,
+    "name": "WorldACD Market Data B.V.",
+    "kvk": "24249906"
+  },
+  {
+    "id": 12728,
+    "name": "Worldwide Baggage Services B.V.",
+    "kvk": "34103489"
+  },
+  {
+    "id": 12729,
+    "name": "Worldwide Flight Services Holland B.V.",
+    "kvk": "54969565"
+  },
+  {
+    "id": 12733,
+    "name": "WP SEO AI B.V.",
+    "kvk": "97296309"
+  },
+  {
+    "id": 12762,
+    "name": "Xella Kalkzandsteen B.V.",
+    "kvk": "13011639"
+  },
+  {
+    "id": 12778,
+    "name": "X-Interactive Internetdiensten B.V.",
+    "kvk": "58063846"
+  },
+  {
+    "id": 12785,
+    "name": "XML International (Netherlands) B.V.",
+    "kvk": "82477620"
+  },
+  {
+    "id": 12791,
+    "name": "Xplore Instruments B.V.",
+    "kvk": "60040114"
+  },
+  {
+    "id": 12809,
+    "name": "Yabandpay B.V.",
+    "kvk": "85678988"
+  },
+  {
+    "id": 12812,
+    "name": "Yakult European R&D Center B.V.",
+    "kvk": "98333739"
+  },
+  {
+    "id": 12813,
+    "name": "Yam Invest N.V.",
+    "kvk": "24324106"
+  },
+  {
+    "id": 12822,
+    "name": "Yap Agency B.V.",
+    "kvk": "88770478"
+  },
+  {
+    "id": 12829,
+    "name": "Yari B.V.",
+    "kvk": "54126541"
+  },
+  {
+    "id": 12837,
+    "name": "Yellow River Lanzhou Handpulled Noodles Rotterdam B.V.",
+    "kvk": "89544676"
+  },
+  {
+    "id": 12850,
+    "name": "YER Nederland B.V.",
+    "kvk": "34131598"
+  },
+  {
+    "id": 12869,
+    "name": "You2Yourself B.V.",
+    "kvk": "71501975"
+  },
+  {
+    "id": 12880,
+    "name": "Your.Online B.V.",
+    "kvk": "83114971"
+  },
+  {
+    "id": 12893,
+    "name": "Yuki Works B.V.",
+    "kvk": "20118844"
+  },
+  {
+    "id": 12901,
+    "name": "Yver B.V.",
+    "kvk": "52869229"
+  },
+  {
+    "id": 12915,
+    "name": "ZEEKR EU B.V.",
+    "kvk": "88529789"
+  },
+  {
+    "id": 12921,
+    "name": "ZEFIRA B.V.",
+    "kvk": "97940933"
+  },
+  {
+    "id": 12923,
+    "name": "Zehnder Group Nederland B.V.",
+    "kvk": "31044546"
+  },
+  {
+    "id": 12936,
+    "name": "Zeno B.V.",
+    "kvk": "94879885"
+  },
+  {
+    "id": 12937,
+    "name": "Zenovo",
+    "kvk": "93425368"
+  },
+  {
+    "id": 12945,
+    "name": "Zeren Group Holding B.V.",
+    "kvk": "86095889"
+  },
+  {
+    "id": 12947,
+    "name": "Zero Hash Europe B.V.",
+    "kvk": "89099060"
+  },
+  {
+    "id": 12948,
+    "name": "Zero Motorcycles B.V.",
+    "kvk": "37162492"
+  },
+  {
+    "id": 12952,
+    "name": "Zerova Technologies Europe B.V.",
+    "kvk": "86739662"
+  },
+  {
+    "id": 12973,
+    "name": "Ziggo Tech Services B.V.",
+    "kvk": "95681124"
+  },
+  {
+    "id": 13010,
+    "name": "Zuiderpark Apotheek",
+    "kvk": "27152409"
+  },
+  {
+    "id": 13015,
+    "name": "Zweegers equipment group B.V.",
+    "kvk": "84642890"
+  },
+  {
+    "id": 13016,
+    "name": "Zwinq Tech B.V.",
+    "kvk": "67040756"
+  }
+]

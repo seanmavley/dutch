@@ -94,13 +94,25 @@ export class AppComponent {
 
   loadJson() {
     this.busy = true;
-    this.dutchService.loadJson('assets/18-10-2025.json')
-      .subscribe((data: iCategory[]) => {
-        this.list_of_categories = data;
-        this.updateFilteredCompanies();
-        this.snack.open('Loaded data successfully', 'Ok', { duration: 5000 });
-        this.busy = false;
-        this.ref.detectChanges()
+    this.dutchService.loadJson('assets/sponsors.json')
+      .subscribe({
+        next: (data: iCategory[]) => {
+          this.list_of_categories = data;
+          this.updateFilteredCompanies();
+          this.snack.open('Loaded data successfully', 'Ok', { duration: 5000 });
+          this.busy = false;
+          this.ref.detectChanges();
+        },
+        error: () => {
+          // Fallback to legacy date-based asset if needed
+          this.dutchService.loadJson('assets/18-10-2025.json').subscribe((data: iCategory[]) => {
+            this.list_of_categories = data;
+            this.updateFilteredCompanies();
+            this.snack.open('Loaded data successfully', 'Ok', { duration: 5000 });
+            this.busy = false;
+            this.ref.detectChanges();
+          });
+        }
       });
   }
 
