@@ -1,165 +1,233 @@
-<mat-toolbar>
-  <span>Dutch <em class="fs-6">v0.3.2</em></span>
-  <span class="spacer"></span>
-  <!-- Search bar desktop -->
-  <div class="container d-none d-md-block">
-    <div class="row justify-content-center">
-      <div class="col-md-6">
-        <form class="pt-4" #searchForm="ngForm">
-          <mat-form-field appearance="fill" class="full-width">
-            <input matInput placeholder="Search company name" name="searchTerm" [formControl]="searchTerm">
-            @if (searchTerm.value) {
-            <button matSuffix mat-icon-button aria-label="Clear" (click)="searchTerm.reset(); filterCompanies()">
-              <mat-icon>close</mat-icon>
-            </button>
-            }
-          </mat-form-field>
-        </form>
-      </div>
-    </div>
-  </div>
-  <span class="spacer"></span>
-  <button mat-icon-button (click)="exportCategory()" matTooltip="Export current category to text file">
-    <mat-icon>save_alt</mat-icon>
-  </button>
-  <button mat-icon-button (click)="refresh()" matTooltip="Click on this reload data from Github">
-    <mat-icon>refresh</mat-icon>
-  </button>
-  <button mat-icon-button (click)="openAboutSheet()" matTooltip="About this website">
-    <mat-icon>info</mat-icon>
-  </button>
-  <a title="Origin data" mat-icon-button matTooltip="The source of the data on this website"
-    href="https://ind.nl/en/public-register-recognised-sponsors/public-register-regular-labour-and-highly-skilled-migrants"
-    target="new">
-    <mat-icon>link</mat-icon>
-  </a>
-  <a title="source code" mat-icon-button href="https://github.com/seanmavley/dutch" target="new"
-    matTooltip="Source code available on Github">
-    <mat-icon>code</mat-icon>
-  </a>
-</mat-toolbar>
-<div style="background-color: #810081;" class="py-md-2">
-  <div class="container-fluid">
-    <!-- Show on Mobile devices -->
-    <div class="row justify-content-center d-block d-md-none">
-      <div class="col-md-6">
-        <form class="pt-4" #searchForm="ngForm">
-          <mat-form-field appearance="outline" class="full-width">
-            <input matInput placeholder="Search company name" name="searchTerm" [formControl]="searchTerm">
-            @if (searchTerm.value) {
-            <button matSuffix mat-icon-button aria-label="Clear" (click)="searchTerm.reset(); filterCompanies()">
-              <mat-icon>close</mat-icon>
-            </button>
-            }
-          </mat-form-field>
-        </form>
-      </div>
-      <div class="col-sm-12">
-        <section class="text-center">
-          <mat-form-field class="full-width" appearance="outline">
-            <mat-label>Filter by industry</mat-label>
-            <mat-select (selectionChange)="onCategoryChange($event.value)">
-              <mat-option value="all">All</mat-option>
-              @for (category of list_of_categories; track $index) {
-              <mat-option [value]="category.category.slug">
-                {{ category.category.name }}
-              </mat-option>
-              }
-            </mat-select>
-          </mat-form-field>
-        </section>
-      </div>
-    </div>
-    <!-- Show on Desktop devices -->
-    <div class="row justify-content-center d-none d-md-block mt-3">
-      <div class="col-sm-12">
-        <section class="text-center">
-          <!-- So in 2024, are we saying there's NO better way to do this in Angular 18+ using Angular Material? -->
-          <!-- I've tried different ways, such as swapping out the attributes via [attr.mat-flat-button] or [class.mat-flat-button] -->
-          <!-- Anyway, below is verbose, but works -->
-          @if (activeCategory === 'all') {
-          <button mat-flat-button color="primary" class="me-2 mb-3" (click)="filterCompanies()" [disabled]="busy"
-            matTooltip="Show all the companies">All</button>
-          }
-          @if (activeCategory !== 'all') {
-          <button mat-stroked-button color="primary" class="me-2 mb-3" (click)="filterCompanies()"
-            [disabled]="busy">All</button>
-          }
-
-          @for (category of list_of_categories; track $index) {
-          @if (activeCategory === category.category.slug) {
-          <button mat-flat-button color="primary" class="me-2 mb-3" (click)="filterCompanies(category.category.slug)"
-            [matTooltip]="category.category.description">
-            {{ category.category.name }}
-          </button>
-          }
-          @if (activeCategory !== category.category.slug) {
-          <button mat-stroked-button color="primary" class="me-2 mb-3" (click)="filterCompanies(category.category.slug)"
-            [matTooltip]="category.category.description">
-            {{ category.category.name }}
-          </button>
-          }
-          }
-        </section>
-      </div>
-    </div>
-  </div>
-</div>
-@if (busy) {
-<mat-progress-bar mode="indeterminate"></mat-progress-bar>
-}
-<mat-tab-nav-panel #tabPanel></mat-tab-nav-panel>
-<mat-drawer-container>
-  <mat-drawer #drawer mode="side" opened="true" class="d-none d-md-block">
-    <mat-toolbar>
-      <span>Companies ({{ filteredCompanies?.length || '0' }})</span>
-    </mat-toolbar>
-    <mat-nav-list>
-      <cdk-virtual-scroll-viewport appendOnly itemSize="10" class="desktop-viewport">
-        <a mat-list-item (click)="selectCompany(company)" *cdkVirtualFor="let company of filteredCompanies"
-          [activated]="active_company?.id === company?.id">
-          <mat-icon matListItemIcon>arrow_right</mat-icon>{{ company.name }}
-        </a>
-        @if (busy) {
-        <a mat-list-item>Loading...</a>
-        }
-        @if (filteredCompanies?.length === 0) {
-        <a mat-list-item>No Companies. Please try another search or category</a>
-        }
-      </cdk-virtual-scroll-viewport>
-    </mat-nav-list>
-  </mat-drawer>
-
-  <mat-drawer-content>
-    <!-- Shows on Mobile devices -->
-    <div class="container mt-4 d-block d-md-none">
-      <div class="ms-3 my-2">Companies ({{ filteredCompanies?.length || '0' }})</div>
-      <div class="row justify-content-center">
-        <mat-nav-list>
-          <cdk-virtual-scroll-viewport appendOnly itemSize="10" class="mobile-viewport">
-            <a mat-list-item (click)="openCompanyCard(company)" *cdkVirtualFor="let company of filteredCompanies"
-              [activated]="active_company?.id === company?.id">
-              <mat-icon matListItemIcon>arrow_right</mat-icon>{{ company.name }}
-            </a>
-            @if (busy) {
-            <a mat-list-item>Loading...</a>
-            }
-            @if (filteredCompanies?.length === 0) {
-            <a mat-list-item>No Companies. Please try another search or category</a>
-            }
-          </cdk-virtual-scroll-viewport>
-
-        </mat-nav-list>
-      </div>
-    </div>
-
-    <!-- Shows on Desktop devices -->
-    <div class="container mt-5 d-none d-md-block">
-      <div class="row justify-content-center">
-        <div class="col-md-8">
-          <app-card [company]="active_company"></app-card>
+<!-- BEGIN: MainHeader -->
+<header class="sticky top-0 z-40 border-b border-slate-200 dark:border-zinc-800/80 bg-white/90 dark:bg-[#0c0d0e]/90 backdrop-blur-md transition-colors">
+  <div class="px-4 lg:px-6 py-2.5 flex items-center justify-between gap-4">
+    <!-- Brand & Version -->
+    <div class="flex items-center gap-3 shrink-0">
+      <div class="flex items-center gap-2">
+        <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-fuchsia-600 to-violet-500 flex items-center justify-center text-white font-bold text-sm shadow-sm shadow-fuchsia-500/20">
+          NL
+        </div>
+        <div>
+          <div class="flex items-center gap-1.5 leading-none">
+            <span class="font-display font-bold text-base tracking-tight text-slate-900 dark:text-white">Dutch</span>
+            <span class="px-1.5 py-0.5 text-[10px] font-mono font-medium rounded bg-fuchsia-100 text-fuchsia-700 dark:bg-fuchsia-950/60 dark:text-fuchsia-300 dark:border dark:border-fuchsia-800/50">v0.3.2</span>
+          </div>
+          <p class="text-[11px] text-slate-500 dark:text-zinc-500 tracking-tight leading-normal mt-0.5">Handelsregister Intelligence</p>
         </div>
       </div>
     </div>
-  </mat-drawer-content>
-</mat-drawer-container>
+
+    <!-- Quick Global Search Bar (Desktop) -->
+    <div class="flex-1 max-w-2xl hidden md:block">
+      <div class="relative">
+        <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400 dark:text-zinc-500">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+          </svg>
+        </div>
+        <input
+          class="w-full pl-10 pr-10 py-1.5 bg-slate-100/80 dark:bg-zinc-900/90 text-sm text-slate-900 dark:text-zinc-100 placeholder-slate-400 dark:placeholder-zinc-500 rounded-lg border border-transparent dark:border-zinc-800 focus:outline-none focus:ring-2 focus:ring-fuchsia-500/40 focus:border-fuchsia-500 dark:focus:border-fuchsia-500/60 transition-all shadow-inner"
+          id="company-search-input"
+          placeholder="Search 13,000+ company names, KvK numbers, or tags..."
+          type="text"
+          [formControl]="searchTerm"
+        />
+        @if (searchTerm.value) {
+          <button (click)="searchTerm.setValue('')" class="absolute inset-y-0 right-0 pr-3 flex items-center text-slate-400 hover:text-slate-600 dark:hover:text-zinc-200">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+            </svg>
+          </button>
+        }
+      </div>
+    </div>
+
+    <!-- Header Tools & Mode Switcher -->
+    <div class="flex items-center gap-1.5">
+      <!-- Download Export -->
+      <button (click)="exportCategory()" class="p-2 text-slate-500 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-zinc-100 rounded-lg hover:bg-slate-100 dark:hover:bg-zinc-800/70 transition-colors cursor-pointer" title="Export Dataset" type="button">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+        </svg>
+      </button>
+
+      <!-- Refresh Dataset -->
+      <button (click)="refresh()" class="p-2 text-slate-500 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-zinc-100 rounded-lg hover:bg-slate-100 dark:hover:bg-zinc-800/70 transition-colors cursor-pointer" title="Reload Records from Source" type="button">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+        </svg>
+      </button>
+
+      <!-- Info / About -->
+      <button (click)="openAboutSheet()" class="p-2 text-slate-500 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-zinc-100 rounded-lg hover:bg-slate-100 dark:hover:bg-zinc-800/70 transition-colors cursor-pointer" title="About & Documentation" type="button">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+        </svg>
+      </button>
+
+      <!-- Source Data Link -->
+      <a class="p-2 text-slate-500 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-zinc-100 rounded-lg hover:bg-slate-100 dark:hover:bg-zinc-800/70 transition-colors" href="https://ind.nl/en/public-register-recognised-sponsors/public-register-work" rel="noopener noreferrer" target="_blank" title="Official IND Register">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+        </svg>
+      </a>
+
+      <!-- GitHub Code Link -->
+      <a class="p-2 text-slate-500 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-zinc-100 rounded-lg hover:bg-slate-100 dark:hover:bg-zinc-800/70 transition-colors" href="https://github.com/seanmavley/dutch" rel="noopener noreferrer" target="_blank" title="GitHub Repository">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+        </svg>
+      </a>
+
+      <!-- Vertical Divider -->
+      <div class="h-4 w-px bg-slate-200 dark:bg-zinc-800 mx-1"></div>
+
+      <!-- Light / Dark Mode Toggle -->
+      <button (click)="toggleTheme()" aria-label="Toggle visual theme" class="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg border border-slate-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-slate-700 dark:text-zinc-300 hover:bg-slate-100 dark:hover:bg-zinc-800 transition-all text-xs font-medium cursor-pointer shadow-xs" type="button">
+        @if (isDarkMode) {
+          <svg class="w-3.5 h-3.5 text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+          </svg>
+          <span class="hidden sm:inline">Dark</span>
+        } @else {
+          <svg class="w-3.5 h-3.5 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+          </svg>
+          <span class="hidden sm:inline">Light</span>
+        }
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Search Bar (Only shown on mobile) -->
+  <div class="px-4 pb-2 md:hidden">
+    <div class="relative">
+      <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400 dark:text-zinc-500">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+        </svg>
+      </div>
+      <input
+        class="w-full pl-9 pr-8 py-1.5 bg-slate-100/90 dark:bg-zinc-900 text-sm text-slate-900 dark:text-zinc-100 placeholder-slate-400 dark:placeholder-zinc-500 rounded-lg border border-transparent dark:border-zinc-800 focus:outline-none focus:ring-2 focus:ring-fuchsia-500/40"
+        placeholder="Search company, KvK, or tag..."
+        type="text"
+        [formControl]="searchTerm"
+      />
+      @if (searchTerm.value) {
+        <button (click)="searchTerm.setValue('')" class="absolute inset-y-0 right-0 pr-2.5 flex items-center text-slate-400">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+          </svg>
+        </button>
+      }
+    </div>
+  </div>
+
+  <!-- Category Pill Filter Bar -->
+  <div class="px-4 lg:px-6 py-2 bg-slate-100/70 dark:bg-[#121316] border-t border-slate-200/80 dark:border-zinc-800/60 overflow-x-auto scrollbar-none flex items-center gap-1.5 text-xs transition-colors">
+    <span class="text-[11px] font-semibold uppercase tracking-wider text-slate-400 dark:text-zinc-500 mr-2 shrink-0">Sectors:</span>
+
+    <button
+      (click)="onCategoryChange('all')"
+      [class]="activeCategory.toLowerCase() === 'all'
+        ? 'sector-pill px-3 py-1 rounded-full font-medium transition-all shrink-0 bg-fuchsia-600 text-white shadow-xs shadow-fuchsia-600/30 cursor-pointer'
+        : 'sector-pill px-3 py-1 rounded-full font-medium transition-all shrink-0 bg-white dark:bg-zinc-800/80 text-slate-600 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-white border border-slate-200/80 dark:border-zinc-700/60 cursor-pointer'">
+      All
+    </button>
+
+    @for (category of list_of_categories; track category.category.slug) {
+      <button
+        (click)="onCategoryChange(category.category.slug)"
+        [title]="category.category.description"
+        [class]="activeCategory.toLowerCase() === category.category.slug.toLowerCase()
+          ? 'sector-pill px-3 py-1 rounded-full font-medium transition-all shrink-0 bg-fuchsia-600 text-white shadow-xs shadow-fuchsia-600/30 cursor-pointer'
+          : 'sector-pill px-3 py-1 rounded-full font-medium transition-all shrink-0 bg-white dark:bg-zinc-800/80 text-slate-600 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-white border border-slate-200/80 dark:border-zinc-700/60 cursor-pointer'">
+        {{ category.category.name }}
+      </button>
+    }
+  </div>
+</header>
+<!-- END: MainHeader -->
+
+<!-- Loading Indicator -->
+@if (busy) {
+  <div class="h-1 bg-slate-200 dark:bg-zinc-800 w-full overflow-hidden">
+    <div class="h-full bg-gradient-to-r from-fuchsia-500 to-violet-500 animate-pulse w-full"></div>
+  </div>
+}
+
+<!-- BEGIN: MasterDetailContainer -->
+<main class="flex-1 flex overflow-hidden w-full mx-auto bg-slate-50 dark:bg-[#0c0d0e] transition-colors">
+  <!-- Left Sidebar: Companies Directory List -->
+  <aside class="w-full md:w-96 lg:w-[420px] border-r border-slate-200 dark:border-zinc-800/80 bg-white dark:bg-[#0f1012] flex flex-col shrink-0 transition-colors">
+    <!-- List Controls & Counter -->
+    <div class="p-3 border-b border-slate-200 dark:border-zinc-800 flex items-center justify-between gap-2 bg-slate-50/50 dark:bg-zinc-900/30">
+      <div class="flex items-center gap-2">
+        <span class="font-display font-semibold text-sm text-slate-900 dark:text-zinc-100">Companies</span>
+        <span class="px-2 py-0.5 text-xs font-mono font-medium rounded-full bg-slate-200/70 dark:bg-zinc-800 text-slate-700 dark:text-zinc-300">
+          {{ filteredCompanies.length | number }}
+        </span>
+      </div>
+      <div class="flex items-center gap-1.5 text-xs">
+        <button (click)="toggleSort()" class="p-1.5 rounded-md text-slate-500 dark:text-zinc-400 hover:text-slate-800 dark:hover:text-zinc-200 hover:bg-slate-200/50 dark:hover:bg-zinc-800 transition cursor-pointer" [title]="sortAscending ? 'Sort Z to A' : 'Sort A to Z'" type="button">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path d="M3 4h13M3 8h9m-9 4h6m4 0l4-4m0 0l4 4m-4-4v12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Scrollable Company Items (Virtual Scroll Viewport) -->
+    <div class="flex-1 p-2">
+      <cdk-virtual-scroll-viewport itemSize="78" class="company-viewport">
+        <article
+          *cdkVirtualFor="let company of filteredCompanies"
+          (click)="onCompanyClick(company)"
+          [class]="active_company?.id === company.id
+            ? 'company-card group p-3 rounded-lg cursor-pointer bg-fuchsia-50/70 dark:bg-zinc-800/60 border border-fuchsia-200 dark:border-fuchsia-500/30 relative transition-all mb-1.5'
+            : 'company-card group p-3 rounded-lg cursor-pointer hover:bg-slate-100/70 dark:hover:bg-zinc-800/40 border border-transparent transition-all mb-1.5'">
+          <div class="flex items-start justify-between gap-2">
+            <div class="flex-1 min-w-0">
+              <div class="flex items-center gap-1.5 mb-1">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0"></span>
+                <span class="text-[10px] font-mono uppercase tracking-wider text-slate-500 dark:text-zinc-400 font-semibold">
+                  KVK · {{ company.kvk }}
+                </span>
+              </div>
+              <h3 class="text-sm font-semibold capitalize truncate transition-colors"
+                  [class]="active_company?.id === company.id
+                    ? 'text-fuchsia-700 dark:text-fuchsia-300'
+                    : 'text-slate-800 dark:text-zinc-200 group-hover:text-fuchsia-600 dark:group-hover:text-fuchsia-400'">
+                {{ company.name }}
+              </h3>
+              <p class="text-xs text-slate-500 dark:text-zinc-400 truncate mt-0.5">
+                {{ getIndustryName(company.category) }}
+                @if (company.tags && company.tags.length > 0) {
+                  <span> · {{ company.tags.join(', ') }}</span>
+                }
+              </p>
+            </div>
+            <div class="shrink-0 mt-1" [class]="active_company?.id === company.id ? 'text-fuchsia-600 dark:text-fuchsia-400' : 'text-slate-300 dark:text-zinc-600 group-hover:text-slate-500 dark:group-hover:text-zinc-400'">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+              </svg>
+            </div>
+          </div>
+        </article>
+
+        @if (filteredCompanies.length === 0 && !busy) {
+          <div class="p-8 text-center text-slate-400 dark:text-zinc-500">
+            <p class="text-sm font-medium">No sponsors found.</p>
+            <p class="text-xs mt-1">Try another search keyword or sector filter.</p>
+          </div>
+        }
+      </cdk-virtual-scroll-viewport>
+    </div>
+  </aside>
+
+  <!-- Right Pane: Detail View (Desktop) -->
+  <section class="hidden md:flex flex-1 overflow-hidden h-full">
+    <app-card [company]="active_company" class="w-full h-full"></app-card>
+  </section>
+</main>
+<!-- END: MasterDetailContainer -->
