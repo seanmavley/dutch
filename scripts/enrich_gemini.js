@@ -106,7 +106,7 @@ const GEMINI_SCHEMA = {
 /**
  * Call Gemini API with structured JSON output
  */
-async function callGeminiBatch(companies, apiKey, model = 'gemini-2.5-flash', retries = 3) {
+async function callGeminiBatch(companies, apiKey, model = 'gemini-3.8-flash', retries = 3) {
   const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
 
   const prompt = `
@@ -268,7 +268,7 @@ async function runPipeline(options = {}) {
   }
 
   const batchSize = options.batchSize || 25;
-  const model = options.model || process.env.GEMINI_MODEL || 'gemini-2.5-flash';
+  const model = options.model || process.env.GEMINI_MODEL || 'gemini-3.8-flash';
   const mode = options.all ? 'all' : 'delta';
 
   const outputFilePath = path.resolve(__dirname, 'output.json');
@@ -424,3 +424,4 @@ if (require.main === module) {
 }
 
 module.exports = { runPipeline, callGeminiBatch, syncToAssets, loadMasterOutput, mergeIntoCategories };
+

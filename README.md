@@ -1,52 +1,96 @@
 # Dutch
 
-I call it Dutch, for lack of a better name. This application uses data from the [Public Register Regular Labour and Highly Skilled Migrants](https://ind.nl/en/public-register-recognised-sponsors/public-register-regular-labour-and-highly-skilled-migrants), and presents the list of companies under categories, and searchable.
+A web application that visualizes data from the Netherlands Immigration and Naturalisation Service ([IND Public Register of Recognised Sponsors](https://ind.nl/en/public-register-recognised-sponsors/public-register-work)). The application organizes recognised sponsors into browsable and searchable industry categories.
 
-Maybe should be called PRRLHSM.
+The application has no runtime backend; it is an Angular 22 Single Page Application (SPA).
 
-The application has no backend. It's an Angular 18+ SPA.
-
-See the live application running at [dutch.khophi.com](dutch.khophi.com)
+See the live application at [dutch.khophi.com](https://dutch.khophi.com).
 
 ![wide](https://github.com/seanmavley/dutch/assets/5289083/2bd7aba1-c321-4b46-8fc8-1cddc084558a)
 
-## To-Do
+---
 
-- Automate the update, to only include the new organization names added
+## Features
 
-## How to run the Angular application locally
+- **Search & Categorization**: Instant search across 13,000+ recognised sponsors with filtering by sector (Technology, Healthcare, Finance, Energy, Manufacturing, Consumer Goods, Other).
+- **Delta-Based Scraping**: Automated scraping from IND with delta calculation so only newly added or modified sponsors are identified.
+- **Gemini AI Enrichment**: Batch-processes sponsors with Google Gemini (`gemini-2.5-flash`) to generate concise company summaries, website URLs, and industry tags with schema enforcement.
+- **PWA & Offline Support**: Fast local loading with service worker caching.
 
-- Clone this repository and change directory to the project folder
-- Run `bun install`
-- Run `ng serve`
+---
 
-## How to contribute
+## Local Development
 
-Send a PR (follow the steps below if you wanna send an updated `output.json` file), or add an issue. 
+### Prerequisites
+- Node.js (v20+ or v24+) or Bun
+- npm or bun
 
-## How to generate new org file
+### Setup
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/seanmavley/dutch.git
+   cd dutch
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   bun install
+   ```
+3. Run the development server:
+   ```bash
+   npm start
+   # or
+   ng serve
+   ```
+4. Navigate to `http://localhost:4200/`.
 
-The `orgs-*.json` file that's loaded and used within the application is generated using the scripts found in the `scripts` folder.
+---
 
-### `ollama.js` JavaScript file
+## Data Enrichment Pipeline (Gemini)
 
-> The response below is from [Gemini Advanced](https://gemini.google.com/app/bed0e1e840e48878). Read the full response at [Company Data Enrichment](https://g.co/gemini/share/53aa701b94b3)
+The company datasets in `src/assets/` are generated via the automated scraping and enrichment pipeline in `scripts/`.
 
-The JavaScript script is designed to:
+### Configuration & Security Best Practices
+1. Copy the example environment file:
+   ```bash
+   cp .env.example .env
+   ```
+2. Add your Gemini API key to `.env`:
+   ```bash
+   GEMINI_API_KEY=your_gemini_api_key_here
+   ```
 
-1. Read: Take a JSON file (`organizations.json`) containing company data (names, IDs, etc.).
-2. Analyze: Use an AI model ([Ollama](https://ollama.ai/) running locally) to enrich each company's data. The AI provides a description, categorizes the company into a specific sector, finds its website, and suggests relevant tags. Learn more about how to set up your [local Ollama](https://ollama.ai/) running service on their official website
-3. Structure: Organize the enriched company information into a well-structured JSON format (`output.json`). Companies are grouped by their sector.
-4. Handle Errors: Log any errors that occur during the process to a separate file (`error_log.json`).
+> [!IMPORTANT]
+> **API Key Security Guidelines**:
+> - `.env` is ignored by `.gitignore` and must **never** be committed to version control.
+> - **API Restriction**: In [Google AI Studio](https://aistudio.google.com/) or Google Cloud Console, restrict your API key specifically to the **Generative Language API**.
+> - **Permissions**: Ensure `.env` has restrictive file permissions on your local machine (`chmod 600 .env`).
+> - **CI/CD**: When running pipeline automation in CI/CD (e.g. GitHub Actions), inject `GEMINI_API_KEY` via encrypted repository secrets.
 
-### `scraper.js` JavaScript file
+### Pipeline Commands
 
-> The response below is from [Gemini Advanced](https://g.co/gemini/share/ebd7454a1332). Read the full response at [Web Scraper for Organization](https://g.co/gemini/share/ebd7454a1332)
+| Command | Description |
+| :--- | :--- |
+| `npm run scrape` | Scrapes the official IND register and extracts newly added sponsor deltas. |
+| `npm run enrich` | Sends delta sponsors to Gemini in batches to generate descriptions, categories, and tags. |
+| `npm run pipeline` | Runs both scraping and enrichment sequentially, then syncs assets. |
+| `npm run sync:data` | Flushes `scripts/output.json` directly into `src/assets/sponsors.json`. |
 
-This script is a web scraper designed to extract specific data from the website [Public Register Regular Labour and Highly Skilled Migrants](https://ind.nl/en/public-register-recognised-sponsors/public-register-regular-labour-and-highly-skilled-migrants). 
+#### CLI Options for `enrich_gemini.js`
+```bash
+# Dry run with a small batch of 10 companies
+node scripts/enrich_gemini.js --limit 10
 
-It uses the following libraries:
+# Customize batch size (companies per Gemini call, default 25)
+node scripts/enrich_gemini.js --batch-size 30
 
-* axios: Fetches the HTML content of the webpage.
-* cheerio: Parses the HTML to locate and extract the desired information.
-* fs (File System): Saves the extracted data into a JSON file.
+# Full re-enrichment of all sponsors
+node scripts/enrich_gemini.js --all
+```
+
+---
+
+## Contributing
+
+Pull requests are welcome! If you are updating the sponsors list, run `npm run pipeline` and submit a PR with the updated asset files.

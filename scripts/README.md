@@ -62,3 +62,4 @@ node scripts/enrich_gemini.js --all
 # Manually trigger asset sync from output.json
 npm run sync:data
 ```
+
