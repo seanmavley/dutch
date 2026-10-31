@@ -11,7 +11,7 @@
         <span class="text-slate-800 dark:text-zinc-200 font-mono font-medium">{{ company.kvk }}</span>
       </div>
       <div class="flex items-center gap-2">
-        <a class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-lg bg-white dark:bg-zinc-800/90 text-slate-700 dark:text-zinc-300 hover:text-slate-900 dark:hover:text-white border border-slate-200 dark:border-zinc-700/80 shadow-2xs hover:bg-slate-50 dark:hover:bg-zinc-800 transition" [href]="'https://www.kvk.nl/zoeken/?source=all&q=' + company.kvk" rel="noopener noreferrer" target="_blank">
+        <a class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-lg bg-white dark:bg-zinc-900 text-slate-700 dark:text-zinc-300 hover:text-slate-900 dark:hover:text-white border border-slate-200 dark:border-zinc-800 shadow-2xs hover:bg-slate-50 dark:hover:bg-zinc-800 transition" [href]="'https://www.kvk.nl/zoeken/?source=all&q=' + company.kvk" rel="noopener noreferrer" target="_blank">
           <svg class="w-3.5 h-3.5 text-slate-400 dark:text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
           </svg>
@@ -21,11 +21,11 @@
     </div>
 
     <!-- Main Detail Card -->
-    <div class="bg-white dark:bg-[#121316] rounded-2xl border border-slate-200/80 dark:border-zinc-800/80 shadow-xs p-6 md:p-8 space-y-6 transition-colors">
+    <div class="bg-white dark:bg-[#121316] rounded-2xl border border-slate-200 dark:border-zinc-800 shadow-sm p-6 md:p-8 space-y-6 transition-colors">
       <!-- Header Meta Badges -->
       <div class="flex flex-wrap items-center gap-2.5">
         <!-- KvK Tag with Copy Feature -->
-        <button (click)="copyKvk(company.kvk)" class="group inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-mono font-medium rounded-md bg-slate-100 hover:bg-slate-200/80 dark:bg-zinc-800/80 dark:hover:bg-zinc-700/80 text-slate-800 dark:text-zinc-200 border border-slate-200 dark:border-zinc-700 transition cursor-pointer" title="Click to copy KvK ID">
+        <button (click)="copyKvk(company.kvk)" class="group inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-mono font-medium rounded-md bg-slate-100 hover:bg-slate-200 dark:bg-zinc-800 dark:hover:bg-zinc-700 text-slate-800 dark:text-zinc-200 border border-slate-200 dark:border-zinc-700 transition cursor-pointer" title="Click to copy KvK ID">
           <span class="text-fuchsia-600 dark:text-fuchsia-400 font-semibold">KVK</span>
           <span class="text-slate-400 dark:text-zinc-500">·</span>
           <span>{{ copiedKvk ? 'Copied!' : company.kvk }}</span>
@@ -35,12 +35,12 @@
         </button>
 
         <!-- Sector Badge -->
-        <span class="inline-flex items-center px-2.5 py-1 text-xs font-medium rounded-md bg-purple-50 text-purple-700 dark:bg-purple-950/40 dark:text-purple-300 dark:border dark:border-purple-800/50">
+        <span class="inline-flex items-center px-2.5 py-1 text-xs font-medium rounded-md bg-fuchsia-50 text-fuchsia-700 dark:bg-fuchsia-950/60 dark:text-fuchsia-300 border border-fuchsia-200 dark:border-fuchsia-800/60">
           {{ getIndustryName(company.category) }}
         </span>
 
         <!-- Status Indicator -->
-        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-medium rounded-md bg-emerald-50 text-emerald-700 dark:bg-emerald-950/40 dark:text-emerald-300 dark:border dark:border-emerald-800/50">
+        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-medium rounded-md bg-emerald-50 text-emerald-700 dark:bg-emerald-950/60 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800/60">
           <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
           Active Registry
         </span>
@@ -51,15 +51,15 @@
         <h1 class="font-display text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-slate-900 dark:text-white leading-tight capitalize">
           {{ company.name }}
         </h1>
-        <p class="text-sm text-slate-500 dark:text-zinc-400 mt-1">Official trading name registered under Dutch commercial laws</p>
+        <p class="text-sm text-slate-500 dark:text-zinc-400 mt-1">Official recognised sponsor registered under Dutch commercial laws</p>
       </div>
 
       <!-- Divider -->
       <hr class="border-slate-100 dark:border-zinc-800"/>
 
       <!-- Primary Description -->
-      <div class="bg-slate-50/70 dark:bg-[#18191d] rounded-xl p-5 md:p-6 border border-slate-200/60 dark:border-zinc-800/60">
-        <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-400 dark:text-zinc-500 mb-2">Company Purpose &amp; Activities</h4>
+      <div class="bg-slate-50 dark:bg-[#18191d] rounded-xl p-5 md:p-6 border border-slate-200/80 dark:border-zinc-800/80">
+        <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-zinc-400 mb-2">Company Purpose &amp; Activities</h4>
         <p class="text-base md:text-lg text-slate-800 dark:text-zinc-200 font-normal leading-relaxed">
           {{ company.description || 'No description available for this organisation.' }}
         </p>
@@ -68,10 +68,10 @@
       <!-- Tags Section -->
       @if (company.tags && company.tags.length > 0) {
         <div>
-          <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-400 dark:text-zinc-500 mb-2">Keywords &amp; Focus</h4>
+          <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-zinc-400 mb-2">Keywords &amp; Focus</h4>
           <div class="flex flex-wrap gap-2">
             @for (tag of company.tags; track tag) {
-              <span class="px-2.5 py-1 text-xs rounded-lg bg-slate-100 dark:bg-zinc-800 text-slate-600 dark:text-zinc-300 border border-slate-200/60 dark:border-zinc-700/50">
+              <span class="px-2.5 py-1 text-xs rounded-lg bg-slate-100 dark:bg-zinc-800 text-slate-700 dark:text-zinc-300 border border-slate-200 dark:border-zinc-700 font-medium">
                 #{{ tag }}
               </span>
             }
@@ -89,13 +89,13 @@
             <span>Company Website</span>
           </a>
         }
-        <a class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-zinc-800 dark:hover:bg-zinc-700/80 text-slate-700 dark:text-zinc-200 text-xs font-semibold border border-slate-200 dark:border-zinc-700 transition-all" [href]="search_url" rel="noopener noreferrer" target="_blank">
+        <a class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-zinc-800 dark:hover:bg-zinc-700 text-slate-700 dark:text-zinc-200 text-xs font-semibold border border-slate-200 dark:border-zinc-700 transition-all" [href]="search_url" rel="noopener noreferrer" target="_blank">
           <svg class="w-3.5 h-3.5 text-slate-500 dark:text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
           </svg>
           <span>Web Search</span>
         </a>
-        <a class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-zinc-800 dark:hover:bg-zinc-700/80 text-slate-700 dark:text-zinc-200 text-xs font-semibold border border-slate-200 dark:border-zinc-700 transition-all" [href]="'https://www.kvk.nl/zoeken/?source=all&q=' + company.kvk" rel="noopener noreferrer" target="_blank">
+        <a class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-zinc-800 dark:hover:bg-zinc-700 text-slate-700 dark:text-zinc-200 text-xs font-semibold border border-slate-200 dark:border-zinc-700 transition-all" [href]="'https://www.kvk.nl/zoeken/?source=all&q=' + company.kvk" rel="noopener noreferrer" target="_blank">
           <svg class="w-3.5 h-3.5 text-slate-500 dark:text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
           </svg>
@@ -106,7 +106,7 @@
   </div>
 
   <!-- Bottom Disclaimer / Verification Footer -->
-  <footer class="mt-8 pt-4 border-t border-slate-200 dark:border-zinc-800/60 max-w-5xl mx-auto w-full flex flex-col sm:flex-row items-center justify-between gap-2 text-[11px] text-slate-400 dark:text-zinc-500 text-center sm:text-left">
+  <footer class="mt-8 pt-4 border-t border-slate-200 dark:border-zinc-800 max-w-5xl mx-auto w-full flex flex-col sm:flex-row items-center justify-between gap-2 text-[11px] text-slate-400 dark:text-zinc-500 text-center sm:text-left">
     <div class="flex items-center gap-1.5 italic">
       <svg class="w-3.5 h-3.5 text-slate-400 dark:text-zinc-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
@@ -120,7 +120,7 @@
 </section>
 } @else {
 <section class="h-full flex flex-col items-center justify-center p-8 text-center bg-slate-50 dark:bg-[#0c0d0e] text-slate-400 dark:text-zinc-500">
-  <div class="w-14 h-14 rounded-2xl bg-slate-100 dark:bg-zinc-800/80 flex items-center justify-center mb-4 text-fuchsia-600 dark:text-fuchsia-400">
+  <div class="w-14 h-14 rounded-2xl bg-slate-100 dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 flex items-center justify-center mb-4 text-fuchsia-600 dark:text-fuchsia-400">
     <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
     </svg>
