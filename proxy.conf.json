@@ -1,0 +1,15 @@
+{
+  "/api/kvk": {
+    "target": "https://web-api.kvk.nl",
+    "secure": true,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/api/kvk": ""
+    },
+    "headers": {
+      "profileId": "5C10A89D-635E-49CC-94B8-042DD533B64A",
+      "Origin": "https://www.kvk.nl",
+      "Referer": "https://www.kvk.nl/"
+    }
+  }
+}

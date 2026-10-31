@@ -103,6 +103,163 @@
         </a>
       </div>
     </div>
+
+    <!-- KvK Handelsregister Overview Section -->
+    <div class="bg-white dark:bg-[#121316] rounded-2xl border border-slate-200 dark:border-zinc-800 shadow-sm p-6 md:p-8 space-y-6 transition-colors">
+      <!-- Section Header -->
+      <div class="flex flex-wrap items-center justify-between gap-3 border-b border-slate-100 dark:border-zinc-800 pb-4">
+        <div class="flex items-center gap-2.5">
+          <div class="w-8 h-8 rounded-lg bg-fuchsia-50 dark:bg-fuchsia-950/60 border border-fuchsia-200 dark:border-fuchsia-800/60 flex items-center justify-center text-fuchsia-600 dark:text-fuchsia-400">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-sm font-bold uppercase tracking-wider text-slate-900 dark:text-white flex items-center gap-2">
+              KVK Handelsregister Overview
+              @if (kvkDetails?.actief) {
+                <span class="inline-flex items-center gap-1 px-2 py-0.5 text-[10px] font-medium rounded-full bg-emerald-50 text-emerald-700 dark:bg-emerald-950/60 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800/60">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                  Ingeschreven
+                </span>
+              }
+            </h3>
+            <p class="text-xs text-slate-500 dark:text-zinc-400">Officiële handelsregistergegevens van de Kamer van Koophandel</p>
+          </div>
+        </div>
+
+        <!-- External link to official KVK website -->
+        <a class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg bg-slate-100 hover:bg-slate-200 dark:bg-zinc-800 dark:hover:bg-zinc-700 text-slate-700 dark:text-zinc-200 border border-slate-200 dark:border-zinc-700 transition"
+           [href]="'https://www.kvk.nl/zoeken/?source=all&q=' + (company.kvk || company.name)"
+           target="_blank"
+           rel="noopener noreferrer">
+          <span>Bekijk op KVK.nl</span>
+          <svg class="w-3.5 h-3.5 text-slate-400 dark:text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Loading State -->
+      @if (loadingKvk) {
+        <div class="py-6 flex items-center justify-center gap-3 text-slate-500 dark:text-zinc-400 animate-pulse">
+          <svg class="w-5 h-5 animate-spin text-fuchsia-600 dark:text-fuchsia-400" fill="none" viewBox="0 0 24 24">
+            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+          </svg>
+          <span class="text-xs font-medium">KVK-handelsregistergegevens ophalen...</span>
+        </div>
+      }
+
+      <!-- Success: KvK Details Found -->
+      @if (!loadingKvk && kvkDetails) {
+        <div class="space-y-5">
+          <!-- Key Facts Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <!-- KVK Nummer -->
+            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-zinc-900/60 border border-slate-200/80 dark:border-zinc-800/80">
+              <span class="text-[11px] font-medium text-slate-400 dark:text-zinc-500 uppercase tracking-wider block">KVK Nummer</span>
+              <span class="text-sm font-semibold font-mono text-slate-800 dark:text-zinc-100 mt-0.5 block">
+                {{ kvkDetails.kvkNummer || company.kvk }}
+              </span>
+            </div>
+
+            <!-- Rechtsvorm -->
+            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-zinc-900/60 border border-slate-200/80 dark:border-zinc-800/80">
+              <span class="text-[11px] font-medium text-slate-400 dark:text-zinc-500 uppercase tracking-wider block">Rechtsvorm</span>
+              <span class="text-sm font-semibold text-slate-800 dark:text-zinc-100 mt-0.5 block">
+                {{ kvkDetails.rechtsvormOmschrijving || kvkDetails.rechtsvormCode || 'Onbekend' }}
+              </span>
+            </div>
+
+            <!-- Type Inschrijving -->
+            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-zinc-900/60 border border-slate-200/80 dark:border-zinc-800/80">
+              <span class="text-[11px] font-medium text-slate-400 dark:text-zinc-500 uppercase tracking-wider block">Inschrijvingstype</span>
+              <span class="text-sm font-semibold text-slate-800 dark:text-zinc-100 mt-0.5 block">
+                {{ kvkDetails.inschrijvingstype || 'Hoofdvestiging' }}
+              </span>
+            </div>
+
+            <!-- Vestigingsnummer of Inschrijvingsdatum -->
+            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-zinc-900/60 border border-slate-200/80 dark:border-zinc-800/80">
+              <span class="text-[11px] font-medium text-slate-400 dark:text-zinc-500 uppercase tracking-wider block">
+                {{ kvkDetails.vestigingsnummer ? 'Vestigingsnr.' : 'Inschrijvingsdatum' }}
+              </span>
+              <span class="text-sm font-semibold font-mono text-slate-800 dark:text-zinc-100 mt-0.5 block">
+                {{ kvkDetails.vestigingsnummer || kvkDetails.inschrijvingsdatum || '-' }}
+              </span>
+            </div>
+          </div>
+
+          <!-- Official Registered Activity Description (from KvK) -->
+          @if (kvkDetails.activiteitomschrijving) {
+            <div class="p-4 rounded-xl bg-slate-50 dark:bg-zinc-900/60 border border-slate-200/80 dark:border-zinc-800/80">
+              <h5 class="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-zinc-400 mb-1.5 flex items-center gap-1.5">
+                <svg class="w-3.5 h-3.5 text-fuchsia-600 dark:text-fuchsia-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                </svg>
+                Statutaire Bedrijfsactiviteiten (KVK)
+              </h5>
+              <p class="text-xs sm:text-sm text-slate-700 dark:text-zinc-300 leading-relaxed whitespace-pre-line">
+                {{ kvkDetails.activiteitomschrijving }}
+              </p>
+            </div>
+          }
+
+          <!-- Registered Visiting Address -->
+          @if (kvkDetails.bezoeklocatie?.straat || kvkDetails.bezoeklocatie?.plaats) {
+            <div class="flex items-start gap-3 p-3.5 rounded-xl bg-slate-50 dark:bg-zinc-900/60 border border-slate-200/80 dark:border-zinc-800/80">
+              <svg class="w-4 h-4 text-slate-400 dark:text-zinc-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+              <div class="text-xs">
+                <span class="font-medium text-slate-400 dark:text-zinc-500 uppercase tracking-wider block text-[10px]">Bezoekadres</span>
+                <span class="text-slate-800 dark:text-zinc-200 font-medium">
+                  {{ kvkDetails.bezoeklocatie?.straat }} {{ kvkDetails.bezoeklocatie?.huisnummer }},
+                  {{ kvkDetails.bezoeklocatie?.postcode }} {{ kvkDetails.bezoeklocatie?.plaats }}
+                </span>
+              </div>
+            </div>
+          }
+
+          <!-- Trade Names / Statutaire Naam -->
+          @if (kvkDetails.huidigeStatutaireNaam && kvkDetails.huidigeStatutaireNaam !== company.name) {
+            <div class="text-xs text-slate-500 dark:text-zinc-400">
+              <span class="font-medium">Statutaire naam:</span>
+              <span class="text-slate-700 dark:text-zinc-300 ml-1">{{ kvkDetails.huidigeStatutaireNaam }}</span>
+            </div>
+          }
+        </div>
+      }
+
+      <!-- Fallback / Error / Not Found / CORS Block State -->
+      @if (!loadingKvk && !kvkDetails) {
+        <div class="p-4 rounded-xl bg-slate-50 dark:bg-zinc-900/60 border border-slate-200/80 dark:border-zinc-800/80 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div class="space-y-1">
+            <h5 class="text-xs font-semibold text-slate-800 dark:text-zinc-200 flex items-center gap-2">
+              <span>Handelsregister Registratie</span>
+              <span class="font-mono text-fuchsia-600 dark:text-fuchsia-400">#{{ company.kvk }}</span>
+            </h5>
+            <p class="text-xs text-slate-500 dark:text-zinc-400">
+              Bekijk de actuele uittreksels, functionarissen en jaarrekeningen direct bij de Kamer van Koophandel.
+            </p>
+          </div>
+          <div class="flex items-center gap-2 shrink-0">
+            <button (click)="retryKvk()" class="px-3 py-1.5 text-xs font-medium rounded-lg bg-white dark:bg-zinc-800 text-slate-700 dark:text-zinc-300 border border-slate-200 dark:border-zinc-700 hover:bg-slate-50 dark:hover:bg-zinc-700 transition cursor-pointer">
+              Opnieuw proberen
+            </button>
+            <a [href]="'https://www.kvk.nl/zoeken/?source=all&q=' + (company.kvk || company.name)"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-fuchsia-600 hover:bg-fuchsia-700 text-white shadow-xs transition">
+              Openen op KVK.nl ↗
+            </a>
+          </div>
+        </div>
+      }
+    </div>
+
   </div>
 
   <!-- Bottom Disclaimer / Verification Footer -->
