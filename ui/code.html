@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dutch Business Registry | KVK Intelligence Platform</title>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+            display: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#fdf4ff',
+              100: '#fae8ff',
+              500: '#d946ef',
+              600: '#c026d3',
+              700: '#a21caf',
+            }
+          }
+        }
+      }
+    }
+  </script>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<style data-purpose="custom-scrollbar">
+    /* Slim custom scrollbar styling */
+    ::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    .dark ::-webkit-scrollbar-thumb {
+      background: #27272a;
+      border-radius: 9999px;
+    }
+    .dark ::-webkit-scrollbar-thumb:hover {
+      background: #3f3f46;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #e2e8f0;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #cbd5e1;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 dark:bg-[#0c0d0e] text-slate-800 dark:text-zinc-200 min-h-screen flex flex-col font-sans transition-colors duration-200 antialiased selection:bg-fuchsia-500 selection:text-white">
+<!-- BEGIN: MainHeader -->
+<header class="sticky top-0 z-40 border-b border-slate-200 dark:border-zinc-800/80 bg-white/80 dark:bg-[#0c0d0e]/80 backdrop-blur-md">
+<div class="px-4 lg:px-6 py-2.5 flex items-center justify-between gap-4">
+<!-- Brand & Version -->
+<div class="flex items-center gap-3 shrink-0">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-fuchsia-600 to-violet-500 flex items-center justify-center text-white font-bold text-sm shadow-sm shadow-fuchsia-500/20">
+            NL
+          </div>
+<div>
+<div class="flex items-center gap-1.5 leading-none">
+<span class="font-display font-bold text-base tracking-tight text-slate-900 dark:text-white">Dutch</span>
+<span class="px-1.5 py-0.5 text-[10px] font-mono font-medium rounded bg-fuchsia-100 text-fuchsia-700 dark:bg-fuchsia-950/60 dark:text-fuchsia-300 dark:border dark:border-fuchsia-800/50">v0.3.2</span>
+</div>
+<p class="text-[11px] text-slate-500 dark:text-zinc-500 tracking-tight leading-normal mt-0.5">Handelsregister Intelligence</p>
+</div>
+</div>
+</div>
+<!-- Quick Global Search Bar -->
+<div class="flex-1 max-w-2xl hidden md:block">
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400 dark:text-zinc-500">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<input class="w-full pl-10 pr-20 py-1.5 bg-slate-100/80 dark:bg-zinc-900/90 text-sm text-slate-900 dark:text-zinc-100 placeholder-slate-400 dark:placeholder-zinc-500 rounded-lg border border-transparent dark:border-zinc-800 focus:outline-none focus:ring-2 focus:ring-fuchsia-500/40 focus:border-fuchsia-500 dark:focus:border-fuchsia-500/60 transition-all shadow-inner" id="company-search-input" placeholder="Search 12,212 company names, KvK numbers, or sectors..." type="text"/>
+<div class="absolute inset-y-0 right-0 pr-2.5 flex items-center gap-1">
+<kbd class="px-1.5 py-0.5 text-[10px] font-mono bg-white dark:bg-zinc-800 text-slate-500 dark:text-zinc-400 rounded border border-slate-200 dark:border-zinc-700 shadow-2xs">⌘K</kbd>
+</div>
+</div>
+</div>
+<!-- Header Tools & Mode Switcher -->
+<div class="flex items-center gap-1.5">
+<!-- Download Export -->
+<button class="p-2 text-slate-500 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-zinc-100 rounded-lg hover:bg-slate-100 dark:hover:bg-zinc-800/70 transition-colors" title="Export Dataset" type="button">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<!-- Refresh Dataset -->
+<button class="p-2 text-slate-500 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-zinc-100 rounded-lg hover:bg-slate-100 dark:hover:bg-zinc-800/70 transition-colors" title="Reload Records" type="button">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<!-- Info / About -->
+<button class="p-2 text-slate-500 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-zinc-100 rounded-lg hover:bg-slate-100 dark:hover:bg-zinc-800/70 transition-colors" title="Documentation &amp; Sources" type="button">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<!-- API / Code Link -->
+<button class="p-2 text-slate-500 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-zinc-100 rounded-lg hover:bg-slate-100 dark:hover:bg-zinc-800/70 transition-colors" title="API Endpoint" type="button">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<!-- Vertical Divider -->
+<div class="h-4 w-px bg-slate-200 dark:bg-zinc-800 mx-1"></div>
+<!-- Light / Dark Mode Interactive Toggle -->
+<button aria-label="Toggle visual theme" class="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg border border-slate-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-slate-700 dark:text-zinc-300 hover:bg-slate-100 dark:hover:bg-zinc-800 transition-all text-xs font-medium cursor-pointer shadow-xs" id="theme-toggle" type="button">
+<!-- Moon Icon (Dark Mode active) -->
+<svg class="w-3.5 h-3.5 text-zinc-400" fill="none" id="theme-moon-icon" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<!-- Sun Icon (Light Mode active) -->
+<svg class="w-3.5 h-3.5 text-amber-500 hidden" fill="none" id="theme-sun-icon" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span class="hidden sm:inline" id="theme-label">Dark</span>
+</button>
+</div>
+</div>
+<!-- Category Pill Filter Bar (Enhanced from original purple banner) -->
+<div class="px-4 lg:px-6 py-2 bg-slate-100/70 dark:bg-[#121316] border-t border-slate-200/80 dark:border-zinc-800/60 overflow-x-auto scrollbar-none flex items-center gap-1.5 text-xs">
+<span class="text-[11px] font-semibold uppercase tracking-wider text-slate-400 dark:text-zinc-500 mr-2 shrink-0">Sectors:</span>
+<button class="sector-pill px-3 py-1 rounded-full font-medium transition-all shrink-0 bg-fuchsia-600 text-white shadow-xs shadow-fuchsia-600/30">
+        All
+      </button>
+<button class="sector-pill px-3 py-1 rounded-full font-medium transition-all shrink-0 bg-white dark:bg-zinc-800/80 text-slate-600 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-white border border-slate-200/80 dark:border-zinc-700/60">
+        Manufacturing &amp; Industrials
+      </button>
+<button class="sector-pill px-3 py-1 rounded-full font-medium transition-all shrink-0 bg-white dark:bg-zinc-800/80 text-slate-600 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-white border border-slate-200/80 dark:border-zinc-700/60">
+        Finance &amp; Real Estate
+      </button>
+<button class="sector-pill px-3 py-1 rounded-full font-medium transition-all shrink-0 bg-white dark:bg-zinc-800/80 text-slate-600 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-white border border-slate-200/80 dark:border-zinc-700/60">
+        Consumer Goods &amp; Retail
+      </button>
+<button class="sector-pill px-3 py-1 rounded-full font-medium transition-all shrink-0 bg-white dark:bg-zinc-800/80 text-slate-600 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-white border border-slate-200/80 dark:border-zinc-700/60">
+        Healthcare &amp; Pharmaceuticals
+      </button>
+<button class="sector-pill px-3 py-1 rounded-full font-medium transition-all shrink-0 bg-white dark:bg-zinc-800/80 text-slate-600 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-white border border-slate-200/80 dark:border-zinc-700/60">
+        Energy &amp; Utilities
+      </button>
+<button class="sector-pill px-3 py-1 rounded-full font-medium transition-all shrink-0 bg-white dark:bg-zinc-800/80 text-slate-600 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-white border border-slate-200/80 dark:border-zinc-700/60">
+        Technology &amp; Telecommunications
+      </button>
+<button class="sector-pill px-3 py-1 rounded-full font-medium transition-all shrink-0 bg-white dark:bg-zinc-800/80 text-slate-600 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-white border border-slate-200/80 dark:border-zinc-700/60">
+        Other
+      </button>
+</div>
+</header>
+<!-- END: MainHeader -->
+<!-- BEGIN: MasterDetailContainer -->
+<main class="flex-1 flex overflow-hidden max-w-[1920px] w-full mx-auto">
+<!-- Left Sidebar: Companies Directory List -->
+<aside class="w-full sm:w-80 md:w-96 lg:w-[420px] border-r border-slate-200 dark:border-zinc-800/80 bg-white dark:bg-[#0f1012] flex flex-col shrink-0">
+<!-- List Controls & Counter -->
+<div class="p-3.5 border-b border-slate-200 dark:border-zinc-800 flex items-center justify-between gap-2 bg-slate-50/50 dark:bg-zinc-900/30">
+<div class="flex items-center gap-2">
+<span class="font-display font-semibold text-sm text-slate-900 dark:text-zinc-100">Companies</span>
+<span class="px-2 py-0.5 text-xs font-mono font-medium rounded-full bg-slate-200/70 dark:bg-zinc-800 text-slate-700 dark:text-zinc-300">12,212</span>
+</div>
+<div class="flex items-center gap-1.5 text-xs">
+<button class="p-1 rounded text-slate-500 dark:text-zinc-400 hover:text-slate-800 dark:hover:text-zinc-200 hover:bg-slate-200/50 dark:hover:bg-zinc-800 transition" title="Sort A-Z" type="button">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M3 4h13M3 8h9m-9 4h6m4 0l4-4m0 0l4 4m-4-4v12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<button class="p-1 rounded text-slate-500 dark:text-zinc-400 hover:text-slate-800 dark:hover:text-zinc-200 hover:bg-slate-200/50 dark:hover:bg-zinc-800 transition" title="Filter Status" type="button">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+</div>
+<!-- Scrollable Company Items -->
+<div class="flex-1 overflow-y-auto divide-y divide-slate-100 dark:divide-zinc-800/40 p-2 space-y-1" id="company-list">
+<!-- Active Item (Aa-Dee Machinefabriek) -->
+<article class="company-card group p-3 rounded-lg cursor-pointer bg-fuchsia-50/70 dark:bg-zinc-800/60 border border-fuchsia-200 dark:border-fuchsia-500/30 relative transition-all">
+<div class="flex items-start justify-between gap-2">
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5 mb-1">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0"></span>
+<span class="text-[10px] font-mono uppercase tracking-wider text-slate-500 dark:text-zinc-400 font-semibold">KVK · 16051874</span>
+</div>
+<h3 class="text-sm font-semibold text-slate-900 dark:text-white truncate group-hover:text-fuchsia-600 dark:group-hover:text-fuchsia-400">
+                aa-dee machinefabriek en staalbouw nederland b.v.
+              </h3>
+<p class="text-xs text-slate-500 dark:text-zinc-400 truncate mt-0.5">Manufacturing &amp; Industrials · Cranes &amp; Machinery</p>
+</div>
+<div class="text-fuchsia-600 dark:text-fuchsia-400 shrink-0 mt-1">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+</svg>
+</div>
+</div>
+</article>
+<!-- List Items from Snapshot -->
+<article class="company-card group p-3 rounded-lg cursor-pointer hover:bg-slate-100/70 dark:hover:bg-zinc-800/40 border border-transparent transition-all">
+<div class="flex items-start justify-between gap-2">
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5 mb-1">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0"></span>
+<span class="text-[10px] font-mono text-slate-400 dark:text-zinc-500">KVK · 17094218</span>
+</div>
+<h3 class="text-sm font-normal text-slate-700 dark:text-zinc-300 truncate group-hover:text-slate-900 dark:group-hover:text-white">
+                aae advanced automated equipment b.v.
+              </h3>
+<p class="text-xs text-slate-400 dark:text-zinc-500 truncate mt-0.5">Helmond · High-tech Systems</p>
+</div>
+<svg class="w-3.5 h-3.5 text-slate-300 dark:text-zinc-600 group-hover:text-slate-500 dark:group-hover:text-zinc-400 shrink-0 mt-1.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+</article>
+<article class="company-card group p-3 rounded-lg cursor-pointer hover:bg-slate-100/70 dark:hover:bg-zinc-800/40 border border-transparent transition-all">
+<div class="flex items-start justify-between gap-2">
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5 mb-1">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0"></span>
+<span class="text-[10px] font-mono text-slate-400 dark:text-zinc-500">KVK · 24419941</span>
+</div>
+<h3 class="text-sm font-normal text-slate-700 dark:text-zinc-300 truncate group-hover:text-slate-900 dark:group-hover:text-white">
+                1 cube b.v.
+              </h3>
+<p class="text-xs text-slate-400 dark:text-zinc-500 truncate mt-0.5">Software &amp; Technology Consultancy</p>
+</div>
+<svg class="w-3.5 h-3.5 text-slate-300 dark:text-zinc-600 group-hover:text-slate-500 dark:group-hover:text-zinc-400 shrink-0 mt-1.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+</article>
+<article class="company-card group p-3 rounded-lg cursor-pointer hover:bg-slate-100/70 dark:hover:bg-zinc-800/40 border border-transparent transition-all">
+<div class="flex items-start justify-between gap-2">
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5 mb-1">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0"></span>
+<span class="text-[10px] font-mono text-slate-400 dark:text-zinc-500">KVK · 32085731</span>
+</div>
+<h3 class="text-sm font-normal text-slate-700 dark:text-zinc-300 truncate group-hover:text-slate-900 dark:group-hover:text-white">
+                2 getthere holding b.v.
+              </h3>
+<p class="text-xs text-slate-400 dark:text-zinc-500 truncate mt-0.5">Automated Transit Systems · Utrecht</p>
+</div>
+<svg class="w-3.5 h-3.5 text-slate-300 dark:text-zinc-600 group-hover:text-slate-500 dark:group-hover:text-zinc-400 shrink-0 mt-1.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+</article>
+<article class="company-card group p-3 rounded-lg cursor-pointer hover:bg-slate-100/70 dark:hover:bg-zinc-800/40 border border-transparent transition-all">
+<div class="flex items-start justify-between gap-2">
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5 mb-1">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0"></span>
+<span class="text-[10px] font-mono text-slate-400 dark:text-zinc-500">KVK · 08173491</span>
+</div>
+<h3 class="text-sm font-normal text-slate-700 dark:text-zinc-300 truncate group-hover:text-slate-900 dark:group-hover:text-white">
+                247tailorsteel b.v.
+              </h3>
+<p class="text-xs text-slate-400 dark:text-zinc-500 truncate mt-0.5">Custom Laser Cutting &amp; Metal Sheet Fab</p>
+</div>
+<svg class="w-3.5 h-3.5 text-slate-300 dark:text-zinc-600 group-hover:text-slate-500 dark:group-hover:text-zinc-400 shrink-0 mt-1.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+</article>
+<article class="company-card group p-3 rounded-lg cursor-pointer hover:bg-slate-100/70 dark:hover:bg-zinc-800/40 border border-transparent transition-all">
+<div class="flex items-start justify-between gap-2">
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5 mb-1">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0"></span>
+<span class="text-[10px] font-mono text-slate-400 dark:text-zinc-500">KVK · 64928172</span>
+</div>
+<h3 class="text-sm font-normal text-slate-700 dark:text-zinc-300 truncate group-hover:text-slate-900 dark:group-hover:text-white">
+                2m engineering limited
+              </h3>
+<p class="text-xs text-slate-400 dark:text-zinc-500 truncate mt-0.5">Medical Devices &amp; Sensor Technology</p>
+</div>
+<svg class="w-3.5 h-3.5 text-slate-300 dark:text-zinc-600 group-hover:text-slate-500 dark:group-hover:text-zinc-400 shrink-0 mt-1.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+</article>
+<article class="company-card group p-3 rounded-lg cursor-pointer hover:bg-slate-100/70 dark:hover:bg-zinc-800/40 border border-transparent transition-all">
+<div class="flex items-start justify-between gap-2">
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5 mb-1">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0"></span>
+<span class="text-[10px] font-mono text-slate-400 dark:text-zinc-500">KVK · 60192834</span>
+</div>
+<h3 class="text-sm font-normal text-slate-700 dark:text-zinc-300 truncate group-hover:text-slate-900 dark:group-hover:text-white">
+                361° europe b.v.
+              </h3>
+<p class="text-xs text-slate-400 dark:text-zinc-500 truncate mt-0.5">Sporting Goods &amp; Footwear Distribution</p>
+</div>
+<svg class="w-3.5 h-3.5 text-slate-300 dark:text-zinc-600 group-hover:text-slate-500 dark:group-hover:text-zinc-400 shrink-0 mt-1.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+</article>
+<article class="company-card group p-3 rounded-lg cursor-pointer hover:bg-slate-100/70 dark:hover:bg-zinc-800/40 border border-transparent transition-all">
+<div class="flex items-start justify-between gap-2">
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5 mb-1">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0"></span>
+<span class="text-[10px] font-mono text-slate-400 dark:text-zinc-500">KVK · 02094833</span>
+</div>
+<h3 class="text-sm font-normal text-slate-700 dark:text-zinc-300 truncate group-hover:text-slate-900 dark:group-hover:text-white">
+                365werk contracting b.v.
+              </h3>
+<p class="text-xs text-slate-400 dark:text-zinc-500 truncate mt-0.5">Staffing &amp; Human Resources</p>
+</div>
+<svg class="w-3.5 h-3.5 text-slate-300 dark:text-zinc-600 group-hover:text-slate-500 dark:group-hover:text-zinc-400 shrink-0 mt-1.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+</article>
+<article class="company-card group p-3 rounded-lg cursor-pointer hover:bg-slate-100/70 dark:hover:bg-zinc-800/40 border border-transparent transition-all">
+<div class="flex items-start justify-between gap-2">
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5 mb-1">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0"></span>
+<span class="text-[10px] font-mono text-slate-400 dark:text-zinc-500">KVK · 57384912</span>
+</div>
+<h3 class="text-sm font-normal text-slate-700 dark:text-zinc-300 truncate group-hover:text-slate-900 dark:group-hover:text-white">
+                3bfab b.v.
+              </h3>
+<p class="text-xs text-slate-400 dark:text-zinc-500 truncate mt-0.5">Additive Manufacturing Solutions</p>
+</div>
+<svg class="w-3.5 h-3.5 text-slate-300 dark:text-zinc-600 group-hover:text-slate-500 dark:group-hover:text-zinc-400 shrink-0 mt-1.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+</article>
+<article class="company-card group p-3 rounded-lg cursor-pointer hover:bg-slate-100/70 dark:hover:bg-zinc-800/40 border border-transparent transition-all">
+<div class="flex items-start justify-between gap-2">
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5 mb-1">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0"></span>
+<span class="text-[10px] font-mono text-slate-400 dark:text-zinc-500">KVK · 57924872</span>
+</div>
+<h3 class="text-sm font-normal text-slate-700 dark:text-zinc-300 truncate group-hover:text-slate-900 dark:group-hover:text-white">
+                3d hubs b.v.
+              </h3>
+<p class="text-xs text-slate-400 dark:text-zinc-500 truncate mt-0.5">On-demand Manufacturing Platform</p>
+</div>
+<svg class="w-3.5 h-3.5 text-slate-300 dark:text-zinc-600 group-hover:text-slate-500 dark:group-hover:text-zinc-400 shrink-0 mt-1.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+</article>
+<article class="company-card group p-3 rounded-lg cursor-pointer hover:bg-slate-100/70 dark:hover:bg-zinc-800/40 border border-transparent transition-all">
+<div class="flex items-start justify-between gap-2">
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5 mb-1">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0"></span>
+<span class="text-[10px] font-mono text-slate-400 dark:text-zinc-500">KVK · 68392019</span>
+</div>
+<h3 class="text-sm font-normal text-slate-700 dark:text-zinc-300 truncate group-hover:text-slate-900 dark:group-hover:text-white">
+                3dm-engineering
+              </h3>
+<p class="text-xs text-slate-400 dark:text-zinc-500 truncate mt-0.5">Industrial Design &amp; CAD Services</p>
+</div>
+<svg class="w-3.5 h-3.5 text-slate-300 dark:text-zinc-600 group-hover:text-slate-500 dark:group-hover:text-zinc-400 shrink-0 mt-1.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+</article>
+<article class="company-card group p-3 rounded-lg cursor-pointer hover:bg-slate-100/70 dark:hover:bg-zinc-800/40 border border-transparent transition-all">
+<div class="flex items-start justify-between gap-2">
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5 mb-1">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0"></span>
+<span class="text-[10px] font-mono text-slate-400 dark:text-zinc-500">KVK · 59283719</span>
+</div>
+<h3 class="text-sm font-normal text-slate-700 dark:text-zinc-300 truncate group-hover:text-slate-900 dark:group-hover:text-white">
+                3duniversum b.v.
+              </h3>
+<p class="text-xs text-slate-400 dark:text-zinc-500 truncate mt-0.5">AI, 3D Computer Vision &amp; Graphics</p>
+</div>
+<svg class="w-3.5 h-3.5 text-slate-300 dark:text-zinc-600 group-hover:text-slate-500 dark:group-hover:text-zinc-400 shrink-0 mt-1.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+</article>
+<article class="company-card group p-3 rounded-lg cursor-pointer hover:bg-slate-100/70 dark:hover:bg-zinc-800/40 border border-transparent transition-all">
+<div class="flex items-start justify-between gap-2">
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5 mb-1">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0"></span>
+<span class="text-[10px] font-mono text-slate-400 dark:text-zinc-500">KVK · 24089123</span>
+</div>
+<h3 class="text-sm font-normal text-slate-700 dark:text-zinc-300 truncate group-hover:text-slate-900 dark:group-hover:text-white">
+                3m nederland b.v.
+              </h3>
+<p class="text-xs text-slate-400 dark:text-zinc-500 truncate mt-0.5">Delft · Industrials &amp; Healthcare Materials</p>
+</div>
+<svg class="w-3.5 h-3.5 text-slate-300 dark:text-zinc-600 group-hover:text-slate-500 dark:group-hover:text-zinc-400 shrink-0 mt-1.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+</article>
+<article class="company-card group p-3 rounded-lg cursor-pointer hover:bg-slate-100/70 dark:hover:bg-zinc-800/40 border border-transparent transition-all">
+<div class="flex items-start justify-between gap-2">
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5 mb-1">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0"></span>
+<span class="text-[10px] font-mono text-slate-400 dark:text-zinc-500">KVK · 18029381</span>
+</div>
+<h3 class="text-sm font-normal text-slate-700 dark:text-zinc-300 truncate group-hover:text-slate-900 dark:group-hover:text-white">
+                3p project services b.v.
+              </h3>
+<p class="text-xs text-slate-400 dark:text-zinc-500 truncate mt-0.5">Engineering &amp; Management Support</p>
+</div>
+<svg class="w-3.5 h-3.5 text-slate-300 dark:text-zinc-600 group-hover:text-slate-500 dark:group-hover:text-zinc-400 shrink-0 mt-1.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+</article>
+<article class="company-card group p-3 rounded-lg cursor-pointer hover:bg-slate-100/70 dark:hover:bg-zinc-800/40 border border-transparent transition-all">
+<div class="flex items-start justify-between gap-2">
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5 mb-1">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0"></span>
+<span class="text-[10px] font-mono text-slate-400 dark:text-zinc-500">KVK · 30192845</span>
+</div>
+<h3 class="text-sm font-normal text-slate-700 dark:text-zinc-300 truncate group-hover:text-slate-900 dark:group-hover:text-white">
+                4dotnet b.v.
+              </h3>
+<p class="text-xs text-slate-400 dark:text-zinc-500 truncate mt-0.5">Software Engineering &amp; Cloud Architecture</p>
+</div>
+<svg class="w-3.5 h-3.5 text-slate-300 dark:text-zinc-600 group-hover:text-slate-500 dark:group-hover:text-zinc-400 shrink-0 mt-1.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+</article>
+</div>
+</aside>
+<!-- Right Pane: Detail View -->
+<section class="flex-1 overflow-y-auto bg-slate-50 dark:bg-[#0c0d0e] p-4 md:p-8 lg:p-10 flex flex-col justify-between">
+<div class="max-w-5xl mx-auto w-full space-y-6">
+<!-- Top Breadcrumbs & Utility Actions -->
+<div class="flex flex-wrap items-center justify-between gap-3 text-xs">
+<div class="flex items-center gap-2 text-slate-500 dark:text-zinc-400">
+<span class="hover:text-slate-900 dark:hover:text-zinc-200 cursor-pointer">Registers</span>
+<span>/</span>
+<span class="hover:text-slate-900 dark:hover:text-zinc-200 cursor-pointer">Manufacturing and Industrials</span>
+<span>/</span>
+<span class="text-slate-800 dark:text-zinc-200 font-medium">16051874</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-lg bg-white dark:bg-zinc-800/90 text-slate-700 dark:text-zinc-300 hover:text-slate-900 dark:hover:text-white border border-slate-200 dark:border-zinc-700/80 shadow-2xs hover:bg-slate-50 transition">
+<svg class="w-3.5 h-3.5 text-slate-400 dark:text-zinc-400" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+              Share Profile
+            </button>
+<a class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-lg bg-white dark:bg-zinc-800/90 text-slate-700 dark:text-zinc-300 hover:text-slate-900 dark:hover:text-white border border-slate-200 dark:border-zinc-700/80 shadow-2xs hover:bg-slate-50 transition" href="https://www.kvk.nl" rel="noopener noreferrer" target="_blank">
+<svg class="w-3.5 h-3.5 text-slate-400 dark:text-zinc-400" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+              KvK Handelsregister
+            </a>
+</div>
+</div>
+<!-- Main Detail Card -->
+<div class="bg-white dark:bg-[#121316] rounded-2xl border border-slate-200/80 dark:border-zinc-800/80 shadow-xs p-6 md:p-8 space-y-6">
+<!-- Header Meta Badges -->
+<div class="flex flex-wrap items-center gap-2.5">
+<!-- KvK Tag with Copy Feature -->
+<button class="group inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-mono font-medium rounded-md bg-slate-100 hover:bg-slate-200/80 dark:bg-zinc-800/80 dark:hover:bg-zinc-700/80 text-slate-800 dark:text-zinc-200 border border-slate-200 dark:border-zinc-700 transition" id="copy-kvk-btn" title="Click to copy KvK ID">
+<span class="text-fuchsia-600 dark:text-fuchsia-400 font-semibold">KVK</span>
+<span class="text-slate-400 dark:text-zinc-500">·</span>
+<span id="kvk-number">16051874</span>
+<svg class="w-3 h-3 text-slate-400 group-hover:text-slate-700 dark:group-hover:text-zinc-200 transition" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<!-- Sector Badge -->
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium rounded-md bg-purple-50 text-purple-700 dark:bg-purple-950/40 dark:text-purple-300 dark:border dark:border-purple-800/50">
+              Manufacturing and Industrials
+            </span>
+<!-- Status Indicator -->
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-medium rounded-md bg-emerald-50 text-emerald-700 dark:bg-emerald-950/40 dark:text-emerald-300 dark:border dark:border-emerald-800/50">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+              Active Registry
+            </span>
+<!-- Legal Form -->
+<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium rounded-md bg-slate-100 text-slate-600 dark:bg-zinc-800 dark:text-zinc-400">
+              Besloten Vennootschap (B.V.)
+            </span>
+</div>
+<!-- Company Official Name -->
+<div>
+<h1 class="font-display text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-slate-900 dark:text-white leading-tight">
+              Aa-Dee Machinefabriek en Staalbouw Nederland B.V.
+            </h1>
+<p class="text-sm text-slate-500 dark:text-zinc-400 mt-1">Official trading name registered under Dutch commercial laws</p>
+</div>
+<!-- Divider -->
+<hr class="border-slate-100 dark:border-zinc-800"/>
+<!-- Primary Description -->
+<div class="bg-slate-50/70 dark:bg-[#18191d] rounded-xl p-5 md:p-6 border border-slate-200/60 dark:border-zinc-800/60">
+<h4 class="text-xs font-semibold uppercase tracking-wider text-slate-400 dark:text-zinc-500 mb-2">Company Purpose &amp; Activities</h4>
+<p class="text-base md:text-lg text-slate-800 dark:text-zinc-200 font-normal leading-relaxed">
+              Aa-Dee Machinefabriek en Staalbouw Nederland B.V. is a manufacturer of mechanical equipment and steel structures, specializing in the production of cranes, hoists, and industrial machinery.
+            </p>
+</div>
+<!-- Structured Info Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-2">
+<div class="p-3.5 rounded-xl border border-slate-200/70 dark:border-zinc-800 bg-white dark:bg-zinc-900/40">
+<div class="text-[11px] font-medium text-slate-400 dark:text-zinc-500 uppercase tracking-wide">Establishment</div>
+<div class="text-sm font-semibold text-slate-800 dark:text-zinc-200 mt-1">North Brabant, NL</div>
+<div class="text-xs text-slate-500 dark:text-zinc-400 mt-0.5">Headquarters</div>
+</div>
+<div class="p-3.5 rounded-xl border border-slate-200/70 dark:border-zinc-800 bg-white dark:bg-zinc-900/40">
+<div class="text-[11px] font-medium text-slate-400 dark:text-zinc-500 uppercase tracking-wide">SBI Code</div>
+<div class="text-sm font-semibold text-slate-800 dark:text-zinc-200 mt-1">2822 · Lifting Equipment</div>
+<div class="text-xs text-slate-500 dark:text-zinc-400 mt-0.5">Primary standard classification</div>
+</div>
+<div class="p-3.5 rounded-xl border border-slate-200/70 dark:border-zinc-800 bg-white dark:bg-zinc-900/40">
+<div class="text-[11px] font-medium text-slate-400 dark:text-zinc-500 uppercase tracking-wide">RSIN Number</div>
+<div class="text-sm font-semibold text-slate-800 dark:text-zinc-200 mt-1 font-mono">801934812</div>
+<div class="text-xs text-slate-500 dark:text-zinc-400 mt-0.5">Fiscal identity record</div>
+</div>
+<div class="p-3.5 rounded-xl border border-slate-200/70 dark:border-zinc-800 bg-white dark:bg-zinc-900/40">
+<div class="text-[11px] font-medium text-slate-400 dark:text-zinc-500 uppercase tracking-wide">Authorized Capital</div>
+<div class="text-sm font-semibold text-slate-800 dark:text-zinc-200 mt-1 font-mono">€ 45,000.00</div>
+<div class="text-xs text-slate-500 dark:text-zinc-400 mt-0.5">Incorporation filing</div>
+</div>
+</div>
+<!-- Bottom Action Buttons Row -->
+<div class="pt-2 flex flex-wrap items-center gap-3">
+<a class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-fuchsia-600 hover:bg-fuchsia-700 text-white text-xs font-semibold shadow-xs shadow-fuchsia-600/30 transition-all hover:scale-[1.01]" href="https://www.google.com/search?q=Aa-Dee+Machinefabriek+en+Staalbouw+Nederland+B.V." rel="noopener noreferrer" target="_blank">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span>Web Search</span>
+</a>
+<button class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-zinc-800 dark:hover:bg-zinc-700/80 text-slate-700 dark:text-zinc-200 text-xs font-semibold border border-slate-200 dark:border-zinc-700 transition-all">
+<svg class="w-3.5 h-3.5 text-slate-500 dark:text-zinc-400" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span>Download KvK Extract (PDF)</span>
+</button>
+<button class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-zinc-800 dark:hover:bg-zinc-700/80 text-slate-700 dark:text-zinc-200 text-xs font-semibold border border-slate-200 dark:border-zinc-700 transition-all">
+<svg class="w-3.5 h-3.5 text-slate-500 dark:text-zinc-400" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span>View Map &amp; Geo</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Bottom Disclaimer / Verification Footer -->
+<footer class="mt-8 pt-4 border-t border-slate-200 dark:border-zinc-800/60 max-w-5xl mx-auto w-full flex flex-col sm:flex-row items-center justify-between gap-2 text-[11px] text-slate-400 dark:text-zinc-500 text-center sm:text-left">
+<div class="flex items-center gap-1.5 italic">
+<svg class="w-3.5 h-3.5 text-slate-400 dark:text-zinc-500 shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span>This site may display AI-assisted info, so double-check its responses with official Handelsregister records.</span>
+</div>
+<div class="font-mono shrink-0">
+          NL-KVK API Synced: Today 08:30 UTC
+        </div>
+</footer>
+</section>
+</main>
+<!-- END: MasterDetailContainer -->
+<!-- BEGIN: InteractiveScripts -->
+<script data-purpose="theme-management">
+    // Interactive Dark/Light Mode Switcher Logic
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const themeSunIcon = document.getElementById('theme-sun-icon');
+    const themeMoonIcon = document.getElementById('theme-moon-icon');
+    const themeLabel = document.getElementById('theme-label');
+    const rootHtml = document.documentElement;
+
+    function updateThemeUI(isDark) {
+      if (isDark) {
+        rootHtml.classList.add('dark');
+        themeSunIcon.classList.add('hidden');
+        themeMoonIcon.classList.remove('hidden');
+        if (themeLabel) themeLabel.textContent = 'Dark';
+      } else {
+        rootHtml.classList.remove('dark');
+        themeMoonIcon.classList.add('hidden');
+        themeSunIcon.classList.remove('hidden');
+        if (themeLabel) themeLabel.textContent = 'Light';
+      }
+    }
+
+    // Toggle click handler
+    themeToggleBtn.addEventListener('click', () => {
+      const isCurrentlyDark = rootHtml.classList.contains('dark');
+      updateThemeUI(!isCurrentlyDark);
+    });
+  </script>
+<script data-purpose="interaction-handlers">
+    // Interactive Sector Pills
+    const sectorPills = document.querySelectorAll('.sector-pill');
+    sectorPills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        sectorPills.forEach(p => {
+          p.className = 'sector-pill px-3 py-1 rounded-full font-medium transition-all shrink-0 bg-white dark:bg-zinc-800/80 text-slate-600 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-white border border-slate-200/80 dark:border-zinc-700/60';
+        });
+        pill.className = 'sector-pill px-3 py-1 rounded-full font-medium transition-all shrink-0 bg-fuchsia-600 text-white shadow-xs shadow-fuchsia-600/30';
+      });
+    });
+
+    // Copy KvK Number with visual feedback
+    const copyKvkBtn = document.getElementById('copy-kvk-btn');
+    const kvkNumber = document.getElementById('kvk-number');
+    
+    if (copyKvkBtn && kvkNumber) {
+      copyKvkBtn.addEventListener('click', () => {
+        navigator.clipboard.writeText(kvkNumber.innerText).then(() => {
+          const originalText = kvkNumber.innerText;
+          kvkNumber.innerText = 'Copied!';
+          setTimeout(() => {
+            kvkNumber.innerText = originalText;
+          }, 1500);
+        });
+      });
+    }
+
+    // Interactive Company Card Selection
+    const companyCards = document.querySelectorAll('.company-card');
+    companyCards.forEach(card => {
+      card.addEventListener('click', () => {
+        companyCards.forEach(c => {
+          c.classList.remove('bg-fuchsia-50/70', 'dark:bg-zinc-800/60', 'border-fuchsia-200', 'dark:border-fuchsia-500/30');
+          c.classList.add('border-transparent');
+        });
+        card.classList.add('bg-fuchsia-50/70', 'dark:bg-zinc-800/60', 'border-fuchsia-200', 'dark:border-fuchsia-500/30');
+        card.classList.remove('border-transparent');
+      });
+    });
+
+    // Search filter simulation
+    const searchInput = document.getElementById('company-search-input');
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        const query = e.target.value.toLowerCase().trim();
+        companyCards.forEach(card => {
+          const text = card.innerText.toLowerCase();
+          if (text.includes(query)) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    }
+  </script>
+<!-- END: InteractiveScripts -->
+</body></html>
