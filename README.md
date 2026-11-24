@@ -4,7 +4,7 @@ A web application that visualizes data from the Netherlands Immigration and Natu
 
 The application has no runtime backend; it is an Angular 22 Single Page Application (SPA).
 
-See the live application at [dutch.khophi.com](https://dutch.khophi.com).
+See the live application at [dutch.khophi.pro](https://dutch.khophi.pro).
 
 ![wide](https://github.com/seanmavley/dutch/assets/5289083/2bd7aba1-c321-4b46-8fc8-1cddc084558a)
 
